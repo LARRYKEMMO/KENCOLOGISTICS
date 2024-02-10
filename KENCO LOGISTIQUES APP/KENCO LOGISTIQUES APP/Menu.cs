@@ -49,5 +49,21 @@ namespace KENCO_LOGISTIQUES_APP
             NewDriver.ShowDialog();
             this.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Reminder reminder = new Reminder();
+            reminder.ShowDialog();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Accounting accounting = new Accounting();
+            accounting.ShowDialog();
+            this.Close();
+        }
     }
 }

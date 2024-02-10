@@ -1289,5 +1289,6 @@
         string newFilePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName,
 "bin\\Debug\\net6.0-windows\\Resources\\Files\\KENCO_DB.xlsx");
         private Button SaveButton;
+        private string Slash = "-";
     }
 }

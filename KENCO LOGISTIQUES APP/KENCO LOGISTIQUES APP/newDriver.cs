@@ -32,7 +32,7 @@ namespace KENCO_LOGISTIQUES_APP
 
         private void AddNew_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(FirstNameBox.Text, LastNameBox.Text, DOBString + MOBString + YOBString, POBBox.Text, IDBox.Text, IDEDateString + IDEMonthString + IDEYearString, DriverLicencseBox.Text, LicenseCategory.Text, LicenseDateString + LicenseMonthString + LicenseYearString, AddressBox.Text, TelNumberBox.Text, EmailBox.Text);
+            dataGridView1.Rows.Add(FirstNameBox.Text, LastNameBox.Text, DOBString + Slash + MOBString + Slash + YOBString, POBBox.Text, IDBox.Text, IDEDateString + Slash + IDEMonthString + Slash + IDEYearString, DriverLicencseBox.Text, LicenseCategory.Text, LicenseDateString + Slash + LicenseMonthString + Slash + LicenseYearString, AddressBox.Text, TelNumberBox.Text, EmailBox.Text);
         }
 
         private void DOBBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -165,31 +165,6 @@ namespace KENCO_LOGISTIQUES_APP
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            //dynamic xlapp = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application"));
-            //dynamic xlworkbook = xlapp.Workbooks.Open(excelFilePath);
-            //dynamic xlworksheet = xlworkbook.Worksheets["Sheet1"];
-            //dynamic xlrange = xlworksheet.UsedRange;
-
-            //// Clear existing data in the Excel worksheet
-            //xlrange.Clear();
-
-            //// Write data from the DataGridView to the Excel worksheet
-            //for (int row = 0; row < dataGridView1.Rows.Count; row++)
-            //{
-            //    for (int col = 0; col < dataGridView1.Columns.Count; col++)
-            //    {
-            //        xlworksheet.Cells[row + 1, col + 1].Value = dataGridView1.Rows[row].Cells[col].Value;
-            //    }
-            //}
-
-            //// Save changes to the Excel file
-            //xlworkbook.Save();
-
-            //// Close workbook and quit Excel
-            ////xlworkbook.Close();
-            ////xlapp.Quit();
-            ///
-
             if (File.Exists(newFilePath))
             {
                 // Open Excel and the workbook
