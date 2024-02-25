@@ -32,7 +32,33 @@ namespace KENCO_LOGISTIQUES_APP
 
         private void AddNew_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(FirstNameBox.Text, LastNameBox.Text, DOBString + Slash + MOBString + Slash + YOBString, POBBox.Text, IDBox.Text, IDEDateString + Slash + IDEMonthString + Slash + IDEYearString, DriverLicencseBox.Text, LicenseCategory.Text, LicenseDateString + Slash + LicenseMonthString + Slash + LicenseYearString, AddressBox.Text, TelNumberBox.Text, EmailBox.Text);
+            if (string.IsNullOrEmpty(FirstNameBox.Text) ||
+                string.IsNullOrEmpty(LastNameBox.Text) ||
+                string.IsNullOrEmpty(DOBString) ||
+                string.IsNullOrEmpty(MOBString) ||
+                string.IsNullOrEmpty(YOBString) ||
+                string.IsNullOrEmpty(POBBox.Text) ||
+                string.IsNullOrEmpty(IDBox.Text) ||
+                string.IsNullOrEmpty(IDEDateString) ||
+                string.IsNullOrEmpty(IDEMonthString) ||
+                string.IsNullOrEmpty(IDEYearString) ||
+                string.IsNullOrEmpty(DriverLicencseBox.Text) ||
+                string.IsNullOrEmpty(LicenseCategory.Text) ||
+                string.IsNullOrEmpty(LicenseDateString) ||
+                string.IsNullOrEmpty(LicenseMonthString) ||
+                string.IsNullOrEmpty(LicenseYearString) ||
+                string.IsNullOrEmpty(AddressBox.Text) ||
+                string.IsNullOrEmpty(TelNumberBox.Text) ||
+                string.IsNullOrEmpty(EmailBox.Text))
+            {
+                MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                dataGridView1.Rows.Add(FirstNameBox.Text, LastNameBox.Text, DOBString + Slash + MOBString + Slash + YOBString, POBBox.Text, IDBox.Text, IDEDateString + Slash + IDEMonthString + Slash + IDEYearString, DriverLicencseBox.Text, LicenseCategory.Text, LicenseDateString + Slash + LicenseMonthString + Slash + LicenseYearString, AddressBox.Text, TelNumberBox.Text, EmailBox.Text);
+
+            }
+
         }
 
         private void DOBBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -143,10 +169,11 @@ namespace KENCO_LOGISTIQUES_APP
         {
             dynamic xlapp = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application"));
             dynamic xlworkbook = xlapp.Workbooks.Open(newFilePath);
-            dynamic xlworksheet = xlworkbook.Worksheets["Sheet1"];
+            dynamic xlworksheet = xlworkbook.Worksheets["NewEmployee"];
             dynamic xlrange = xlworksheet.UsedRange;
 
-            dataGridView1.ColumnCount = xlrange.Columns.Count;
+            //dataGridView1.ColumnCount = xlrange.Columns.Count;
+            dataGridView1.Rows.Clear();
 
             for (int xlrow = 2; xlrow <= xlrange.Rows.Count; xlrow++)
             {
@@ -159,6 +186,8 @@ namespace KENCO_LOGISTIQUES_APP
 
             }
 
+            DeleteEmptyRows(dataGridView1);
+
             xlworkbook.Close();
             xlapp.Quit();
         }
@@ -170,7 +199,7 @@ namespace KENCO_LOGISTIQUES_APP
                 // Open Excel and the workbook
                 dynamic xlapp = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application"));
                 dynamic xlworkbook = xlapp.Workbooks.Open(newFilePath);
-                dynamic xlworksheet = xlworkbook.Worksheets["Sheet1"];
+                dynamic xlworksheet = xlworkbook.Worksheets["NewEmployee"];
 
                 // Clear existing data in the Excel worksheet
                 xlworksheet.Cells.ClearContents();
@@ -202,6 +231,31 @@ namespace KENCO_LOGISTIQUES_APP
             {
                 MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void DeleteEmptyRows(DataGridView dataGridView)
+        {
+            // Iterate through the rows in reverse order to avoid issues with indices
+            for (int i = dataGridView.Rows.Count - 1; i >= 0; i--)
+            {
+                DataGridViewRow row = dataGridView.Rows[i];
+                if (IsRowEmpty(row))
+                {
+                    dataGridView.Rows.RemoveAt(i);
+                }
+            }
+        }
+
+        private bool IsRowEmpty(DataGridViewRow row)
+        {
+            foreach (DataGridViewCell cell in row.Cells)
+            {
+                if (cell.Value != null && !string.IsNullOrWhiteSpace(cell.Value.ToString()))
+                {
+                    return false; // At least one cell has a non-null, non-empty value
+                }
+            }
+            return true; // All cells are either null or empty
         }
     }
 }

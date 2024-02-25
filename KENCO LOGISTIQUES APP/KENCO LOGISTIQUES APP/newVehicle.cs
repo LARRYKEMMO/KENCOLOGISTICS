@@ -74,9 +74,29 @@ namespace KENCO_LOGISTIQUES_APP
 
         private void AddNew_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(PlateNumberBox.Text, MakeBoxString, TypeBoxString, FUDateBoxString + Slash + FUMonthBoxString + Slash + FUYearBoxString, CapacityBox.Text + CapacityUnityBoxString, ChassisNumberBox.Text, DriverNameBox.Text, DTelephoneBox.Text, CDBox.Text, CDTelephoneBox.Text);
-        }
+            if (string.IsNullOrEmpty(PlateNumberBox.Text) ||
+                string.IsNullOrEmpty(MakeBoxString) ||
+                string.IsNullOrEmpty(TypeBoxString) ||
+                string.IsNullOrEmpty(FUDateBoxString) ||
+                string.IsNullOrEmpty(FUMonthBoxString) ||
+                string.IsNullOrEmpty(FUYearBoxString) ||
+                string.IsNullOrEmpty(CapacityBox.Text) ||
+                string.IsNullOrEmpty(CapacityUnityBoxString) ||
+                string.IsNullOrEmpty(ChassisNumberBox.Text) ||
+                string.IsNullOrEmpty(DriverNameBox.Text) ||
+                string.IsNullOrEmpty(CDBox.Text) ||
+                string.IsNullOrEmpty(DTelephoneBox.Text) ||
+                string.IsNullOrEmpty(CDTelephoneBox.Text))
+            {
+                MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                dataGridView1.Rows.Add(PlateNumberBox.Text, MakeBoxString, TypeBoxString, FUDateBoxString + Slash + FUMonthBoxString + Slash + FUYearBoxString, CapacityBox.Text + CapacityUnityBoxString, ChassisNumberBox.Text, DriverNameBox.Text, DTelephoneBox.Text, CDBox.Text, CDTelephoneBox.Text);
 
+            }
+
+        }
         private void Delete_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
@@ -122,7 +142,7 @@ namespace KENCO_LOGISTIQUES_APP
         {
             dynamic xlapp = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application"));
             dynamic xlworkbook = xlapp.Workbooks.Open(newFilePath);
-            dynamic xlworksheet = xlworkbook.Worksheets["Sheet2"];
+            dynamic xlworksheet = xlworkbook.Worksheets["NewVehicle"];
             dynamic xlrange = xlworksheet.UsedRange;
 
             dataGridView1.ColumnCount = xlrange.Columns.Count;
@@ -137,6 +157,8 @@ namespace KENCO_LOGISTIQUES_APP
 
             }
 
+            DeleteEmptyRows(dataGridView1);
+
             xlworkbook.Close();
             xlapp.Quit();
         }
@@ -148,7 +170,7 @@ namespace KENCO_LOGISTIQUES_APP
                 // Open Excel and the workbook
                 dynamic xlapp = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application"));
                 dynamic xlworkbook = xlapp.Workbooks.Open(newFilePath);
-                dynamic xlworksheet = xlworkbook.Worksheets["Sheet2"];
+                dynamic xlworksheet = xlworkbook.Worksheets["NewVehicle"];
 
                 // Clear existing data in the Excel worksheet
                 xlworksheet.Cells.ClearContents();
@@ -180,6 +202,31 @@ namespace KENCO_LOGISTIQUES_APP
             {
                 MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void DeleteEmptyRows(DataGridView dataGridView)
+        {
+            // Iterate through the rows in reverse order to avoid issues with indices
+            for (int i = dataGridView.Rows.Count - 1; i >= 0; i--)
+            {
+                DataGridViewRow row = dataGridView.Rows[i];
+                if (IsRowEmpty(row))
+                {
+                    dataGridView.Rows.RemoveAt(i);
+                }
+            }
+        }
+
+        private bool IsRowEmpty(DataGridViewRow row)
+        {
+            foreach (DataGridViewCell cell in row.Cells)
+            {
+                if (cell.Value != null && !string.IsNullOrWhiteSpace(cell.Value.ToString()))
+                {
+                    return false; // At least one cell has a non-null, non-empty value
+                }
+            }
+            return true; // All cells are either null or empty
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace KENCO_LOGISTIQUES_APP
+﻿using System.Collections;
+
+namespace KENCO_LOGISTIQUES_APP
 {
     partial class Accounting
     {
@@ -30,6 +32,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.EVBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.IVBox = new System.Windows.Forms.TextBox();
             this.ResetExpense = new System.Windows.Forms.Button();
             this.DeleteExpense = new System.Windows.Forms.Button();
             this.ResetIncome = new System.Windows.Forms.Button();
@@ -38,9 +44,11 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteIncome = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddIncome = new System.Windows.Forms.Button();
@@ -70,18 +78,19 @@
             this.label39 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
             this.Reset = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.AddNew = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.MainMenu = new System.Windows.Forms.Button();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -103,6 +112,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.EVBox);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.IVBox);
             this.panel1.Controls.Add(this.ResetExpense);
             this.panel1.Controls.Add(this.DeleteExpense);
             this.panel1.Controls.Add(this.ResetIncome);
@@ -139,6 +152,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1580, 337);
             this.panel1.TabIndex = 221;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label15.Location = new System.Drawing.Point(839, 69);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(69, 20);
+            this.label15.TabIndex = 273;
+            this.label15.Text = "Vehicles:";
+            // 
+            // EVBox
+            // 
+            this.EVBox.Location = new System.Drawing.Point(922, 69);
+            this.EVBox.Name = "EVBox";
+            this.EVBox.Size = new System.Drawing.Size(125, 27);
+            this.EVBox.TabIndex = 274;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label14.Location = new System.Drawing.Point(17, 69);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 20);
+            this.label14.TabIndex = 271;
+            this.label14.Text = "Vehicles:";
+            // 
+            // IVBox
+            // 
+            this.IVBox.Location = new System.Drawing.Point(100, 69);
+            this.IVBox.Name = "IVBox";
+            this.IVBox.Size = new System.Drawing.Size(125, 27);
+            this.IVBox.TabIndex = 272;
             // 
             // ResetExpense
             // 
@@ -196,7 +245,8 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
+            this.dataGridViewTextBoxColumn3,
+            this.Column11});
             this.dataGridView2.Location = new System.Drawing.Point(1111, 60);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
@@ -207,7 +257,7 @@
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Amount (Fcfa)";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Vehicle";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -215,7 +265,7 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Amount (Fcfa)";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -223,11 +273,19 @@
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Description";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 134;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Date";
+            this.Column11.MinimumWidth = 6;
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 125;
             // 
             // DeleteIncome
             // 
@@ -248,6 +306,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column10,
             this.Column2,
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(289, 60);
@@ -260,11 +319,19 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Amount (Fcfa)";
+            this.Column1.HeaderText = "Vehicle";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 134;
+            this.Column1.Width = 125;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Amount (Fcfa)";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 125;
             // 
             // Column2
             // 
@@ -272,7 +339,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 134;
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
@@ -280,7 +347,7 @@
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 134;
+            this.Column3.Width = 125;
             // 
             // AddIncome
             // 
@@ -307,7 +374,7 @@
             // 
             // ExpenseAmountBox
             // 
-            this.ExpenseAmountBox.Location = new System.Drawing.Point(921, 103);
+            this.ExpenseAmountBox.Location = new System.Drawing.Point(922, 127);
             this.ExpenseAmountBox.Name = "ExpenseAmountBox";
             this.ExpenseAmountBox.Size = new System.Drawing.Size(125, 27);
             this.ExpenseAmountBox.TabIndex = 260;
@@ -472,7 +539,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(12, 98);
+            this.label5.Location = new System.Drawing.Point(17, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 247;
@@ -505,7 +572,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(12, 174);
+            this.label4.Location = new System.Drawing.Point(16, 180);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 248;
@@ -554,7 +621,7 @@
             // 
             // IncomeAmountBox
             // 
-            this.IncomeAmountBox.Location = new System.Drawing.Point(95, 98);
+            this.IncomeAmountBox.Location = new System.Drawing.Point(100, 127);
             this.IncomeAmountBox.Name = "IncomeAmountBox";
             this.IncomeAmountBox.Size = new System.Drawing.Size(125, 27);
             this.IncomeAmountBox.TabIndex = 249;
@@ -581,7 +648,7 @@
             "Logistics consulting and advisory services",
             "Tolls and access fees (reimbursed by clients)",
             "Equipment leasing or rental income"});
-            this.IncomeDescription.Location = new System.Drawing.Point(117, 171);
+            this.IncomeDescription.Location = new System.Drawing.Point(121, 177);
             this.IncomeDescription.Name = "IncomeDescription";
             this.IncomeDescription.Size = new System.Drawing.Size(151, 28);
             this.IncomeDescription.TabIndex = 250;
@@ -620,7 +687,7 @@
             "Cargo loading and unloading fees",
             "Equipment financing costs",
             "Technology and software licensing fees"});
-            this.ExpenseDecriptionBox.Location = new System.Drawing.Point(943, 174);
+            this.ExpenseDecriptionBox.Location = new System.Drawing.Point(944, 180);
             this.ExpenseDecriptionBox.Name = "ExpenseDecriptionBox";
             this.ExpenseDecriptionBox.Size = new System.Drawing.Size(151, 28);
             this.ExpenseDecriptionBox.TabIndex = 261;
@@ -682,7 +749,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label11.Location = new System.Drawing.Point(844, 177);
+            this.label11.Location = new System.Drawing.Point(845, 183);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(93, 20);
             this.label11.TabIndex = 259;
@@ -715,7 +782,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label12.Location = new System.Drawing.Point(844, 103);
+            this.label12.Location = new System.Drawing.Point(845, 127);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 20);
             this.label12.TabIndex = 258;
@@ -883,6 +950,7 @@
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
+            this.Column12,
             this.Column5,
             this.Column6,
             this.Column7,
@@ -895,54 +963,6 @@
             this.dataGridView3.RowTemplate.Height = 29;
             this.dataGridView3.Size = new System.Drawing.Size(1535, 158);
             this.dataGridView3.TabIndex = 247;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Income (Fcfa)";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 250;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Description";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 250;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Expenses (Fcfa)";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 250;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Description";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 250;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Profit (+)  / Loss (-)";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 250;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Date";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 250;
             // 
             // label13
             // 
@@ -1015,6 +1035,62 @@
             this.MainMenu.UseVisualStyleBackColor = false;
             this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
             // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Vehicle";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 225;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Income (Fcfa)";
+            this.Column12.MinimumWidth = 6;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 250;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Description";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 250;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Expenses (Fcfa)";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 250;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Description";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 250;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Profit (+)  / Loss (-)";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 250;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Date";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 250;
+            // 
             // Accounting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1072,13 +1148,7 @@
         private Label label40;
         private Label label39;
         private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
         private Panel panel2;
         private Label label13;
         private Button ResetExpense;
@@ -1106,15 +1176,40 @@
         private string Date;
         private string DateExpenses;
         private string DateIncome;
+        private string VIString;
+        private string VEString;
+        private string VehicleNumber;
         private Button SaveButton;
         string newFilePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName,
 "bin\\Debug\\net6.0-windows\\Resources\\Files\\KENCO_DB.xlsx");
+        private Button MainMenu;
+        private Label label15;
+        private TextBox EVBox;
+        private Label label14;
+        private TextBox IVBox;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn Column11;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column10;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column12;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
-        private Button MainMenu;
+        private ArrayList VehicleIncomeList = new ArrayList();
+        private ArrayList IncomeList = new ArrayList();
+        private ArrayList DescriptionIncomeList = new ArrayList();
+        private ArrayList DateIncomeList = new ArrayList();
+        private ArrayList VehicleExpenseList = new ArrayList();
+        private ArrayList ExpenseList = new ArrayList();
+        private ArrayList DescriptionExpenseList = new ArrayList();
+        private ArrayList DateExpenseList = new ArrayList();
+
     }
 }

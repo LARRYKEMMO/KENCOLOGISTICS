@@ -65,5 +65,13 @@ namespace KENCO_LOGISTIQUES_APP
             accounting.ShowDialog();
             this.Close();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            IncomeAnalytics IA = new IncomeAnalytics();
+            IA.ShowDialog();
+            this.Close();
+        }
     }
 }

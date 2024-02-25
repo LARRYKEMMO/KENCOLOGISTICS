@@ -253,7 +253,34 @@ namespace KENCO_LOGISTIQUES_APP
 
         private void AddNew_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(VehiclePlateNumberBox.Text, IEDDateBox.Text + Slash + IEDMonthBox.Text + Slash + IEDYearBox.Text, IEDReminderDateBox.Text + Slash + IEDReminderMonthBox.Text + Slash + IEDReminderYearBox.Text, TVEDDateBox.Text + Slash + TVEDMonthBox.Text + Slash + TVEDYearBox.Text, TVEDReminderDateBox.Text + Slash + TVEDReminderMonthBox.Text + Slash + TVEDReminderYearBox.Text, RCEDateBox.Text + Slash + RCEMonthBox.Text + Slash + RCEYearBox.Text, RCEReminderDateBox.Text + Slash + RCEReminderMonthBox.Text + Slash + RCEReminderYearBox.Text);
+            if (string.IsNullOrEmpty(VehiclePlateNumberBox.Text) ||
+                string.IsNullOrEmpty(IEDDateBox.Text) ||
+                string.IsNullOrEmpty(IEDMonthBox.Text) ||
+                string.IsNullOrEmpty(IEDYearBox.Text) ||
+                string.IsNullOrEmpty(IEDReminderDateBox.Text) ||
+                string.IsNullOrEmpty(IEDReminderMonthBox.Text) ||
+                string.IsNullOrEmpty(IEDReminderYearBox.Text) ||
+                string.IsNullOrEmpty(TVEDDateBox.Text) ||
+                string.IsNullOrEmpty(TVEDMonthBox.Text) ||
+                string.IsNullOrEmpty(TVEDYearBox.Text) ||
+                string.IsNullOrEmpty(TVEDReminderDateBox.Text) ||
+                string.IsNullOrEmpty(TVEDReminderMonthBox.Text) ||
+                string.IsNullOrEmpty(TVEDReminderYearBox.Text) ||
+                string.IsNullOrEmpty(RCEDateBox.Text) ||
+                string.IsNullOrEmpty(RCEMonthBox.Text) ||
+                string.IsNullOrEmpty(RCEYearBox.Text) ||
+                string.IsNullOrEmpty(RCEReminderDateBox.Text) ||
+                string.IsNullOrEmpty(RCEReminderMonthBox.Text) ||
+                string.IsNullOrEmpty(RCEReminderYearBox.Text))
+            {
+                MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                dataGridView1.Rows.Add(VehiclePlateNumberBox.Text, IEDDateBox.Text + Slash + IEDMonthBox.Text + Slash + IEDYearBox.Text, IEDReminderDateBox.Text + Slash + IEDReminderMonthBox.Text + Slash + IEDReminderYearBox.Text, TVEDDateBox.Text + Slash + TVEDMonthBox.Text + Slash + TVEDYearBox.Text, TVEDReminderDateBox.Text + Slash + TVEDReminderMonthBox.Text + Slash + TVEDReminderYearBox.Text, RCEDateBox.Text + Slash + RCEMonthBox.Text + Slash + RCEYearBox.Text, RCEReminderDateBox.Text + Slash + RCEReminderMonthBox.Text + Slash + RCEReminderYearBox.Text);
+
+            }
+
         }
 
         private void Delete_Click(object sender, EventArgs e)
@@ -306,10 +333,11 @@ namespace KENCO_LOGISTIQUES_APP
         {
             dynamic xlapp = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application"));
             dynamic xlworkbook = xlapp.Workbooks.Open(newFilePath);
-            dynamic xlworksheet = xlworkbook.Worksheets["Sheet3"];
+            dynamic xlworksheet = xlworkbook.Worksheets["Reminders"];
             dynamic xlrange = xlworksheet.UsedRange;
 
-            dataGridView1.ColumnCount = xlrange.Columns.Count;
+            //dataGridView3.ColumnCount = xlrange.Columns.Count;
+            dataGridView1.Rows.Clear();
 
             for (int xlrow = 2; xlrow <= xlrange.Rows.Count; xlrow++)
             {
@@ -319,6 +347,8 @@ namespace KENCO_LOGISTIQUES_APP
                 xlrange.Cells[xlrow, 6].Text, xlrange.Cells[xlrow, 7].Text);
 
             }
+
+            DeleteEmptyRows(dataGridView1);
 
             xlworkbook.Close();
             xlapp.Quit();
@@ -331,7 +361,7 @@ namespace KENCO_LOGISTIQUES_APP
                 // Open Excel and the workbook
                 dynamic xlapp = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application"));
                 dynamic xlworkbook = xlapp.Workbooks.Open(newFilePath);
-                dynamic xlworksheet = xlworkbook.Worksheets["Sheet3"];
+                dynamic xlworksheet = xlworkbook.Worksheets["Reminders"];
 
                 // Clear existing data in the Excel worksheet
                 xlworksheet.Cells.ClearContents();
@@ -363,6 +393,31 @@ namespace KENCO_LOGISTIQUES_APP
             {
                 MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void DeleteEmptyRows(DataGridView dataGridView)
+        {
+            // Iterate through the rows in reverse order to avoid issues with indices
+            for (int i = dataGridView.Rows.Count - 1; i >= 0; i--)
+            {
+                DataGridViewRow row = dataGridView.Rows[i];
+                if (IsRowEmpty(row))
+                {
+                    dataGridView.Rows.RemoveAt(i);
+                }
+            }
+        }
+
+        private bool IsRowEmpty(DataGridViewRow row)
+        {
+            foreach (DataGridViewCell cell in row.Cells)
+            {
+                if (cell.Value != null && !string.IsNullOrWhiteSpace(cell.Value.ToString()))
+                {
+                    return false; // At least one cell has a non-null, non-empty value
+                }
+            }
+            return true; // All cells are either null or empty
         }
     }
 }
