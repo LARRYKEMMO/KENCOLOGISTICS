@@ -1,4 +1,6 @@
-﻿namespace KENCO_LOGISTIQUES_APP
+﻿using System.Collections;
+
+namespace KENCO_LOGISTIQUES_APP
 {
     partial class IncomeAnalytics
     {
@@ -35,7 +37,11 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -49,7 +55,7 @@
             this.Column10,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(31, 206);
+            this.dataGridView1.Location = new System.Drawing.Point(32, 506);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -91,7 +97,7 @@
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(782, 90);
+            this.SearchBox.Location = new System.Drawing.Point(761, 448);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(125, 27);
             this.SearchBox.TabIndex = 273;
@@ -100,7 +106,7 @@
             // 
             this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Search.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Search.Location = new System.Drawing.Point(976, 90);
+            this.Search.Location = new System.Drawing.Point(955, 448);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(138, 29);
             this.Search.TabIndex = 275;
@@ -108,18 +114,39 @@
             this.Search.UseVisualStyleBackColor = false;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(42, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(596, 368);
+            this.pictureBox1.TabIndex = 276;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(702, 13);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(391, 367);
+            this.pictureBox2.TabIndex = 277;
+            this.pictureBox2.TabStop = false;
+            // 
             // IncomeAnalytics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1227, 536);
+            this.ClientSize = new System.Drawing.Size(1149, 752);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.dataGridView1);
             this.Name = "IncomeAnalytics";
             this.Text = "IncomeAnalytics";
+            this.Load += new System.EventHandler(this.IncomeAnalytics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,6 +163,18 @@
         string newFilePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName,
 "bin\\Debug\\net6.0-windows\\Resources\\Files\\KENCO_DB.xlsx");
         private Button Search;
-
+        private PictureBox pictureBox1;
+        private ArrayList Income = new ArrayList();
+        private ArrayList VehiclesList = new ArrayList();
+        HashSet<string> Vehicles = new HashSet<string>();
+        //private ArrayList Description = new ArrayList();
+        HashSet<string> Description = new HashSet<string>();
+        private ArrayList DescriptionList = new ArrayList();
+        private double income;
+        private double doubleX;
+        Dictionary<string, double> myDictionary = new Dictionary<string, double>();
+        private PictureBox pictureBox2;
+        private string Search1;
+        private string Search2;
     }
 }
