@@ -55,7 +55,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column10,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(32, 506);
+            this.dataGridView1.Location = new System.Drawing.Point(42, 487);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -97,7 +97,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(761, 448);
+            this.SearchBox.Location = new System.Drawing.Point(771, 429);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(125, 27);
             this.SearchBox.TabIndex = 273;
@@ -106,7 +106,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Search.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Search.Location = new System.Drawing.Point(955, 448);
+            this.Search.Location = new System.Drawing.Point(965, 429);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(138, 29);
             this.Search.TabIndex = 275;
@@ -135,7 +135,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1149, 752);
+            this.ClientSize = new System.Drawing.Size(1127, 739);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Search);
@@ -171,6 +171,7 @@ namespace KENCO_LOGISTIQUES_APP
         HashSet<string> Description = new HashSet<string>();
         private ArrayList DescriptionList = new ArrayList();
         private double income;
+        private double income2;
         private double doubleX;
         Dictionary<string, double> myDictionary = new Dictionary<string, double>();
         private PictureBox pictureBox2;
