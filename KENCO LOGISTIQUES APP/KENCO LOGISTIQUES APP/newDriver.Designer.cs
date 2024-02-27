@@ -95,7 +95,7 @@
             // 
             this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.MainMenu.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MainMenu.Location = new System.Drawing.Point(745, 792);
+            this.MainMenu.Location = new System.Drawing.Point(1362, 792);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(118, 29);
             this.MainMenu.TabIndex = 112;
@@ -1144,7 +1144,7 @@
             // 
             this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.SaveButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SaveButton.Location = new System.Drawing.Point(1371, 792);
+            this.SaveButton.Location = new System.Drawing.Point(736, 792);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(94, 29);
             this.SaveButton.TabIndex = 118;

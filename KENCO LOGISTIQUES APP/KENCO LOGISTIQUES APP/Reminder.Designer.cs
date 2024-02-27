@@ -86,7 +86,9 @@
             this.Reset = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.AddNew = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label35
@@ -94,7 +96,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label35.Location = new System.Drawing.Point(1274, 343);
+            this.label35.Location = new System.Drawing.Point(1262, 255);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(44, 20);
             this.label35.TabIndex = 218;
@@ -106,7 +108,7 @@
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label36.Location = new System.Drawing.Point(1136, 344);
+            this.label36.Location = new System.Drawing.Point(1114, 254);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(60, 20);
             this.label36.TabIndex = 217;
@@ -118,7 +120,7 @@
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label37.Location = new System.Drawing.Point(1017, 343);
+            this.label37.Location = new System.Drawing.Point(995, 253);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(46, 20);
             this.label37.TabIndex = 216;
@@ -231,7 +233,7 @@
             "2048",
             "2049",
             "2050"});
-            this.RCEReminderYearBox.Location = new System.Drawing.Point(1324, 341);
+            this.RCEReminderYearBox.Location = new System.Drawing.Point(1312, 253);
             this.RCEReminderYearBox.Name = "RCEReminderYearBox";
             this.RCEReminderYearBox.Size = new System.Drawing.Size(87, 28);
             this.RCEReminderYearBox.TabIndex = 215;
@@ -254,7 +256,7 @@
             "10",
             "11",
             "12"});
-            this.RCEReminderMonthBox.Location = new System.Drawing.Point(1202, 341);
+            this.RCEReminderMonthBox.Location = new System.Drawing.Point(1180, 251);
             this.RCEReminderMonthBox.Name = "RCEReminderMonthBox";
             this.RCEReminderMonthBox.Size = new System.Drawing.Size(64, 28);
             this.RCEReminderMonthBox.TabIndex = 214;
@@ -296,7 +298,7 @@
             "29",
             "30",
             "31"});
-            this.RCEReminderDateBox.Location = new System.Drawing.Point(1064, 340);
+            this.RCEReminderDateBox.Location = new System.Drawing.Point(1042, 250);
             this.RCEReminderDateBox.Name = "RCEReminderDateBox";
             this.RCEReminderDateBox.Size = new System.Drawing.Size(66, 28);
             this.RCEReminderDateBox.TabIndex = 213;
@@ -307,7 +309,7 @@
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label32.Location = new System.Drawing.Point(1274, 278);
+            this.label32.Location = new System.Drawing.Point(1262, 190);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(44, 20);
             this.label32.TabIndex = 212;
@@ -319,7 +321,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label33.Location = new System.Drawing.Point(1136, 279);
+            this.label33.Location = new System.Drawing.Point(1114, 189);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(60, 20);
             this.label33.TabIndex = 211;
@@ -331,7 +333,7 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label34.Location = new System.Drawing.Point(1017, 278);
+            this.label34.Location = new System.Drawing.Point(995, 188);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(46, 20);
             this.label34.TabIndex = 210;
@@ -444,7 +446,7 @@
             "2048",
             "2049",
             "2050"});
-            this.TVEDReminderYearBox.Location = new System.Drawing.Point(1324, 276);
+            this.TVEDReminderYearBox.Location = new System.Drawing.Point(1312, 188);
             this.TVEDReminderYearBox.Name = "TVEDReminderYearBox";
             this.TVEDReminderYearBox.Size = new System.Drawing.Size(87, 28);
             this.TVEDReminderYearBox.TabIndex = 209;
@@ -467,7 +469,7 @@
             "10",
             "11",
             "12"});
-            this.TVEDReminderMonthBox.Location = new System.Drawing.Point(1202, 276);
+            this.TVEDReminderMonthBox.Location = new System.Drawing.Point(1180, 186);
             this.TVEDReminderMonthBox.Name = "TVEDReminderMonthBox";
             this.TVEDReminderMonthBox.Size = new System.Drawing.Size(64, 28);
             this.TVEDReminderMonthBox.TabIndex = 208;
@@ -509,7 +511,7 @@
             "29",
             "30",
             "31"});
-            this.TVEDReminderDateBox.Location = new System.Drawing.Point(1064, 275);
+            this.TVEDReminderDateBox.Location = new System.Drawing.Point(1042, 185);
             this.TVEDReminderDateBox.Name = "TVEDReminderDateBox";
             this.TVEDReminderDateBox.Size = new System.Drawing.Size(66, 28);
             this.TVEDReminderDateBox.TabIndex = 207;
@@ -520,7 +522,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label29.Location = new System.Drawing.Point(1274, 218);
+            this.label29.Location = new System.Drawing.Point(1262, 130);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(44, 20);
             this.label29.TabIndex = 206;
@@ -532,7 +534,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label30.Location = new System.Drawing.Point(1136, 219);
+            this.label30.Location = new System.Drawing.Point(1114, 129);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(60, 20);
             this.label30.TabIndex = 205;
@@ -544,7 +546,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label31.Location = new System.Drawing.Point(1017, 218);
+            this.label31.Location = new System.Drawing.Point(995, 128);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(46, 20);
             this.label31.TabIndex = 204;
@@ -657,7 +659,7 @@
             "2048",
             "2049",
             "2050"});
-            this.IEDReminderYearBox.Location = new System.Drawing.Point(1324, 216);
+            this.IEDReminderYearBox.Location = new System.Drawing.Point(1312, 128);
             this.IEDReminderYearBox.Name = "IEDReminderYearBox";
             this.IEDReminderYearBox.Size = new System.Drawing.Size(87, 28);
             this.IEDReminderYearBox.TabIndex = 203;
@@ -680,7 +682,7 @@
             "10",
             "11",
             "12"});
-            this.IEDReminderMonthBox.Location = new System.Drawing.Point(1202, 216);
+            this.IEDReminderMonthBox.Location = new System.Drawing.Point(1180, 126);
             this.IEDReminderMonthBox.Name = "IEDReminderMonthBox";
             this.IEDReminderMonthBox.Size = new System.Drawing.Size(64, 28);
             this.IEDReminderMonthBox.TabIndex = 202;
@@ -722,7 +724,7 @@
             "29",
             "30",
             "31"});
-            this.IEDReminderDateBox.Location = new System.Drawing.Point(1064, 215);
+            this.IEDReminderDateBox.Location = new System.Drawing.Point(1042, 125);
             this.IEDReminderDateBox.Name = "IEDReminderDateBox";
             this.IEDReminderDateBox.Size = new System.Drawing.Size(66, 28);
             this.IEDReminderDateBox.TabIndex = 201;
@@ -733,7 +735,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label26.Location = new System.Drawing.Point(542, 340);
+            this.label26.Location = new System.Drawing.Point(520, 250);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(44, 20);
             this.label26.TabIndex = 200;
@@ -745,7 +747,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label27.Location = new System.Drawing.Point(404, 341);
+            this.label27.Location = new System.Drawing.Point(382, 251);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(60, 20);
             this.label27.TabIndex = 199;
@@ -757,7 +759,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label28.Location = new System.Drawing.Point(285, 340);
+            this.label28.Location = new System.Drawing.Point(263, 250);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(46, 20);
             this.label28.TabIndex = 198;
@@ -870,7 +872,7 @@
             "2048",
             "2049",
             "2050"});
-            this.RCEYearBox.Location = new System.Drawing.Point(592, 338);
+            this.RCEYearBox.Location = new System.Drawing.Point(570, 248);
             this.RCEYearBox.Name = "RCEYearBox";
             this.RCEYearBox.Size = new System.Drawing.Size(87, 28);
             this.RCEYearBox.TabIndex = 197;
@@ -893,7 +895,7 @@
             "10",
             "11",
             "12"});
-            this.RCEMonthBox.Location = new System.Drawing.Point(470, 338);
+            this.RCEMonthBox.Location = new System.Drawing.Point(448, 248);
             this.RCEMonthBox.Name = "RCEMonthBox";
             this.RCEMonthBox.Size = new System.Drawing.Size(64, 28);
             this.RCEMonthBox.TabIndex = 196;
@@ -935,7 +937,7 @@
             "29",
             "30",
             "31"});
-            this.RCEDateBox.Location = new System.Drawing.Point(332, 337);
+            this.RCEDateBox.Location = new System.Drawing.Point(310, 247);
             this.RCEDateBox.Name = "RCEDateBox";
             this.RCEDateBox.Size = new System.Drawing.Size(66, 28);
             this.RCEDateBox.TabIndex = 195;
@@ -946,7 +948,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label20.Location = new System.Drawing.Point(542, 276);
+            this.label20.Location = new System.Drawing.Point(520, 186);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(44, 20);
             this.label20.TabIndex = 194;
@@ -958,7 +960,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label24.Location = new System.Drawing.Point(404, 277);
+            this.label24.Location = new System.Drawing.Point(382, 187);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(60, 20);
             this.label24.TabIndex = 193;
@@ -970,7 +972,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label25.Location = new System.Drawing.Point(285, 276);
+            this.label25.Location = new System.Drawing.Point(263, 186);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(46, 20);
             this.label25.TabIndex = 192;
@@ -1083,7 +1085,7 @@
             "2048",
             "2049",
             "2050"});
-            this.TVEDYearBox.Location = new System.Drawing.Point(592, 274);
+            this.TVEDYearBox.Location = new System.Drawing.Point(570, 184);
             this.TVEDYearBox.Name = "TVEDYearBox";
             this.TVEDYearBox.Size = new System.Drawing.Size(87, 28);
             this.TVEDYearBox.TabIndex = 191;
@@ -1106,7 +1108,7 @@
             "10",
             "11",
             "12"});
-            this.TVEDMonthBox.Location = new System.Drawing.Point(470, 274);
+            this.TVEDMonthBox.Location = new System.Drawing.Point(448, 184);
             this.TVEDMonthBox.Name = "TVEDMonthBox";
             this.TVEDMonthBox.Size = new System.Drawing.Size(64, 28);
             this.TVEDMonthBox.TabIndex = 190;
@@ -1148,7 +1150,7 @@
             "29",
             "30",
             "31"});
-            this.TVEDDateBox.Location = new System.Drawing.Point(332, 273);
+            this.TVEDDateBox.Location = new System.Drawing.Point(310, 183);
             this.TVEDDateBox.Name = "TVEDDateBox";
             this.TVEDDateBox.Size = new System.Drawing.Size(66, 28);
             this.TVEDDateBox.TabIndex = 189;
@@ -1159,7 +1161,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label21.Location = new System.Drawing.Point(542, 215);
+            this.label21.Location = new System.Drawing.Point(520, 125);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(44, 20);
             this.label21.TabIndex = 188;
@@ -1171,7 +1173,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label22.Location = new System.Drawing.Point(404, 216);
+            this.label22.Location = new System.Drawing.Point(382, 126);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(60, 20);
             this.label22.TabIndex = 187;
@@ -1183,7 +1185,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label23.Location = new System.Drawing.Point(285, 215);
+            this.label23.Location = new System.Drawing.Point(263, 125);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(46, 20);
             this.label23.TabIndex = 186;
@@ -1296,7 +1298,7 @@
             "2048",
             "2049",
             "2050"});
-            this.IEDYearBox.Location = new System.Drawing.Point(592, 213);
+            this.IEDYearBox.Location = new System.Drawing.Point(570, 123);
             this.IEDYearBox.Name = "IEDYearBox";
             this.IEDYearBox.Size = new System.Drawing.Size(87, 28);
             this.IEDYearBox.TabIndex = 185;
@@ -1319,7 +1321,7 @@
             "10",
             "11",
             "12"});
-            this.IEDMonthBox.Location = new System.Drawing.Point(470, 213);
+            this.IEDMonthBox.Location = new System.Drawing.Point(448, 123);
             this.IEDMonthBox.Name = "IEDMonthBox";
             this.IEDMonthBox.Size = new System.Drawing.Size(64, 28);
             this.IEDMonthBox.TabIndex = 184;
@@ -1361,7 +1363,7 @@
             "29",
             "30",
             "31"});
-            this.IEDDateBox.Location = new System.Drawing.Point(332, 212);
+            this.IEDDateBox.Location = new System.Drawing.Point(310, 122);
             this.IEDDateBox.Name = "IEDDateBox";
             this.IEDDateBox.Size = new System.Drawing.Size(66, 28);
             this.IEDDateBox.TabIndex = 183;
@@ -1372,7 +1374,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label19.Location = new System.Drawing.Point(910, 340);
+            this.label19.Location = new System.Drawing.Point(888, 250);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(82, 20);
             this.label19.TabIndex = 182;
@@ -1384,7 +1386,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label18.Location = new System.Drawing.Point(910, 276);
+            this.label18.Location = new System.Drawing.Point(888, 186);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(82, 20);
             this.label18.TabIndex = 181;
@@ -1396,7 +1398,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label17.Location = new System.Drawing.Point(910, 216);
+            this.label17.Location = new System.Drawing.Point(888, 126);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(82, 20);
             this.label17.TabIndex = 180;
@@ -1408,7 +1410,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label16.Location = new System.Drawing.Point(29, 338);
+            this.label16.Location = new System.Drawing.Point(7, 248);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(220, 20);
             this.label16.TabIndex = 179;
@@ -1420,7 +1422,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label15.Location = new System.Drawing.Point(29, 274);
+            this.label15.Location = new System.Drawing.Point(7, 184);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(197, 20);
             this.label15.TabIndex = 178;
@@ -1432,7 +1434,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label14.Location = new System.Drawing.Point(30, 214);
+            this.label14.Location = new System.Drawing.Point(8, 124);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(166, 20);
             this.label14.TabIndex = 177;
@@ -1455,7 +1457,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(35, 142);
+            this.label2.Location = new System.Drawing.Point(13, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 20);
             this.label2.TabIndex = 220;
@@ -1464,7 +1466,7 @@
             // 
             // VehiclePlateNumberBox
             // 
-            this.VehiclePlateNumberBox.Location = new System.Drawing.Point(230, 142);
+            this.VehiclePlateNumberBox.Location = new System.Drawing.Point(208, 52);
             this.VehiclePlateNumberBox.Name = "VehiclePlateNumberBox";
             this.VehiclePlateNumberBox.Size = new System.Drawing.Size(125, 27);
             this.VehiclePlateNumberBox.TabIndex = 221;
@@ -1474,7 +1476,7 @@
             // 
             this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.MainMenu.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MainMenu.Location = new System.Drawing.Point(1303, 573);
+            this.MainMenu.Location = new System.Drawing.Point(1281, 520);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(118, 29);
             this.MainMenu.TabIndex = 222;
@@ -1495,12 +1497,12 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 390);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 399);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1418, 168);
+            this.dataGridView1.Size = new System.Drawing.Size(1401, 168);
             this.dataGridView1.TabIndex = 223;
             // 
             // Column1
@@ -1563,7 +1565,7 @@
             // 
             this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.SaveButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SaveButton.Location = new System.Drawing.Point(1164, 573);
+            this.SaveButton.Location = new System.Drawing.Point(1142, 520);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(94, 29);
             this.SaveButton.TabIndex = 227;
@@ -1575,7 +1577,7 @@
             // 
             this.Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Reset.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Reset.Location = new System.Drawing.Point(1008, 573);
+            this.Reset.Location = new System.Drawing.Point(986, 520);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(94, 29);
             this.Reset.TabIndex = 226;
@@ -1587,7 +1589,7 @@
             // 
             this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Delete.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Delete.Location = new System.Drawing.Point(856, 573);
+            this.Delete.Location = new System.Drawing.Point(834, 520);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(94, 29);
             this.Delete.TabIndex = 225;
@@ -1599,7 +1601,7 @@
             // 
             this.AddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.AddNew.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddNew.Location = new System.Drawing.Point(696, 573);
+            this.AddNew.Location = new System.Drawing.Point(674, 520);
             this.AddNew.Name = "AddNew";
             this.AddNew.Size = new System.Drawing.Size(94, 29);
             this.AddNew.TabIndex = 224;
@@ -1607,67 +1609,78 @@
             this.AddNew.UseVisualStyleBackColor = false;
             this.AddNew.Click += new System.EventHandler(this.AddNew_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.SaveButton);
+            this.panel1.Controls.Add(this.VehiclePlateNumberBox);
+            this.panel1.Controls.Add(this.label35);
+            this.panel1.Controls.Add(this.Reset);
+            this.panel1.Controls.Add(this.RCEReminderYearBox);
+            this.panel1.Controls.Add(this.label32);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.TVEDReminderYearBox);
+            this.panel1.Controls.Add(this.Delete);
+            this.panel1.Controls.Add(this.label29);
+            this.panel1.Controls.Add(this.label36);
+            this.panel1.Controls.Add(this.IEDReminderYearBox);
+            this.panel1.Controls.Add(this.AddNew);
+            this.panel1.Controls.Add(this.label37);
+            this.panel1.Controls.Add(this.RCEReminderMonthBox);
+            this.panel1.Controls.Add(this.MainMenu);
+            this.panel1.Controls.Add(this.RCEReminderDateBox);
+            this.panel1.Controls.Add(this.label33);
+            this.panel1.Controls.Add(this.label34);
+            this.panel1.Controls.Add(this.TVEDReminderMonthBox);
+            this.panel1.Controls.Add(this.TVEDReminderDateBox);
+            this.panel1.Controls.Add(this.label30);
+            this.panel1.Controls.Add(this.label31);
+            this.panel1.Controls.Add(this.IEDReminderMonthBox);
+            this.panel1.Controls.Add(this.IEDReminderDateBox);
+            this.panel1.Controls.Add(this.label26);
+            this.panel1.Controls.Add(this.label27);
+            this.panel1.Controls.Add(this.label28);
+            this.panel1.Controls.Add(this.RCEYearBox);
+            this.panel1.Controls.Add(this.RCEMonthBox);
+            this.panel1.Controls.Add(this.RCEDateBox);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.TVEDYearBox);
+            this.panel1.Controls.Add(this.TVEDMonthBox);
+            this.panel1.Controls.Add(this.TVEDDateBox);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.IEDYearBox);
+            this.panel1.Controls.Add(this.IEDMonthBox);
+            this.panel1.Controls.Add(this.IEDDateBox);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Location = new System.Drawing.Point(12, 69);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1433, 567);
+            this.panel1.TabIndex = 228;
+            // 
             // Reminder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1442, 614);
-            this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.Reset);
-            this.Controls.Add(this.Delete);
-            this.Controls.Add(this.AddNew);
+            this.ClientSize = new System.Drawing.Size(1457, 648);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.MainMenu);
-            this.Controls.Add(this.VehiclePlateNumberBox);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.RCEReminderYearBox);
-            this.Controls.Add(this.RCEReminderMonthBox);
-            this.Controls.Add(this.RCEReminderDateBox);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.TVEDReminderYearBox);
-            this.Controls.Add(this.TVEDReminderMonthBox);
-            this.Controls.Add(this.TVEDReminderDateBox);
-            this.Controls.Add(this.label29);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.label31);
-            this.Controls.Add(this.IEDReminderYearBox);
-            this.Controls.Add(this.IEDReminderMonthBox);
-            this.Controls.Add(this.IEDReminderDateBox);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.RCEYearBox);
-            this.Controls.Add(this.RCEMonthBox);
-            this.Controls.Add(this.RCEDateBox);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.TVEDYearBox);
-            this.Controls.Add(this.TVEDMonthBox);
-            this.Controls.Add(this.TVEDDateBox);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.IEDYearBox);
-            this.Controls.Add(this.IEDMonthBox);
-            this.Controls.Add(this.IEDDateBox);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.panel1);
             this.Name = "Reminder";
             this.Text = "Reminder";
             this.Load += new System.EventHandler(this.Reminder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1736,5 +1749,6 @@
         string newFilePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName,
 "bin\\Debug\\net6.0-windows\\Resources\\Files\\KENCO_DB.xlsx");
         private string Slash = "-";
+        private Panel panel1;
     }
 }

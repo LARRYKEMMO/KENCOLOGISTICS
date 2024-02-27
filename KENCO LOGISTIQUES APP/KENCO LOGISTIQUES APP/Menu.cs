@@ -22,7 +22,19 @@ namespace KENCO_LOGISTIQUES_APP
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Close the application
+                Application.Exit();
+            }
+        }
+
+        private void ownersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Owner form3 = new Owner();
@@ -30,19 +42,15 @@ namespace KENCO_LOGISTIQUES_APP
             this.Close();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void vehiclesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             this.Hide();
             newVehicle newVehicles = new newVehicle();
             newVehicles.ShowDialog();
             this.Close();
-
-            //this.Hide();
-
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void employeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             newDriver NewDriver = new newDriver();
@@ -50,7 +58,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.Close();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void remindersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Reminder reminder = new Reminder();
@@ -58,7 +66,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void accountingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Accounting accounting = new Accounting();
@@ -66,18 +74,29 @@ namespace KENCO_LOGISTIQUES_APP
             this.Close();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void incomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //IncomeAnalytics IA = new IncomeAnalytics();
-            //IA.ShowDialog();
-            //this.Close();
+            this.Hide();
+            IncomeAnalytics IA = new IncomeAnalytics();
+            IA.ShowDialog();
+            this.Close();
+        }
 
-            //this.Hide();
-            //ExpenseAnalyticscs EA = new ExpenseAnalyticscs();
-            //EA.ShowDialog();
-            //this.Close();
+        private void expensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ExpenseAnalyticscs EA = new ExpenseAnalyticscs();
+            EA.ShowDialog();
+            this.Close();
+        }
 
+        private void analyticsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cashFLowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             this.Hide();
             CashFlowAnalytics CFA = new CashFlowAnalytics();
             CFA.ShowDialog();

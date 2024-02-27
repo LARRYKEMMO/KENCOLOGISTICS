@@ -21,6 +21,7 @@ namespace KENCO_LOGISTIQUES_APP
             InitializeComponent();
             OpenXLFile();
             GetVehicles();
+            SearchMechanics("");
         }
 
         private void OpenXLFile()
