@@ -12,6 +12,7 @@ using ScottPlot;
 
 
 
+
 namespace KENCO_LOGISTIQUES_APP
 {
     public partial class IncomeAnalytics : Form
@@ -217,6 +218,8 @@ namespace KENCO_LOGISTIQUES_APP
                 }
             }
 
+            VehiclesList.Sort();
+
             //MessageBox.Show("Income: " + VehiclesList.Count, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             for (int i = 0; i < VehiclesList.Count;i++)
@@ -358,7 +361,8 @@ namespace KENCO_LOGISTIQUES_APP
                     GetCash2(dataGridView1);
                     values = values.Append(income2).ToArray();
                     labels.Add(digit);
-                    plt.PlotPie(values, labels.ToArray(), showPercentages: true, showLabels: true);
+                    plt.PlotPie(values, labels.ToArray(), showPercentages: true, showLabels: false);
+
                 }
 
             }
