@@ -15,6 +15,7 @@ namespace KENCO_LOGISTIQUES_APP
         public Menu()
         {
             InitializeComponent();
+            reminder.reminderCheck();
         }
 
         private void Form2_Load(object sender, EventArgs e)

@@ -71,7 +71,9 @@
             this.Reset = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.AddNew = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // CapacityUnityBox
@@ -81,7 +83,7 @@
             "Tons",
             "Kg",
             "Seats"});
-            this.CapacityUnityBox.Location = new System.Drawing.Point(308, 368);
+            this.CapacityUnityBox.Location = new System.Drawing.Point(287, 279);
             this.CapacityUnityBox.Name = "CapacityUnityBox";
             this.CapacityUnityBox.Size = new System.Drawing.Size(85, 28);
             this.CapacityUnityBox.TabIndex = 185;
@@ -98,7 +100,7 @@
             "HYUNDAI",
             "RENAULT",
             "HONDA"});
-            this.MakeBox.Location = new System.Drawing.Point(171, 167);
+            this.MakeBox.Location = new System.Drawing.Point(150, 78);
             this.MakeBox.Name = "MakeBox";
             this.MakeBox.Size = new System.Drawing.Size(151, 28);
             this.MakeBox.TabIndex = 184;
@@ -113,7 +115,7 @@
             "Camion Carosserie",
             "Camion Benne",
             "Bulldozer"});
-            this.TypeBox.Location = new System.Drawing.Point(171, 235);
+            this.TypeBox.Location = new System.Drawing.Point(150, 146);
             this.TypeBox.Name = "TypeBox";
             this.TypeBox.Size = new System.Drawing.Size(151, 28);
             this.TypeBox.TabIndex = 183;
@@ -124,7 +126,7 @@
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label38.Location = new System.Drawing.Point(428, 303);
+            this.label38.Location = new System.Drawing.Point(407, 214);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(44, 20);
             this.label38.TabIndex = 182;
@@ -135,7 +137,7 @@
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label39.Location = new System.Drawing.Point(290, 304);
+            this.label39.Location = new System.Drawing.Point(269, 215);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(60, 20);
             this.label39.TabIndex = 181;
@@ -146,7 +148,7 @@
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label40.Location = new System.Drawing.Point(171, 303);
+            this.label40.Location = new System.Drawing.Point(150, 214);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(46, 20);
             this.label40.TabIndex = 180;
@@ -258,7 +260,7 @@
             "2048",
             "2049",
             "2050"});
-            this.FUYearBox.Location = new System.Drawing.Point(478, 301);
+            this.FUYearBox.Location = new System.Drawing.Point(457, 212);
             this.FUYearBox.Name = "FUYearBox";
             this.FUYearBox.Size = new System.Drawing.Size(87, 28);
             this.FUYearBox.TabIndex = 179;
@@ -281,7 +283,7 @@
             "10",
             "11",
             "12"});
-            this.FUMonthBox.Location = new System.Drawing.Point(356, 301);
+            this.FUMonthBox.Location = new System.Drawing.Point(335, 212);
             this.FUMonthBox.Name = "FUMonthBox";
             this.FUMonthBox.Size = new System.Drawing.Size(64, 28);
             this.FUMonthBox.TabIndex = 178;
@@ -323,7 +325,7 @@
             "29",
             "30",
             "31"});
-            this.FUDateBox.Location = new System.Drawing.Point(218, 300);
+            this.FUDateBox.Location = new System.Drawing.Point(197, 211);
             this.FUDateBox.Name = "FUDateBox";
             this.FUDateBox.Size = new System.Drawing.Size(66, 28);
             this.FUDateBox.TabIndex = 177;
@@ -331,14 +333,14 @@
             // 
             // CapacityBox
             // 
-            this.CapacityBox.Location = new System.Drawing.Point(172, 368);
+            this.CapacityBox.Location = new System.Drawing.Point(151, 279);
             this.CapacityBox.Name = "CapacityBox";
             this.CapacityBox.Size = new System.Drawing.Size(125, 27);
             this.CapacityBox.TabIndex = 134;
             // 
             // ChassisNumberBox
             // 
-            this.ChassisNumberBox.Location = new System.Drawing.Point(172, 438);
+            this.ChassisNumberBox.Location = new System.Drawing.Point(151, 349);
             this.ChassisNumberBox.Name = "ChassisNumberBox";
             this.ChassisNumberBox.Size = new System.Drawing.Size(248, 27);
             this.ChassisNumberBox.TabIndex = 133;
@@ -346,7 +348,7 @@
             // 
             // PlateNumberBox
             // 
-            this.PlateNumberBox.Location = new System.Drawing.Point(172, 99);
+            this.PlateNumberBox.Location = new System.Drawing.Point(151, 10);
             this.PlateNumberBox.Name = "PlateNumberBox";
             this.PlateNumberBox.Size = new System.Drawing.Size(125, 27);
             this.PlateNumberBox.TabIndex = 132;
@@ -367,7 +369,7 @@
             // 
             // DriverNameBox
             // 
-            this.DriverNameBox.Location = new System.Drawing.Point(172, 512);
+            this.DriverNameBox.Location = new System.Drawing.Point(151, 423);
             this.DriverNameBox.Name = "DriverNameBox";
             this.DriverNameBox.Size = new System.Drawing.Size(125, 27);
             this.DriverNameBox.TabIndex = 129;
@@ -384,7 +386,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label12.Location = new System.Drawing.Point(24, 723);
+            this.label12.Location = new System.Drawing.Point(5, 637);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 20);
             this.label12.TabIndex = 124;
@@ -395,7 +397,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(26, 581);
+            this.label10.Location = new System.Drawing.Point(5, 492);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 20);
             this.label10.TabIndex = 122;
@@ -406,7 +408,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(20, 655);
+            this.label9.Location = new System.Drawing.Point(-1, 566);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(144, 20);
             this.label9.TabIndex = 121;
@@ -417,7 +419,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(26, 512);
+            this.label8.Location = new System.Drawing.Point(5, 423);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(112, 20);
             this.label8.TabIndex = 120;
@@ -428,7 +430,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(20, 441);
+            this.label7.Location = new System.Drawing.Point(5, 349);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 20);
             this.label7.TabIndex = 119;
@@ -440,7 +442,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(21, 371);
+            this.label6.Location = new System.Drawing.Point(0, 282);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 20);
             this.label6.TabIndex = 118;
@@ -451,7 +453,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(21, 300);
+            this.label5.Location = new System.Drawing.Point(0, 211);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 20);
             this.label5.TabIndex = 117;
@@ -462,7 +464,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(25, 235);
+            this.label4.Location = new System.Drawing.Point(4, 146);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 20);
             this.label4.TabIndex = 116;
@@ -473,7 +475,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(24, 170);
+            this.label3.Location = new System.Drawing.Point(3, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 115;
@@ -484,7 +486,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(25, 99);
+            this.label2.Location = new System.Drawing.Point(4, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 20);
             this.label2.TabIndex = 114;
@@ -665,6 +667,37 @@
             this.AddNew.UseVisualStyleBackColor = false;
             this.AddNew.Click += new System.EventHandler(this.AddNew_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.CapacityUnityBox);
+            this.panel1.Controls.Add(this.MakeBox);
+            this.panel1.Controls.Add(this.TypeBox);
+            this.panel1.Controls.Add(this.label38);
+            this.panel1.Controls.Add(this.label39);
+            this.panel1.Controls.Add(this.label40);
+            this.panel1.Controls.Add(this.FUYearBox);
+            this.panel1.Controls.Add(this.FUMonthBox);
+            this.panel1.Controls.Add(this.FUDateBox);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.CapacityBox);
+            this.panel1.Controls.Add(this.ChassisNumberBox);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.PlateNumberBox);
+            this.panel1.Controls.Add(this.DriverNameBox);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(21, 89);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(652, 718);
+            this.panel1.TabIndex = 192;
+            // 
             // newVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -677,36 +710,16 @@
             this.Controls.Add(this.AddNew);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.MainMenu);
-            this.Controls.Add(this.CapacityUnityBox);
-            this.Controls.Add(this.MakeBox);
-            this.Controls.Add(this.TypeBox);
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.label39);
-            this.Controls.Add(this.label40);
-            this.Controls.Add(this.FUYearBox);
-            this.Controls.Add(this.FUMonthBox);
-            this.Controls.Add(this.FUDateBox);
-            this.Controls.Add(this.CapacityBox);
-            this.Controls.Add(this.ChassisNumberBox);
-            this.Controls.Add(this.PlateNumberBox);
             this.Controls.Add(this.CDBox);
             this.Controls.Add(this.CDTelephoneBox);
-            this.Controls.Add(this.DriverNameBox);
             this.Controls.Add(this.DTelephoneBox);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Name = "newVehicle";
             this.Text = "newVehicle";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,5 +782,6 @@
 
         string newFilePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName,
 "bin\\Debug\\net6.0-windows\\Resources\\Files\\KENCO_DB.xlsx");
+        private Panel panel1;
     }
 }

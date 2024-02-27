@@ -1,8 +1,10 @@
-﻿using System;
+﻿using ScottPlot;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +23,55 @@ namespace KENCO_LOGISTIQUES_APP
         private void Reminder_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public async void reminderCheck()
+        {
+            await Task.Delay(1000);
+
+            string? digit1;
+            string? digit2;
+            string? digit3;
+
+            DateTime dateTime1;
+            DateTime dateTime2;
+            DateTime dateTime3;
+
+            // Get today's date
+            DateTime currentDate = DateTime.Now.Date;
+
+            
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                digit1 = dataGridView1.Rows[i].Cells[2].Value?.ToString();
+                digit2 = dataGridView1.Rows[i].Cells[4].Value?.ToString();
+                digit3 = dataGridView1.Rows[i].Cells[6].Value?.ToString();
+                if (digit1 != null && digit2 != null && digit3 != null)
+                {
+                    DateTime.TryParseExact(digit1, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime1);
+                    DateTime.TryParseExact(digit2, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime2);
+                    DateTime.TryParseExact(digit3, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime3);
+                
+                    if(dateTime1.Equals(currentDate))
+                    {
+                        MessageBox.Show("Reminder: Insurance Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    if (dateTime2.Equals(currentDate))
+                    {
+                        MessageBox.Show("Reminder: Technical Visit Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    if (dateTime3.Equals(currentDate))
+                    {
+                        MessageBox.Show("Reminder: Registration Card Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+
+
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

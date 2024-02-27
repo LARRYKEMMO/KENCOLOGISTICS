@@ -217,5 +217,7 @@
         private ToolStripMenuItem accidentsToolStripMenuItem;
         private ToolStripMenuItem documentManagementToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private Reminder reminder = new Reminder();
+
     }
 }
