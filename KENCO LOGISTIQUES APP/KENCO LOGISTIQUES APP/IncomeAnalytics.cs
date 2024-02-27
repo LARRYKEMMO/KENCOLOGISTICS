@@ -121,9 +121,12 @@ namespace KENCO_LOGISTIQUES_APP
             //Search1 = "CE182EP";
             //Search2 = "transportation services";
             //CreatePieChart();
+            GetCash(dataGridView1);
+            income3 = income;
             GetVehicles();
             //SearchMechanics2(Search2);
             GetDescription();
+            SearchMechanics("");
         }
 
         private void SearchMechanics(string Text)
@@ -235,6 +238,7 @@ namespace KENCO_LOGISTIQUES_APP
                     dataY = dataY.Append(income).ToArray();
                     plt.AddScatter(dataX, dataY);
                 }
+
                 
             }
 
@@ -364,7 +368,8 @@ namespace KENCO_LOGISTIQUES_APP
                     plt.PlotPie(values, labels.ToArray(), showPercentages: true, showLabels: false);
 
                 }
-
+                percentage = (income2 / income3) * 100;
+                LegendTable.Rows.Add(digit, income2.ToString(), Math.Round(percentage, 2) + "%");
             }
 
 
