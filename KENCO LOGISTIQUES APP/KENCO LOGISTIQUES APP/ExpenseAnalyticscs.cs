@@ -135,7 +135,7 @@ namespace KENCO_LOGISTIQUES_APP
             plt.Palette = Palette.Amber;
             plt.Title("Expenses Chart");
             plt.XLabel("Vehicles");
-            plt.YLabel("Income");
+            plt.YLabel("Expenses");
 
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {

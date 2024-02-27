@@ -144,7 +144,7 @@ namespace KENCO_LOGISTIQUES_APP
             plt.Palette = Palette.Amber;
             plt.Title("Cash Flow Chart");
             plt.XLabel("Vehicles");
-            plt.YLabel("Income");
+            plt.YLabel("Profit / Loss");
 
             plt2.Palette = Palette.Amber;
             plt2.Title("Cash Flow Paretto");
@@ -186,7 +186,7 @@ namespace KENCO_LOGISTIQUES_APP
                     dataX = dataX.Append(doubleX).ToArray();
                     dataY = dataY.Append(income).ToArray();
                     plt.AddScatter(dataX, dataY);
-                    plt2.PlotPie(dataX, labels.ToArray());
+                    plt2.PlotPie(dataX, labels.ToArray(), showPercentages: true); ;
                 }
 
 
