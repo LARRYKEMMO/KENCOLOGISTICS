@@ -68,9 +68,19 @@ namespace KENCO_LOGISTIQUES_APP
 
         private void button8_Click(object sender, EventArgs e)
         {
+            //this.Hide();
+            //IncomeAnalytics IA = new IncomeAnalytics();
+            //IA.ShowDialog();
+            //this.Close();
+
+            //this.Hide();
+            //ExpenseAnalyticscs EA = new ExpenseAnalyticscs();
+            //EA.ShowDialog();
+            //this.Close();
+
             this.Hide();
-            IncomeAnalytics IA = new IncomeAnalytics();
-            IA.ShowDialog();
+            CashFlowAnalytics CFA = new CashFlowAnalytics();
+            CFA.ShowDialog();
             this.Close();
         }
     }

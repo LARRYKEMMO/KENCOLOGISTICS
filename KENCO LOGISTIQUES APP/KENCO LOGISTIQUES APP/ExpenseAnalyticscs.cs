@@ -1,33 +1,35 @@
-﻿using Microsoft.Office.Interop.Excel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ScottPlot;
 
-
-
-
 namespace KENCO_LOGISTIQUES_APP
 {
-    public partial class IncomeAnalytics : Form
+    public partial class ExpenseAnalyticscs : Form
     {
-        public IncomeAnalytics()
+        public ExpenseAnalyticscs()
         {
             InitializeComponent();
             OpenXLFile();
+            GetCash(dataGridView1);
+            income3 = income;
+            GetVehicles();
+            GetDescription();
+            SearchMechanics("");
         }
 
         private void OpenXLFile()
         {
             dynamic xlapp = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application"));
             dynamic xlworkbook = xlapp.Workbooks.Open(newFilePath);
-            dynamic xlworksheet = xlworkbook.Worksheets["Income"];
+            dynamic xlworksheet = xlworkbook.Worksheets["Expenses"];
             dynamic xlrange = xlworksheet.UsedRange;
 
             //dataGridView3.ColumnCount = xlrange.Columns.Count;
@@ -45,31 +47,6 @@ namespace KENCO_LOGISTIQUES_APP
 
             xlworkbook.Close();
             xlapp.Quit();
-        }
-
-        private void Search_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                // Check if the row is not a new row
-                if (!row.IsNewRow)
-                {
-                    // Access the cell value for the 'Amount (FCFA)' column
-                    string amountCellValue = Convert.ToString(row.Cells["Column1"].Value);
-
-                    // Check if the cell value contains the search text
-                    if (amountCellValue.Contains(SearchBox.Text))
-                    {
-                        // Show the row if the cell value contains the search text
-                        row.Visible = true;
-                    }
-                    else
-                    {
-                        // Hide the row if the cell value does not contain the search text
-                        row.Visible = false;
-                    }
-                }
-            }
         }
 
         private void DeleteEmptyRows(DataGridView dataGridView)
@@ -97,36 +74,30 @@ namespace KENCO_LOGISTIQUES_APP
             return true; // All cells are either null or empty
         }
 
-        private void DrawGraph()
+        private void Search_Click(object sender, EventArgs e)
         {
-            var plt = new ScottPlot.Plot(596, 165);
-            int pointcount = 60;
-            double[] x = new double[] { 1, 2, 3, 4, 5 };
-            double[] Sin = new double[] { 1, 4, 9, 16, 25 };
-            //double[] Cos = DataGen.Cos(pointcount);
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                // Check if the row is not a new row
+                if (!row.IsNewRow)
+                {
+                    // Access the cell value for the 'Amount (FCFA)' column
+                    string amountCellValue = Convert.ToString(row.Cells["Column1"].Value);
 
-            plt.Palette = Palette.Amber;
-            plt.Title("My chart");
-            plt.XLabel("x-axis");
-            plt.YLabel("y-axis");
-            plt.AddScatter(x, Sin);
-            //plt.AddScatter(x, Cos);
-            plt.SaveFig("scater.png");
-            pictureBox1.ImageLocation = "scater.png";
-        }
-
-
-        private void IncomeAnalytics_Load(object sender, EventArgs e)
-        {
-            //Search1 = "CE182EP";
-            //Search2 = "transportation services";
-            //CreatePieChart();
-            GetCash(dataGridView1);
-            income3 = income;
-            GetVehicles();
-            //SearchMechanics2(Search2);
-            GetDescription();
-            SearchMechanics("");
+                    // Check if the cell value contains the search text
+                    if (amountCellValue.Contains(SearchBox.Text))
+                    {
+                        // Show the row if the cell value contains the search text
+                        row.Visible = true;
+                    }
+                    else
+                    {
+                        // Hide the row if the cell value does not contain the search text
+                        row.Visible = false;
+                    }
+                }
+            }
+        
         }
 
         private void SearchMechanics(string Text)
@@ -154,41 +125,6 @@ namespace KENCO_LOGISTIQUES_APP
             }
         }
 
-
-        private void SearchMechanics2(string Text2)
-        {
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                // Check if the row is not a new row
-                if (!row.IsNewRow)
-                {
-                    // Access the cell value for the 'Amount (FCFA)' column
-                    //string amountCellValue = Convert.ToString(row.Cells["Column1"].Value);
-                    string amountCellValue2 = Convert.ToString(row.Cells["Column2"].Value);
-
-                    // Check if the cell value contains the search text
-                    //if (amountCellValue.Contains(Text))
-                    //{
-                    //    // Show the row if the cell value contains the search text
-                    //    row.Visible = true;
-                    if(amountCellValue2.Contains(Text2))
-                    {
-                        row.Visible = true;
-                    }
-                    else
-                    {
-                        row.Visible = false;
-                    }
-                    //}
-                    //else
-                    //{
-                    //    // Hide the row if the cell value does not contain the search text
-                    //    row.Visible = false;
-                    //}
-                }
-            }
-        }
-
         private void GetVehicles()
         {
             string? digit;
@@ -197,7 +133,7 @@ namespace KENCO_LOGISTIQUES_APP
             double[] dataY = new double[0];
 
             plt.Palette = Palette.Amber;
-            plt.Title("Income Chart");
+            plt.Title("Expenses Chart");
             plt.XLabel("Vehicles");
             plt.YLabel("Income");
 
@@ -225,7 +161,7 @@ namespace KENCO_LOGISTIQUES_APP
 
             //MessageBox.Show("Income: " + VehiclesList.Count, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            for (int i = 0; i < VehiclesList.Count;i++)
+            for (int i = 0; i < VehiclesList.Count; i++)
             {
                 income = 0;
                 digit = VehiclesList[i]?.ToString();
@@ -239,17 +175,17 @@ namespace KENCO_LOGISTIQUES_APP
                     plt.AddScatter(dataX, dataY);
                 }
 
-                
+
             }
 
-            plt.SaveFig("IncomeChart.png");
-            pictureBox1.ImageLocation = "IncomeChart.png";
+            plt.SaveFig("ExpenseChart.png");
+            pictureBox1.ImageLocation = "ExpenseChart.png";
         }
 
         private void GetDigit(string temp)
         {
             string Number;
-            
+
             Number = temp.Substring(2, 3);
             //MessageBox.Show("Income: " + Number, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
             doubleX = double.Parse(Number);
@@ -257,7 +193,7 @@ namespace KENCO_LOGISTIQUES_APP
 
         private void GetCash(DataGridView dataGridView)
         {
-           
+
 
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
@@ -311,20 +247,39 @@ namespace KENCO_LOGISTIQUES_APP
             }
         }
 
-        private void CreatePieChart()
+
+        private void SearchMechanics2(string Text2)
         {
-            var plt = new ScottPlot.Plot(400, 357);
-            // Define data
-            double[] values = { 35, 25, 20, 10, 5 };
-            string[] labels = { "Apple", "Banana", "Orange", "Grapes", "Watermelon" };
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                // Check if the row is not a new row
+                if (!row.IsNewRow)
+                {
+                    // Access the cell value for the 'Amount (FCFA)' column
+                    //string amountCellValue = Convert.ToString(row.Cells["Column1"].Value);
+                    string amountCellValue2 = Convert.ToString(row.Cells["Column2"].Value);
 
-            // Create ScottPlot pie chart
-            plt.PlotPie(values, labels);
-            plt.Title("Fruit Distribution");
-
-            // Render the plot
-            plt.SaveFig("Fruit.png");
-            pictureBox2.ImageLocation = "Fruit.png";
+                    // Check if the cell value contains the search text
+                    //if (amountCellValue.Contains(Text))
+                    //{
+                    //    // Show the row if the cell value contains the search text
+                    //    row.Visible = true;
+                    if (amountCellValue2.Contains(Text2))
+                    {
+                        row.Visible = true;
+                    }
+                    else
+                    {
+                        row.Visible = false;
+                    }
+                    //}
+                    //else
+                    //{
+                    //    // Hide the row if the cell value does not contain the search text
+                    //    row.Visible = false;
+                    //}
+                }
+            }
         }
 
         private void GetDescription()
@@ -373,9 +328,9 @@ namespace KENCO_LOGISTIQUES_APP
             }
 
 
-            plt.Title("Income Paretto Chart");
-            plt.SaveFig("Paretto.png");
-            pictureBox2.ImageLocation = "Paretto.png";
+            plt.Title("Expense Paretto Chart");
+            plt.SaveFig("ParettoExp.png");
+            pictureBox2.ImageLocation = "ParettoExp.png";
 
         }
 
