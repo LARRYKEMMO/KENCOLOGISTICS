@@ -32,6 +32,10 @@ namespace KENCO_LOGISTIQUES_APP
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.NicknameBox2 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.NicknameBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.EVBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -42,12 +46,14 @@ namespace KENCO_LOGISTIQUES_APP
             this.AddExpense = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteIncome = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +85,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,6 +119,10 @@ namespace KENCO_LOGISTIQUES_APP
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.NicknameBox2);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.NicknameBox);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.EVBox);
             this.panel1.Controls.Add(this.label14);
@@ -148,17 +159,53 @@ namespace KENCO_LOGISTIQUES_APP
             this.panel1.Controls.Add(this.label38);
             this.panel1.Controls.Add(this.label40);
             this.panel1.Controls.Add(this.label39);
-            this.panel1.Location = new System.Drawing.Point(21, 50);
+            this.panel1.Location = new System.Drawing.Point(21, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1580, 337);
+            this.panel1.Size = new System.Drawing.Size(1580, 354);
             this.panel1.TabIndex = 221;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label17.Location = new System.Drawing.Point(839, 96);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(83, 20);
+            this.label17.TabIndex = 277;
+            this.label17.Text = "Nickname:";
+            // 
+            // NicknameBox2
+            // 
+            this.NicknameBox2.Location = new System.Drawing.Point(934, 96);
+            this.NicknameBox2.Name = "NicknameBox2";
+            this.NicknameBox2.Size = new System.Drawing.Size(125, 27);
+            this.NicknameBox2.TabIndex = 278;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label16.Location = new System.Drawing.Point(17, 96);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(83, 20);
+            this.label16.TabIndex = 275;
+            this.label16.Text = "Nickname:";
+            // 
+            // NicknameBox
+            // 
+            this.NicknameBox.Location = new System.Drawing.Point(121, 93);
+            this.NicknameBox.Name = "NicknameBox";
+            this.NicknameBox.Size = new System.Drawing.Size(125, 27);
+            this.NicknameBox.TabIndex = 276;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label15.Location = new System.Drawing.Point(839, 69);
+            this.label15.Location = new System.Drawing.Point(839, 47);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(69, 20);
             this.label15.TabIndex = 273;
@@ -166,7 +213,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // EVBox
             // 
-            this.EVBox.Location = new System.Drawing.Point(922, 69);
+            this.EVBox.Location = new System.Drawing.Point(934, 47);
             this.EVBox.Name = "EVBox";
             this.EVBox.Size = new System.Drawing.Size(125, 27);
             this.EVBox.TabIndex = 274;
@@ -176,7 +223,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label14.Location = new System.Drawing.Point(17, 69);
+            this.label14.Location = new System.Drawing.Point(17, 47);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 20);
             this.label14.TabIndex = 271;
@@ -184,7 +231,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // IVBox
             // 
-            this.IVBox.Location = new System.Drawing.Point(100, 69);
+            this.IVBox.Location = new System.Drawing.Point(121, 44);
             this.IVBox.Name = "IVBox";
             this.IVBox.Size = new System.Drawing.Size(125, 27);
             this.IVBox.TabIndex = 272;
@@ -193,7 +240,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             this.ResetExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ResetExpense.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ResetExpense.Location = new System.Drawing.Point(1404, 295);
+            this.ResetExpense.Location = new System.Drawing.Point(1394, 310);
             this.ResetExpense.Name = "ResetExpense";
             this.ResetExpense.Size = new System.Drawing.Size(94, 29);
             this.ResetExpense.TabIndex = 249;
@@ -205,7 +252,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             this.DeleteExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.DeleteExpense.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DeleteExpense.Location = new System.Drawing.Point(1247, 295);
+            this.DeleteExpense.Location = new System.Drawing.Point(1237, 310);
             this.DeleteExpense.Name = "DeleteExpense";
             this.DeleteExpense.Size = new System.Drawing.Size(94, 29);
             this.DeleteExpense.TabIndex = 248;
@@ -217,7 +264,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             this.ResetIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ResetIncome.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ResetIncome.Location = new System.Drawing.Point(566, 295);
+            this.ResetIncome.Location = new System.Drawing.Point(566, 310);
             this.ResetIncome.Name = "ResetIncome";
             this.ResetIncome.Size = new System.Drawing.Size(94, 29);
             this.ResetIncome.TabIndex = 252;
@@ -229,7 +276,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             this.AddExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.AddExpense.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddExpense.Location = new System.Drawing.Point(1039, 295);
+            this.AddExpense.Location = new System.Drawing.Point(1029, 310);
             this.AddExpense.Name = "AddExpense";
             this.AddExpense.Size = new System.Drawing.Size(138, 29);
             this.AddExpense.TabIndex = 247;
@@ -244,15 +291,16 @@ namespace KENCO_LOGISTIQUES_APP
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.Column14,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.Column11});
-            this.dataGridView2.Location = new System.Drawing.Point(1111, 60);
+            this.dataGridView2.Location = new System.Drawing.Point(1111, 47);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(456, 158);
+            this.dataGridView2.Size = new System.Drawing.Size(456, 186);
             this.dataGridView2.TabIndex = 270;
             // 
             // dataGridViewTextBoxColumn1
@@ -262,6 +310,14 @@ namespace KENCO_LOGISTIQUES_APP
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 134;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Nickname";
+            this.Column14.MinimumWidth = 6;
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -291,7 +347,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             this.DeleteIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.DeleteIncome.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DeleteIncome.Location = new System.Drawing.Point(409, 295);
+            this.DeleteIncome.Location = new System.Drawing.Point(409, 310);
             this.DeleteIncome.Name = "DeleteIncome";
             this.DeleteIncome.Size = new System.Drawing.Size(94, 29);
             this.DeleteIncome.TabIndex = 251;
@@ -306,15 +362,16 @@ namespace KENCO_LOGISTIQUES_APP
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column13,
             this.Column10,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(289, 60);
+            this.dataGridView1.Location = new System.Drawing.Point(289, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(456, 158);
+            this.dataGridView1.Size = new System.Drawing.Size(456, 186);
             this.dataGridView1.TabIndex = 269;
             // 
             // Column1
@@ -324,6 +381,14 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Width = 125;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Nickname";
+            this.Column13.MinimumWidth = 6;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 125;
             // 
             // Column10
             // 
@@ -353,7 +418,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             this.AddIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.AddIncome.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddIncome.Location = new System.Drawing.Point(201, 295);
+            this.AddIncome.Location = new System.Drawing.Point(201, 310);
             this.AddIncome.Name = "AddIncome";
             this.AddIncome.Size = new System.Drawing.Size(138, 29);
             this.AddIncome.TabIndex = 250;
@@ -366,7 +431,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(1154, 244);
+            this.label7.Location = new System.Drawing.Point(1144, 259);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 20);
             this.label7.TabIndex = 268;
@@ -374,17 +439,18 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // ExpenseAmountBox
             // 
-            this.ExpenseAmountBox.Location = new System.Drawing.Point(922, 127);
+            this.ExpenseAmountBox.Location = new System.Drawing.Point(934, 142);
             this.ExpenseAmountBox.Name = "ExpenseAmountBox";
             this.ExpenseAmountBox.Size = new System.Drawing.Size(125, 27);
             this.ExpenseAmountBox.TabIndex = 260;
+            this.ExpenseAmountBox.TextChanged += new System.EventHandler(this.ExpenseAmountBox_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(1016, 245);
+            this.label8.Location = new System.Drawing.Point(1006, 260);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 20);
             this.label8.TabIndex = 267;
@@ -395,7 +461,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(264, 10);
+            this.label2.Location = new System.Drawing.Point(289, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 18);
             this.label2.TabIndex = 245;
@@ -406,7 +472,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(897, 244);
+            this.label9.Location = new System.Drawing.Point(887, 259);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 20);
             this.label9.TabIndex = 266;
@@ -417,7 +483,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(1144, 10);
+            this.label3.Location = new System.Drawing.Point(1111, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 18);
             this.label3.TabIndex = 246;
@@ -529,7 +595,7 @@ namespace KENCO_LOGISTIQUES_APP
             "2048",
             "2049",
             "2050"});
-            this.ExpenseYearBox.Location = new System.Drawing.Point(1204, 242);
+            this.ExpenseYearBox.Location = new System.Drawing.Point(1194, 257);
             this.ExpenseYearBox.Name = "ExpenseYearBox";
             this.ExpenseYearBox.Size = new System.Drawing.Size(87, 28);
             this.ExpenseYearBox.TabIndex = 265;
@@ -539,7 +605,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(17, 127);
+            this.label5.Location = new System.Drawing.Point(17, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 247;
@@ -562,7 +628,7 @@ namespace KENCO_LOGISTIQUES_APP
             "10",
             "11",
             "12"});
-            this.ExpenseMonthBox.Location = new System.Drawing.Point(1082, 242);
+            this.ExpenseMonthBox.Location = new System.Drawing.Point(1072, 257);
             this.ExpenseMonthBox.Name = "ExpenseMonthBox";
             this.ExpenseMonthBox.Size = new System.Drawing.Size(64, 28);
             this.ExpenseMonthBox.TabIndex = 264;
@@ -572,7 +638,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(16, 180);
+            this.label4.Location = new System.Drawing.Point(16, 195);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 248;
@@ -614,14 +680,14 @@ namespace KENCO_LOGISTIQUES_APP
             "29",
             "30",
             "31"});
-            this.ExpenseDayBox.Location = new System.Drawing.Point(944, 241);
+            this.ExpenseDayBox.Location = new System.Drawing.Point(934, 256);
             this.ExpenseDayBox.Name = "ExpenseDayBox";
             this.ExpenseDayBox.Size = new System.Drawing.Size(66, 28);
             this.ExpenseDayBox.TabIndex = 263;
             // 
             // IncomeAmountBox
             // 
-            this.IncomeAmountBox.Location = new System.Drawing.Point(100, 127);
+            this.IncomeAmountBox.Location = new System.Drawing.Point(121, 139);
             this.IncomeAmountBox.Name = "IncomeAmountBox";
             this.IncomeAmountBox.Size = new System.Drawing.Size(125, 27);
             this.IncomeAmountBox.TabIndex = 249;
@@ -631,7 +697,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(844, 244);
+            this.label10.Location = new System.Drawing.Point(834, 259);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 20);
             this.label10.TabIndex = 262;
@@ -648,7 +714,7 @@ namespace KENCO_LOGISTIQUES_APP
             "Logistics consulting and advisory services",
             "Tolls and access fees (reimbursed by clients)",
             "Equipment leasing or rental income"});
-            this.IncomeDescription.Location = new System.Drawing.Point(121, 177);
+            this.IncomeDescription.Location = new System.Drawing.Point(121, 192);
             this.IncomeDescription.Name = "IncomeDescription";
             this.IncomeDescription.Size = new System.Drawing.Size(151, 28);
             this.IncomeDescription.TabIndex = 250;
@@ -687,7 +753,7 @@ namespace KENCO_LOGISTIQUES_APP
             "Cargo loading and unloading fees",
             "Equipment financing costs",
             "Technology and software licensing fees"});
-            this.ExpenseDecriptionBox.Location = new System.Drawing.Point(944, 180);
+            this.ExpenseDecriptionBox.Location = new System.Drawing.Point(934, 195);
             this.ExpenseDecriptionBox.Name = "ExpenseDecriptionBox";
             this.ExpenseDecriptionBox.Size = new System.Drawing.Size(151, 28);
             this.ExpenseDecriptionBox.TabIndex = 261;
@@ -697,7 +763,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(12, 241);
+            this.label6.Location = new System.Drawing.Point(12, 256);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 20);
             this.label6.TabIndex = 251;
@@ -739,7 +805,7 @@ namespace KENCO_LOGISTIQUES_APP
             "29",
             "30",
             "31"});
-            this.IncomeDateBox.Location = new System.Drawing.Point(111, 238);
+            this.IncomeDateBox.Location = new System.Drawing.Point(111, 253);
             this.IncomeDateBox.Name = "IncomeDateBox";
             this.IncomeDateBox.Size = new System.Drawing.Size(66, 28);
             this.IncomeDateBox.TabIndex = 252;
@@ -749,7 +815,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label11.Location = new System.Drawing.Point(845, 183);
+            this.label11.Location = new System.Drawing.Point(835, 198);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(93, 20);
             this.label11.TabIndex = 259;
@@ -772,7 +838,7 @@ namespace KENCO_LOGISTIQUES_APP
             "10",
             "11",
             "12"});
-            this.IncomeMonthBox.Location = new System.Drawing.Point(249, 239);
+            this.IncomeMonthBox.Location = new System.Drawing.Point(249, 254);
             this.IncomeMonthBox.Name = "IncomeMonthBox";
             this.IncomeMonthBox.Size = new System.Drawing.Size(64, 28);
             this.IncomeMonthBox.TabIndex = 253;
@@ -782,11 +848,12 @@ namespace KENCO_LOGISTIQUES_APP
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label12.Location = new System.Drawing.Point(845, 127);
+            this.label12.Location = new System.Drawing.Point(839, 142);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 20);
             this.label12.TabIndex = 258;
             this.label12.Text = "Amount:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // IncomeYearBox
             // 
@@ -894,7 +961,7 @@ namespace KENCO_LOGISTIQUES_APP
             "2048",
             "2049",
             "2050"});
-            this.IncomeYearBox.Location = new System.Drawing.Point(371, 239);
+            this.IncomeYearBox.Location = new System.Drawing.Point(371, 254);
             this.IncomeYearBox.Name = "IncomeYearBox";
             this.IncomeYearBox.Size = new System.Drawing.Size(87, 28);
             this.IncomeYearBox.TabIndex = 254;
@@ -904,7 +971,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label38.Location = new System.Drawing.Point(321, 241);
+            this.label38.Location = new System.Drawing.Point(321, 256);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(44, 20);
             this.label38.TabIndex = 257;
@@ -915,7 +982,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label40.Location = new System.Drawing.Point(64, 241);
+            this.label40.Location = new System.Drawing.Point(64, 256);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(40, 20);
             this.label40.TabIndex = 255;
@@ -926,7 +993,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label39.Location = new System.Drawing.Point(183, 242);
+            this.label39.Location = new System.Drawing.Point(183, 257);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(60, 20);
             this.label39.TabIndex = 256;
@@ -950,6 +1017,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
+            this.Column15,
             this.Column12,
             this.Column5,
             this.Column6,
@@ -971,6 +1039,14 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Width = 225;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Nickname";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 225;
             // 
             // Column12
             // 
@@ -1179,6 +1255,7 @@ namespace KENCO_LOGISTIQUES_APP
         private string VIString;
         private string VEString;
         private string VehicleNumber;
+        private string NickName;
         private Button SaveButton;
         string newFilePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName,
 "bin\\Debug\\net6.0-windows\\Resources\\Files\\KENCO_DB.xlsx");
@@ -1187,29 +1264,37 @@ namespace KENCO_LOGISTIQUES_APP
         private TextBox EVBox;
         private Label label14;
         private TextBox IVBox;
+        private ArrayList VehicleIncomeList = new ArrayList();
+        private ArrayList NicknameIncomeList = new ArrayList();
+        private ArrayList IncomeList = new ArrayList();
+        private ArrayList DescriptionIncomeList = new ArrayList();
+        private ArrayList DateIncomeList = new ArrayList();
+        private ArrayList VehicleExpenseList = new ArrayList();
+        private ArrayList NicknameExpenseList = new ArrayList();
+        private ArrayList ExpenseList = new ArrayList();
+        private ArrayList DescriptionExpenseList = new ArrayList();
+        private ArrayList DateExpenseList = new ArrayList();
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn Column14;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn Column11;
         private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column13;
         private DataGridViewTextBoxColumn Column10;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column15;
         private DataGridViewTextBoxColumn Column12;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
-        private ArrayList VehicleIncomeList = new ArrayList();
-        private ArrayList IncomeList = new ArrayList();
-        private ArrayList DescriptionIncomeList = new ArrayList();
-        private ArrayList DateIncomeList = new ArrayList();
-        private ArrayList VehicleExpenseList = new ArrayList();
-        private ArrayList ExpenseList = new ArrayList();
-        private ArrayList DescriptionExpenseList = new ArrayList();
-        private ArrayList DateExpenseList = new ArrayList();
-
+        private Label label16;
+        private TextBox NicknameBox;
+        private Label label17;
+        private TextBox NicknameBox2;
     }
 }

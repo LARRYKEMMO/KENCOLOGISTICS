@@ -88,7 +88,8 @@ namespace KENCO_LOGISTIQUES_APP
                 string.IsNullOrEmpty(DTelephoneBox.Text) ||
                 string.IsNullOrEmpty(CDTelephoneBox.Text))
             {
-                MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "All fields must be filled.");
             }
             else
             {
@@ -133,7 +134,8 @@ namespace KENCO_LOGISTIQUES_APP
                 }
                 catch (Exception exe)
                 {
-                    MessageBox.Show("All rows are to be deleted " + exe, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("All rows are to be deleted " + exe, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowToast("ERROR", "Rows are not able to be deleted.");
                 }
             }
         }
@@ -196,11 +198,14 @@ namespace KENCO_LOGISTIQUES_APP
                 xlworkbook.Close(true);
                 xlapp.Quit();
 
-                MessageBox.Show("Data saved successfully to Excel file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Data saved successfully to Excel file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowToast("SUCCESS", "Data saved successfully to Excel file.");
+
             }
             else
             {
-                MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "The specified Excel file does not exist.");
             }
         }
 
@@ -227,6 +232,12 @@ namespace KENCO_LOGISTIQUES_APP
                 }
             }
             return true; // All cells are either null or empty
+        }
+
+        public void ShowToast(string Type, string Message)
+        {
+            ToastForm toastForm = new ToastForm(Type, Message);
+            toastForm.ShowDialog();
         }
     }
 }

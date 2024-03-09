@@ -1742,5 +1742,8 @@
 "bin\\Debug\\net6.0-windows\\Resources\\Files\\KENCO_DB.xlsx");
         private string Slash = "-";
         private Panel panel1;
+        private List<DateTime> IDateList = new List<DateTime>();
+        private List<DateTime> TVDateList = new List<DateTime>();
+        private List<DateTime> RCDateList = new List<DateTime>();
     }
 }

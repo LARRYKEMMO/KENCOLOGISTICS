@@ -25,18 +25,21 @@ namespace KENCO_LOGISTIQUES_APP
         private void AddIncome_Click(object sender, EventArgs e)
         {
             if( string.IsNullOrEmpty(IVBox.Text) ||
+                string.IsNullOrEmpty(NicknameBox.Text) ||
                 string.IsNullOrEmpty(IncomeAmountBox.Text) ||
                 string.IsNullOrEmpty(IncomeDescription.Text) ||
                 string.IsNullOrEmpty(IncomeDateBox.Text) ||
                 string.IsNullOrEmpty(IncomeMonthBox.Text) ||
                 string.IsNullOrEmpty(IncomeYearBox.Text))
             {
-                MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "All Income fields must be filled.");
             }
             else
             {
-                dataGridView1.Rows.Add(IVBox.Text, IncomeAmountBox.Text, IncomeDescription.Text, IncomeDateBox.Text + slash + IncomeMonthBox.Text + slash + IncomeYearBox.Text);
+                dataGridView1.Rows.Add(IVBox.Text, NicknameBox.Text, IncomeAmountBox.Text, IncomeDescription.Text, IncomeDateBox.Text + slash + IncomeMonthBox.Text + slash + IncomeYearBox.Text);
                 VehicleIncomeList.Add(IVBox.Text);
+                NicknameIncomeList.Add(NicknameBox.Text);
                 IncomeList.Add(IncomeAmountBox.Text);
                 DescriptionIncomeList.Add(IncomeDescription.Text);
                 DateIncomeList.Add(IncomeDateBox.Text + slash + IncomeMonthBox.Text + slash + IncomeYearBox.Text);
@@ -65,6 +68,7 @@ namespace KENCO_LOGISTIQUES_APP
                     index < DescriptionIncomeList.Count && index < DateIncomeList.Count)
                 {
                     VehicleIncomeList.RemoveAt(index);
+                    NicknameIncomeList.RemoveAt(index);
                     IncomeList.RemoveAt(index);
                     DescriptionIncomeList.RemoveAt(index);
                     DateIncomeList.RemoveAt(index);
@@ -85,6 +89,13 @@ namespace KENCO_LOGISTIQUES_APP
             IncomeMonthBox.Text = null;
             IncomeYearBox.Text = null;
             IVBox.Text = null;
+            NicknameBox.Text = null;
+
+            VehicleIncomeList.Clear();
+            NicknameIncomeList.Clear();
+            IncomeList.Clear();
+            DescriptionIncomeList.Clear();
+            DateIncomeList.Clear();
 
             // Clears Data Grid View
             int numRows = dataGridView1.Rows.Count;
@@ -97,7 +108,8 @@ namespace KENCO_LOGISTIQUES_APP
                 }
                 catch (Exception exe)
                 {
-                    MessageBox.Show("All rows are to be deleted " + exe, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("All rows are to be deleted " + exe, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowToast("ERROR", "Rows are not to be deleted");
                 }
             }
         }
@@ -105,18 +117,21 @@ namespace KENCO_LOGISTIQUES_APP
         private void AddExpense_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(EVBox.Text) ||
+                string.IsNullOrEmpty(NicknameBox2.Text) ||
                 string.IsNullOrEmpty(ExpenseAmountBox.Text) ||
                 string.IsNullOrEmpty(ExpenseDecriptionBox.Text) ||
                 string.IsNullOrEmpty(ExpenseDayBox.Text) ||
                 string.IsNullOrEmpty(ExpenseMonthBox.Text) ||
                 string.IsNullOrEmpty(ExpenseYearBox.Text))
             {
-                MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "All Expense fields must be filled.");
             }
             else
             {
-                dataGridView2.Rows.Add(EVBox.Text, ExpenseAmountBox.Text, ExpenseDecriptionBox.Text, ExpenseDayBox.Text + slash + ExpenseMonthBox.Text + slash + ExpenseYearBox.Text);
+                dataGridView2.Rows.Add(EVBox.Text, NicknameBox2.Text, ExpenseAmountBox.Text, ExpenseDecriptionBox.Text, ExpenseDayBox.Text + slash + ExpenseMonthBox.Text + slash + ExpenseYearBox.Text);
                 VehicleExpenseList.Add(EVBox.Text);
+                NicknameExpenseList.Add(NicknameBox2.Text);
                 ExpenseList.Add(ExpenseAmountBox.Text);
                 DescriptionExpenseList.Add(ExpenseDecriptionBox.Text);
                 DateExpenseList.Add(ExpenseDayBox.Text + slash + ExpenseMonthBox.Text + slash + ExpenseYearBox.Text);
@@ -143,6 +158,7 @@ namespace KENCO_LOGISTIQUES_APP
                     index < DescriptionExpenseList.Count && index < DateExpenseList.Count)
                 {
                     VehicleExpenseList.RemoveAt(index);
+                    NicknameExpenseList.RemoveAt(index);
                     ExpenseList.RemoveAt(index);
                     DescriptionExpenseList.RemoveAt(index);
                     DateExpenseList.RemoveAt(index);
@@ -163,6 +179,14 @@ namespace KENCO_LOGISTIQUES_APP
             ExpenseMonthBox.Text = null;
             ExpenseYearBox.Text = null;
             EVBox.Text = null;
+            NicknameBox2.Text = null;
+
+            VehicleExpenseList.Clear();
+            NicknameExpenseList.Clear();
+            ExpenseList.Clear();
+            DescriptionExpenseList.Clear();
+            DateExpenseList.Clear();
+
             // Clears Data Grid View
             int numRows = dataGridView2.Rows.Count;
             for (int i = 0; i < numRows; i++)
@@ -174,10 +198,12 @@ namespace KENCO_LOGISTIQUES_APP
                 }
                 catch (Exception exe)
                 {
-                    MessageBox.Show("All rows are to be deleted " + exe, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("All rows are to be deleted " + exe, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowToast("ERROR", "Rows are not to be deleted");
                 }
             }
         }
+
 
         private void GetVehicle(DataGridView dataGridView)
         {
@@ -218,7 +244,51 @@ namespace KENCO_LOGISTIQUES_APP
 
             if (CorrectCounter == 3)
             {
-                MessageBox.Show("Date: " + VehicleNumber, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Date: " + VehicleNumber, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void GetNickName(DataGridView dataGridView)
+        {
+            NickName = "Null";
+            string? digit;
+
+
+            digit = dataGridView.Rows[0].Cells[1].Value?.ToString();
+            int CorrectCounter = 0;
+
+            if (digit != null)
+            {
+                NickName = digit;
+            }
+            else
+            {
+                NickName = "None";
+            }
+
+            for (int counter = 0; counter < dataGridView.Rows.Count; counter++)
+            {
+                digit = dataGridView.Rows[counter].Cells[1].Value?.ToString();
+
+                if (digit != null)
+                {
+                    if (VehicleNumber.Equals(digit))
+                    {
+                        CorrectCounter++;
+                    }
+                    else
+                    {
+                        NickName = "None";
+                    }
+
+                }
+
+            }
+
+            if (CorrectCounter == 3)
+            {
+                //MessageBox.Show("Date: " + NickName, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
@@ -231,7 +301,7 @@ namespace KENCO_LOGISTIQUES_APP
 
             for (int counter = 0; counter < dataGridView.Rows.Count; counter++)
             {
-                digit = dataGridView.Rows[counter].Cells[1].Value?.ToString();
+                digit = dataGridView.Rows[counter].Cells[2].Value?.ToString();
 
                 if (digit != null)
                 {
@@ -244,7 +314,7 @@ namespace KENCO_LOGISTIQUES_APP
                 income += cellValue;
             }
 
-            MessageBox.Show("Income: " + income, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Income: " + income, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void GetDescription(DataGridView dataGridView)
@@ -255,7 +325,7 @@ namespace KENCO_LOGISTIQUES_APP
 
             for (int counter = 0; counter < dataGridView.Rows.Count; counter++)
             {
-                digit = dataGridView.Rows[counter].Cells[2].Value?.ToString();
+                digit = dataGridView.Rows[counter].Cells[3].Value?.ToString();
 
                 if (digit != null)
                 {
@@ -275,7 +345,7 @@ namespace KENCO_LOGISTIQUES_APP
                 }
             }
 
-            MessageBox.Show("Description: " + Description, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Description: " + Description, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void GetDate(DataGridView dataGridView)
@@ -284,7 +354,7 @@ namespace KENCO_LOGISTIQUES_APP
             string? digit;
             
 
-            digit = dataGridView.Rows[0].Cells[3].Value?.ToString();
+            digit = dataGridView.Rows[0].Cells[4].Value?.ToString();
             int CorrectCounter = 0;
 
             if (digit != null)
@@ -298,7 +368,7 @@ namespace KENCO_LOGISTIQUES_APP
 
             for (int counter = 0; counter < dataGridView.Rows.Count; counter++)
             {
-                digit = dataGridView.Rows[counter].Cells[3].Value?.ToString();
+                digit = dataGridView.Rows[counter].Cells[4].Value?.ToString();
 
                 if (digit != null)
                 {
@@ -317,7 +387,7 @@ namespace KENCO_LOGISTIQUES_APP
 
             if (CorrectCounter == 3)
             {
-                MessageBox.Show("Date: " + date, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Date: " + date, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
 
@@ -325,7 +395,7 @@ namespace KENCO_LOGISTIQUES_APP
         private void AddNew_Click(object sender, EventArgs e)
         {
             float NetCash;
-
+            int counter = 0;
 
             GetCash(dataGridView1);
             Income = income;
@@ -334,6 +404,7 @@ namespace KENCO_LOGISTIQUES_APP
             GetDate(dataGridView1);
             DateIncome = date;
             GetVehicle(dataGridView1);
+            GetNickName(dataGridView1);
             VIString = VehicleNumber;
             GetCash(dataGridView2);
             Expenses = income;
@@ -342,6 +413,7 @@ namespace KENCO_LOGISTIQUES_APP
             GetDate(dataGridView2);
             DateExpenses = date;
             GetVehicle(dataGridView2);
+            GetNickName(dataGridView2);
             VEString = VehicleNumber;
 
             NetCash = Income - Expenses;
@@ -350,14 +422,31 @@ namespace KENCO_LOGISTIQUES_APP
             if(DateIncome.Equals(DateExpenses))
             {
                 Date = DateIncome;
+                counter++;
             }
 
             if (VIString.Equals(VEString))
             {
                 VehicleNumber = VIString;
+                counter++;
             }
 
-            dataGridView3.Rows.Insert(0,VehicleNumber, Income.ToString(), DescriptionIncome, Expenses.ToString(), DescriptionExpenses, Profit_Loss, Date);
+            if (NicknameBox.Text.Equals(NicknameBox2.Text))
+            {
+                NickName = NicknameBox.Text;
+                counter++;
+            }
+
+            if(counter.Equals(3))
+            {
+                dataGridView3.Rows.Add(VehicleNumber, NickName, Income.ToString(), DescriptionIncome, Expenses.ToString(), DescriptionExpenses, Profit_Loss, Date);
+
+            }
+            else
+            {
+                //MessageBox.Show("Error - Check your Income and Expense entries to find the problem");
+                ShowToast("ERROR", "Check your Income and Expense entries to find the problem");
+            }
            
         }
 
@@ -387,7 +476,8 @@ namespace KENCO_LOGISTIQUES_APP
                 }
                 catch (Exception exe)
                 {
-                    MessageBox.Show("All rows are to be deleted " + exe, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("All rows are to be deleted " + exe, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowToast("ERROR", "Rows are not to be deleted");
                 }
             }
 
@@ -411,7 +501,7 @@ namespace KENCO_LOGISTIQUES_APP
 
                 dataGridView3.Rows.Add(xlrange.Cells[xlrow, 1].Text, xlrange.Cells[xlrow, 2].Text,
                 xlrange.Cells[xlrow, 3].Text, xlrange.Cells[xlrow, 4].Text, xlrange.Cells[xlrow, 5].Text,
-                xlrange.Cells[xlrow, 6].Text, xlrange.Cells[xlrow, 7].Text);
+                xlrange.Cells[xlrow, 6].Text, xlrange.Cells[xlrow, 7].Text, xlrange.Cells[xlrow, 8].Text);
 
             }
 
@@ -435,7 +525,7 @@ namespace KENCO_LOGISTIQUES_APP
             {
 
                 dataGridView1.Rows.Add(xlrange.Cells[xlrow, 1].Text, xlrange.Cells[xlrow, 2].Text,
-                xlrange.Cells[xlrow, 3].Text, xlrange.Cells[xlrow, 4].Text);
+                xlrange.Cells[xlrow, 3].Text, xlrange.Cells[xlrow, 4].Text, xlrange.Cells[xlrow, 5].Text);
 
             }
 
@@ -459,7 +549,7 @@ namespace KENCO_LOGISTIQUES_APP
             {
 
                 dataGridView2.Rows.Add(xlrange.Cells[xlrow, 1].Text, xlrange.Cells[xlrow, 2].Text,
-                xlrange.Cells[xlrow, 3].Text, xlrange.Cells[xlrow, 4].Text);
+                xlrange.Cells[xlrow, 3].Text, xlrange.Cells[xlrow, 4].Text, xlrange.Cells[xlrow, 5].Text);
 
             }
 
@@ -494,7 +584,7 @@ namespace KENCO_LOGISTIQUES_APP
 
                 for(int i = 0; i < IncomeList.Count; i++)
                 {
-                    dataGridView1.Rows.Add(VehicleIncomeList[i], IncomeList[i], DescriptionIncomeList[i], DateIncomeList[i]);
+                    dataGridView1.Rows.Add(VehicleIncomeList[i], NicknameIncomeList[i], IncomeList[i], DescriptionIncomeList[i], DateIncomeList[i]);
                 }
 
                 DeleteEmptyRows(dataGridView1);
@@ -515,11 +605,13 @@ namespace KENCO_LOGISTIQUES_APP
                 xlworkbook.Close(true);
                 xlapp.Quit();
 
-                MessageBox.Show("Data saved successfully to Excel file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Data saved successfully to Excel file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowToast("SUCCESS", "Data saved successfully to Excel file.");
             }
             else
             {
-                MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "The specified Excel file does not exist.");
             }
         }
 
@@ -549,7 +641,7 @@ namespace KENCO_LOGISTIQUES_APP
 
                 for (int i = 0; i < ExpenseList.Count; i++)
                 {
-                    dataGridView2.Rows.Add(VehicleExpenseList[i], ExpenseList[i], DescriptionExpenseList[i], DateExpenseList[i]);
+                    dataGridView2.Rows.Add(VehicleExpenseList[i], NicknameExpenseList[i], ExpenseList[i], DescriptionExpenseList[i], DateExpenseList[i]);
                 }
 
                 DeleteEmptyRows(dataGridView2);
@@ -570,11 +662,13 @@ namespace KENCO_LOGISTIQUES_APP
                 xlworkbook.Close(true);
                 xlapp.Quit();
 
-                MessageBox.Show("Data saved successfully to Excel file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Data saved successfully to Excel file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowToast("SUCCESS", "Data saved successfully to Excel file.");
             }
             else
             {
-                MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "The specified Excel file does not exist.");
             }
         }
 
@@ -611,11 +705,13 @@ namespace KENCO_LOGISTIQUES_APP
                 xlworkbook.Close(true);
                 xlapp.Quit();
 
-                MessageBox.Show("Data saved successfully to Excel file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Data saved successfully to Excel file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowToast("SUCCESS", "Data saved successfully to Excel file.");
             }
             else
             {
-                MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "The specified Excel file does not exist.");
             }
 
             SaveIncome();
@@ -653,6 +749,32 @@ namespace KENCO_LOGISTIQUES_APP
             Menu menu = new Menu();
             menu.ShowDialog();
             this.Close();
+        }
+
+        public void ShowToast(string Type, string Message)
+        {
+            ToastForm toastForm = new ToastForm(Type, Message);
+            toastForm.ShowDialog();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EVBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExpenseAmountBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

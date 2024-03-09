@@ -37,7 +37,7 @@ namespace KENCO_LOGISTIQUES_APP
             {
 
                 dataGridView1.Rows.Add(xlrange.Cells[xlrow, 1].Text, xlrange.Cells[xlrow, 2].Text,
-                xlrange.Cells[xlrow, 3].Text, xlrange.Cells[xlrow, 4].Text);
+                xlrange.Cells[xlrow, 3].Text, xlrange.Cells[xlrow, 4].Text, xlrange.Cells[xlrow, 5].Text);
 
             }
 
@@ -55,7 +55,7 @@ namespace KENCO_LOGISTIQUES_APP
                 if (!row.IsNewRow)
                 {
                     // Access the cell value for the 'Amount (FCFA)' column
-                    string amountCellValue = Convert.ToString(row.Cells["Column1"].Value);
+                    string amountCellValue = Convert.ToString(row.Cells["Column3"].Value);
 
                     // Check if the cell value contains the search text
                     if (amountCellValue.Contains(SearchBox.Text))
@@ -236,7 +236,7 @@ namespace KENCO_LOGISTIQUES_APP
                     GetDigit(digit);
                     dataX = dataX.Append(doubleX).ToArray();
                     dataY = dataY.Append(income).ToArray();
-                    plt.AddScatter(dataX, dataY);
+                    plt.PlotBar(dataX, dataY, fillColor: Color.Blue, barWidth: 20.0);
                 }
 
                 
@@ -342,14 +342,14 @@ namespace KENCO_LOGISTIQUES_APP
                 {
                     // Access the current row using dataGridView1.Rows[i]
                     // Your code to process the row goes here
-                    if (Description.Contains(dataGridView1.Rows[i].Cells[2].Value.ToString()))
+                    if (Description.Contains(dataGridView1.Rows[i].Cells[3].Value.ToString()))
                     {
 
                     }
                     else
                     {
-                        Description.Add(dataGridView1.Rows[i].Cells[2].Value.ToString());
-                        DescriptionList.Add(dataGridView1.Rows[i].Cells[2].Value.ToString());
+                        Description.Add(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                        DescriptionList.Add(dataGridView1.Rows[i].Cells[3].Value.ToString());
                         //MessageBox.Show("Income: " + dataGridView1.Rows[i].Cells[0].Value.ToString(), "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -373,7 +373,7 @@ namespace KENCO_LOGISTIQUES_APP
             }
 
 
-            plt.Title("Income Paretto Chart");
+            plt.Title("Income Pie Chart");
             plt.SaveFig("Paretto.png");
             pictureBox2.ImageLocation = "Paretto.png";
 

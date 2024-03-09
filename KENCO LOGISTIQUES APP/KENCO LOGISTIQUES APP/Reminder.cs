@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace KENCO_LOGISTIQUES_APP
 {
@@ -25,53 +26,162 @@ namespace KENCO_LOGISTIQUES_APP
 
         }
 
+        private void DateGenerator(DateTime Itommorrow, DateTime TVtommorrow, DateTime RCtommorrow)
+        {
+            DateTime tomorrowI;
+            DateTime tomorrowTV;
+            DateTime tomorrowRC;
+
+
+            for (int i = 0; i < 31; i++)
+            {
+                tomorrowI = Itommorrow.AddDays(i);
+                IDateList.Add(tomorrowI);
+            }
+
+            for (int i = 0; i < 31; i++)
+            {
+                tomorrowTV = TVtommorrow.AddDays(i);
+                TVDateList.Add(tomorrowTV);
+            }
+
+            for (int i = 0; i < 31; i++)
+            {
+                tomorrowRC = RCtommorrow.AddDays(i);
+                RCDateList.Add(tomorrowRC);
+            }
+        }
+
         public async void reminderCheck()
         {
             await Task.Delay(1000);
+            
+
+            bool Expired1 = false;
+            bool Expired2 = false;
+            bool Expired3 = false;
 
             string? digit1;
             string? digit2;
             string? digit3;
+            string? digit4;
+            string? digit5;
+            string? digit6;
 
             DateTime dateTime1;
             DateTime dateTime2;
             DateTime dateTime3;
+            DateTime dateTime4;
+            DateTime dateTime5;
+            DateTime dateTime6;
 
             // Get today's date
             DateTime currentDate = DateTime.Now.Date;
 
-            
 
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            for(int j = 0; j < 31; j++)
             {
-                digit1 = dataGridView1.Rows[i].Cells[2].Value?.ToString();
-                digit2 = dataGridView1.Rows[i].Cells[4].Value?.ToString();
-                digit3 = dataGridView1.Rows[i].Cells[6].Value?.ToString();
-                if (digit1 != null && digit2 != null && digit3 != null)
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
-                    DateTime.TryParseExact(digit1, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime1);
-                    DateTime.TryParseExact(digit2, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime2);
-                    DateTime.TryParseExact(digit3, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime3);
-                
-                    if(dateTime1.Equals(currentDate))
+                    if(IDateList != null && TVDateList != null && RCDateList != null)
                     {
-                        MessageBox.Show("Reminder: Insurance Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        IDateList.Clear();
+                        TVDateList.Clear();
+                        RCDateList.Clear();
                     }
 
-                    if (dateTime2.Equals(currentDate))
+                    digit1 = dataGridView1.Rows[i].Cells[2].Value?.ToString();
+                    digit2 = dataGridView1.Rows[i].Cells[4].Value?.ToString();
+                    digit3 = dataGridView1.Rows[i].Cells[6].Value?.ToString();
+                    digit4 = dataGridView1.Rows[i].Cells[1].Value?.ToString();
+                    digit5 = dataGridView1.Rows[i].Cells[3].Value?.ToString();
+                    digit6 = dataGridView1.Rows[i].Cells[5].Value?.ToString();
+
+                    if (digit1 != null && digit2 != null && digit3 != null && digit4 != null && digit5 != null && digit6 != null)
                     {
-                        MessageBox.Show("Reminder: Technical Visit Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        DateTime.TryParseExact(digit1, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime1);
+                        DateTime.TryParseExact(digit2, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime2);
+                        DateTime.TryParseExact(digit3, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime3);
+                        DateTime.TryParseExact(digit4, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime4);
+                        DateTime.TryParseExact(digit5, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime5);
+                        DateTime.TryParseExact(digit6, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime6);
+
+                        DateGenerator(dateTime1, dateTime2, dateTime3);
+
+
+                        if (dateTime1.Equals(IDateList[j]))
+                        {
+                               
+                            if (dateTime4.Equals(currentDate))
+                            {
+                                //MessageBox.Show("Reminder: Insurance Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                ShowToast("REMINDER", "Reminder: Insurance Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today");
+                                Expired1 = true;
+                                
+                            }
+
+                            if (Expired1 == false)
+                            {
+                                //MessageBox.Show("Reminder: Insurance Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                ShowToast("WARNING", "Reminder: Insurance Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon");
+                            }
+                        }
+
+
+                        
+                        if (dateTime2.Equals(TVDateList[j]))
+                        {
+
+                            if (dateTime5.Equals(currentDate))
+                            {
+                                //MessageBox.Show("Reminder: Technical Visit Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                ShowToast("REMINDER", "Reminder: Technical Visit Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today");
+                                Expired2 = true;
+                            }
+
+                            if (Expired2 == false)
+                            {
+                                //MessageBox.Show("Reminder: Technical Visit Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                ShowToast("WARNING", "Reminder: Technical Visit Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon");
+                            }
+                        
+                        }
+
+
+                        
+                        if (dateTime3.Equals(RCDateList[j]))
+                        {
+
+                            if (dateTime6.Equals(currentDate))
+                            {
+                                //MessageBox.Show("Reminder: Registration Card Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                ShowToast("REMINDER", "Reminder: Registration Card Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today");
+                                Expired3 = true;
+
+                            }
+
+                            if (Expired3 == false)
+                            {
+                                //MessageBox.Show("Reminder: Registration Card Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                ShowToast("WARNING", "Reminder: Registration Card Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon");
+                            }
+                      
+                        }
+
                     }
 
-                    if (dateTime3.Equals(currentDate))
-                    {
-                        MessageBox.Show("Reminder: Registration Card Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
 
                 }
-
-
             }
+
+            
+        }
+
+        public void ShowToast(string Type, string Message)
+        {
+            ToastForm toastForm = new ToastForm(Type, Message);
+            toastForm.ShowDialog();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -324,7 +434,8 @@ namespace KENCO_LOGISTIQUES_APP
                 string.IsNullOrEmpty(RCEReminderMonthBox.Text) ||
                 string.IsNullOrEmpty(RCEReminderYearBox.Text))
             {
-                MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "All fields must be filled.");
             }
             else
             {
@@ -376,6 +487,7 @@ namespace KENCO_LOGISTIQUES_APP
                 catch (Exception exe)
                 {
                     MessageBox.Show("All rows are to be deleted " + exe, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowToast("ERROR", "Rows are not able to be deleted.");
                 }
             }
         }
@@ -438,11 +550,13 @@ namespace KENCO_LOGISTIQUES_APP
                 xlworkbook.Close(true);
                 xlapp.Quit();
 
-                MessageBox.Show("Data saved successfully to Excel file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Data saved successfully to Excel file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowToast("SUCCESS", "Data saved successfully to Excel file.");
             }
             else
             {
-                MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("The specified Excel file does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "The specified Excel file does not exist.");
             }
         }
 

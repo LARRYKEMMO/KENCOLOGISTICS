@@ -98,7 +98,7 @@
             this.vehiclesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.vehiclesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("vehiclesToolStripMenuItem.Image")));
             this.vehiclesToolStripMenuItem.Name = "vehiclesToolStripMenuItem";
-            this.vehiclesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.vehiclesToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.vehiclesToolStripMenuItem.Text = "Vehicles";
             this.vehiclesToolStripMenuItem.Click += new System.EventHandler(this.vehiclesToolStripMenuItem_Click);
             // 
@@ -107,7 +107,7 @@
             this.employeesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.employeesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("employeesToolStripMenuItem.Image")));
             this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
-            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.employeesToolStripMenuItem.Text = "Employees";
             this.employeesToolStripMenuItem.Click += new System.EventHandler(this.employeesToolStripMenuItem_Click);
             // 
@@ -116,7 +116,7 @@
             this.ownersToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ownersToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ownersToolStripMenuItem.Image")));
             this.ownersToolStripMenuItem.Name = "ownersToolStripMenuItem";
-            this.ownersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ownersToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.ownersToolStripMenuItem.Text = "Owners";
             this.ownersToolStripMenuItem.Click += new System.EventHandler(this.ownersToolStripMenuItem_Click);
             // 
@@ -125,7 +125,7 @@
             this.remindersToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.remindersToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("remindersToolStripMenuItem.Image")));
             this.remindersToolStripMenuItem.Name = "remindersToolStripMenuItem";
-            this.remindersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.remindersToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.remindersToolStripMenuItem.Text = "Accounting";
             this.remindersToolStripMenuItem.Click += new System.EventHandler(this.remindersToolStripMenuItem_Click);
             // 
@@ -134,7 +134,7 @@
             this.accidentsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.accidentsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("accidentsToolStripMenuItem.Image")));
             this.accidentsToolStripMenuItem.Name = "accidentsToolStripMenuItem";
-            this.accidentsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.accidentsToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.accidentsToolStripMenuItem.Text = "Accidents";
             // 
             // exitToolStripMenuItem
@@ -142,7 +142,7 @@
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -166,7 +166,7 @@
             this.incomeToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.incomeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("incomeToolStripMenuItem.Image")));
             this.incomeToolStripMenuItem.Name = "incomeToolStripMenuItem";
-            this.incomeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.incomeToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.incomeToolStripMenuItem.Text = "Income";
             this.incomeToolStripMenuItem.Click += new System.EventHandler(this.incomeToolStripMenuItem_Click_1);
             // 
@@ -175,7 +175,7 @@
             this.expensesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.expensesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("expensesToolStripMenuItem.Image")));
             this.expensesToolStripMenuItem.Name = "expensesToolStripMenuItem";
-            this.expensesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.expensesToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.expensesToolStripMenuItem.Text = "Expenses";
             this.expensesToolStripMenuItem.Click += new System.EventHandler(this.expensesToolStripMenuItem_Click_1);
             // 
@@ -184,7 +184,7 @@
             this.cashFlowToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cashFlowToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cashFlowToolStripMenuItem.Image")));
             this.cashFlowToolStripMenuItem.Name = "cashFlowToolStripMenuItem";
-            this.cashFlowToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cashFlowToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.cashFlowToolStripMenuItem.Text = "Cash Flow";
             this.cashFlowToolStripMenuItem.Click += new System.EventHandler(this.cashFlowToolStripMenuItem_Click_1);
             // 
@@ -239,7 +239,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Menu";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

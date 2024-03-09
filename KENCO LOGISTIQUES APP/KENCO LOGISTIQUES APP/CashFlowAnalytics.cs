@@ -39,7 +39,7 @@ namespace KENCO_LOGISTIQUES_APP
 
                 dataGridView1.Rows.Add(xlrange.Cells[xlrow, 1].Text, xlrange.Cells[xlrow, 2].Text,
                 xlrange.Cells[xlrow, 3].Text, xlrange.Cells[xlrow, 4].Text, xlrange.Cells[xlrow, 5].Text,
-                xlrange.Cells[xlrow, 6].Text, xlrange.Cells[xlrow, 7].Text);
+                xlrange.Cells[xlrow, 6].Text, xlrange.Cells[xlrow, 7].Text, xlrange.Cells[xlrow, 8].Text);
 
             }
 
@@ -135,6 +135,7 @@ namespace KENCO_LOGISTIQUES_APP
         private void GetVehicles()
         {
             string? digit;
+            Color[] colors = { Color.Orange, Color.DarkGreen, Color.Indigo, Color.Violet, Color.Pink, Color.Blue, Color.Red, Color.Yellow, Color.DeepSkyBlue, Color.Cyan, Color.Magenta, Color.Gray, Color.Magenta, Color.DeepPink, Color.Purple, Color.Brown};
             var plt = new ScottPlot.Plot(620, 368);
             var plt2 = new ScottPlot.Plot(678, 367);
             double[] dataX = new double[0];
@@ -147,7 +148,7 @@ namespace KENCO_LOGISTIQUES_APP
             plt.YLabel("Profit / Loss");
 
             plt2.Palette = Palette.Amber;
-            plt2.Title("Cash Flow Paretto");
+            plt2.Title("Cash Flow Pie Chart");
 
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
@@ -185,8 +186,8 @@ namespace KENCO_LOGISTIQUES_APP
                     labels.Add(digit);
                     dataX = dataX.Append(doubleX).ToArray();
                     dataY = dataY.Append(income).ToArray();
-                    plt.AddScatter(dataX, dataY);
-                    plt2.PlotPie(dataX, labels.ToArray(), showPercentages: true); ;
+                    plt.PlotBar(dataX, dataY, fillColor: Color.Red, barWidth: 20.0);
+                    plt2.PlotPie(dataX, labels.ToArray(), colors, showPercentages: true);
                 }
 
 
