@@ -31,6 +31,11 @@ namespace KENCO_LOGISTIQUES_APP
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,15 +45,15 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LegendTable)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -63,101 +68,13 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column10,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(42, 467);
+            this.dataGridView1.Location = new System.Drawing.Point(269, 509);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(1517, 258);
             this.dataGridView1.TabIndex = 271;
-            // 
-            // SearchBox
-            // 
-            this.SearchBox.Location = new System.Drawing.Point(47, 419);
-            this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(125, 27);
-            this.SearchBox.TabIndex = 273;
-            // 
-            // Search
-            // 
-            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Search.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Search.Location = new System.Drawing.Point(241, 419);
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(138, 29);
-            this.Search.TabIndex = 275;
-            this.Search.Text = "Search";
-            this.Search.UseVisualStyleBackColor = false;
-            this.Search.Click += new System.EventHandler(this.Search_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(42, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(596, 368);
-            this.pictureBox1.TabIndex = 276;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(702, 13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(391, 367);
-            this.pictureBox2.TabIndex = 277;
-            this.pictureBox2.TabStop = false;
-            // 
-            // LegendTable
-            // 
-            this.LegendTable.AllowUserToAddRows = false;
-            this.LegendTable.AllowUserToDeleteRows = false;
-            this.LegendTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LegendTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.LegendTable.Location = new System.Drawing.Point(1114, 13);
-            this.LegendTable.Name = "LegendTable";
-            this.LegendTable.ReadOnly = true;
-            this.LegendTable.RowHeadersWidth = 51;
-            this.LegendTable.RowTemplate.Height = 29;
-            this.LegendTable.Size = new System.Drawing.Size(449, 367);
-            this.LegendTable.TabIndex = 278;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Description";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Amount";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Percentage";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 145;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(1421, 741);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 29);
-            this.button1.TabIndex = 279;
-            this.button1.Text = "Main Menu";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Column1
             // 
@@ -199,13 +116,156 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column3.ReadOnly = true;
             this.Column3.Width = 365;
             // 
+            // SearchBox
+            // 
+            this.SearchBox.Location = new System.Drawing.Point(274, 461);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(125, 27);
+            this.SearchBox.TabIndex = 273;
+            // 
+            // Search
+            // 
+            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Search.Location = new System.Drawing.Point(468, 461);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(138, 29);
+            this.Search.TabIndex = 275;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = false;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(269, 54);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(596, 368);
+            this.pictureBox1.TabIndex = 276;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(929, 55);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(391, 367);
+            this.pictureBox2.TabIndex = 277;
+            this.pictureBox2.TabStop = false;
+            // 
+            // LegendTable
+            // 
+            this.LegendTable.AllowUserToAddRows = false;
+            this.LegendTable.AllowUserToDeleteRows = false;
+            this.LegendTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LegendTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.LegendTable.Location = new System.Drawing.Point(1341, 55);
+            this.LegendTable.Name = "LegendTable";
+            this.LegendTable.ReadOnly = true;
+            this.LegendTable.RowHeadersWidth = 51;
+            this.LegendTable.RowTemplate.Height = 29;
+            this.LegendTable.Size = new System.Drawing.Size(449, 367);
+            this.LegendTable.TabIndex = 278;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Description";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Amount";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Percentage";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 145;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(11, 529);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(215, 63);
+            this.button1.TabIndex = 279;
+            this.button1.Text = "Main Menu";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.Location = new System.Drawing.Point(11, 303);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(215, 65);
+            this.button2.TabIndex = 280;
+            this.button2.Text = "Monthly Analytics";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button3.Location = new System.Drawing.Point(11, 86);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(215, 66);
+            this.button3.TabIndex = 281;
+            this.button3.Text = "All-Time Analytics";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Location = new System.Drawing.Point(11, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(241, 713);
+            this.panel1.TabIndex = 282;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 26);
+            this.label1.TabIndex = 283;
+            this.label1.Text = "INCOME ANALYTICS";
+            // 
             // IncomeAnalytics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1598, 782);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1798, 782);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.LegendTable);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -213,12 +273,14 @@ namespace KENCO_LOGISTIQUES_APP
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.dataGridView1);
             this.Name = "IncomeAnalytics";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IncomeAnalytics";
             this.Load += new System.EventHandler(this.IncomeAnalytics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LegendTable)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,13 +296,19 @@ namespace KENCO_LOGISTIQUES_APP
         private PictureBox pictureBox1;
         private ArrayList Income = new ArrayList();
         private ArrayList VehiclesList = new ArrayList();
+        private ArrayList VisibleCash = new ArrayList();
+        private ArrayList VisibleDescription = new ArrayList();
+        private ArrayList VisibleVehicle = new ArrayList();
         HashSet<string> Vehicles = new HashSet<string>();
+        private HashSet<string> VisibleVehicles = new HashSet<string>();
+        private HashSet<string> VisibleDescriptionList = new HashSet<string>();
         //private ArrayList Description = new ArrayList();
         HashSet<string> Description = new HashSet<string>();
         private ArrayList DescriptionList = new ArrayList();
         private double income;
         private double income2;
         private double income3;
+        private double income4;
         private double percentage;
         private double doubleX;
         Dictionary<string, double> myDictionary = new Dictionary<string, double>();
@@ -257,5 +325,9 @@ namespace KENCO_LOGISTIQUES_APP
         private DataGridViewTextBoxColumn Column10;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
+        private Button button2;
+        private Button button3;
+        private Panel panel1;
+        private Label label1;
     }
 }

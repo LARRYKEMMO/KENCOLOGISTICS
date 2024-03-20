@@ -31,11 +31,6 @@ namespace KENCO_LOGISTIQUES_APP
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MainMenu = new System.Windows.Forms.Button();
-            this.Search = new System.Windows.Forms.Button();
-            this.SearchBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +39,11 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MainMenu = new System.Windows.Forms.Button();
+            this.Search = new System.Windows.Forms.Button();
+            this.SearchBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -70,53 +70,6 @@ namespace KENCO_LOGISTIQUES_APP
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(1535, 294);
             this.dataGridView1.TabIndex = 248;
-            // 
-            // MainMenu
-            // 
-            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.MainMenu.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MainMenu.Location = new System.Drawing.Point(1458, 774);
-            this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(118, 29);
-            this.MainMenu.TabIndex = 252;
-            this.MainMenu.Text = "Main Menu";
-            this.MainMenu.UseVisualStyleBackColor = false;
-            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
-            // 
-            // Search
-            // 
-            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Search.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Search.Location = new System.Drawing.Point(233, 420);
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(138, 29);
-            this.Search.TabIndex = 277;
-            this.Search.Text = "Search";
-            this.Search.UseVisualStyleBackColor = false;
-            this.Search.Click += new System.EventHandler(this.Search_Click);
-            // 
-            // SearchBox
-            // 
-            this.SearchBox.Location = new System.Drawing.Point(39, 420);
-            this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(125, 27);
-            this.SearchBox.TabIndex = 276;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(132, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(620, 368);
-            this.pictureBox1.TabIndex = 278;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(772, 21);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(678, 367);
-            this.pictureBox2.TabIndex = 279;
-            this.pictureBox2.TabStop = false;
             // 
             // Column4
             // 
@@ -182,6 +135,53 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column9.ReadOnly = true;
             this.Column9.Width = 250;
             // 
+            // MainMenu
+            // 
+            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.MainMenu.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MainMenu.Location = new System.Drawing.Point(1458, 774);
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.Size = new System.Drawing.Size(118, 29);
+            this.MainMenu.TabIndex = 252;
+            this.MainMenu.Text = "Main Menu";
+            this.MainMenu.UseVisualStyleBackColor = false;
+            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
+            // 
+            // Search
+            // 
+            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Search.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Search.Location = new System.Drawing.Point(233, 420);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(138, 29);
+            this.Search.TabIndex = 277;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = false;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
+            // 
+            // SearchBox
+            // 
+            this.SearchBox.Location = new System.Drawing.Point(39, 420);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(125, 27);
+            this.SearchBox.TabIndex = 276;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(132, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(620, 368);
+            this.pictureBox1.TabIndex = 278;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(772, 21);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(678, 367);
+            this.pictureBox2.TabIndex = 279;
+            this.pictureBox2.TabStop = false;
+            // 
             // CashFlowAnalytics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -195,6 +195,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.dataGridView1);
             this.Name = "CashFlowAnalytics";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashFlowAnalytics";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

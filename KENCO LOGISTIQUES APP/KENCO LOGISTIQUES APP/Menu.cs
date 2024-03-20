@@ -131,7 +131,18 @@ namespace KENCO_LOGISTIQUES_APP
 
         private void invoicesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Invoice invoice = new Invoice();
+            invoice.ShowDialog();
+            this.Close();
+        }
 
+        private void accidentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Accidents accident = new Accidents();
+            accident.ShowDialog();
+            this.Close();
         }
     }
 }

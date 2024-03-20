@@ -1668,6 +1668,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "Reminder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reminder";
             this.Load += new System.EventHandler(this.Reminder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
