@@ -38,17 +38,22 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Search = new System.Windows.Forms.Button();
             this.SearchBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LegendTable = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LegendTable)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -63,7 +68,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column10,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(25, 520);
+            this.dataGridView1.Location = new System.Drawing.Point(269, 556);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -113,9 +118,11 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // Search
             // 
-            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Search.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Search.Location = new System.Drawing.Point(221, 467);
+            this.Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Search.Location = new System.Drawing.Point(465, 503);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(138, 29);
             this.Search.TabIndex = 277;
@@ -125,26 +132,14 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(27, 467);
+            this.SearchBox.Location = new System.Drawing.Point(269, 503);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(125, 27);
             this.SearchBox.TabIndex = 276;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(1404, 786);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 29);
-            this.button1.TabIndex = 280;
-            this.button1.Text = "Main Menu";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(25, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(269, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(596, 368);
             this.pictureBox1.TabIndex = 281;
@@ -152,7 +147,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(664, 25);
+            this.pictureBox2.Location = new System.Drawing.Point(908, 61);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(391, 367);
             this.pictureBox2.TabIndex = 282;
@@ -167,7 +162,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column4,
             this.Column5,
             this.Column6});
-            this.LegendTable.Location = new System.Drawing.Point(1093, 25);
+            this.LegendTable.Location = new System.Drawing.Point(1337, 61);
             this.LegendTable.Name = "LegendTable";
             this.LegendTable.ReadOnly = true;
             this.LegendTable.RowHeadersWidth = 51;
@@ -199,16 +194,81 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column6.ReadOnly = true;
             this.Column6.Width = 145;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Location = new System.Drawing.Point(12, 61);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(238, 753);
+            this.panel1.TabIndex = 284;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.Location = new System.Drawing.Point(12, 340);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(215, 65);
+            this.button2.TabIndex = 283;
+            this.button2.Text = "Monthly Analytics";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button3.Location = new System.Drawing.Point(12, 566);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(215, 63);
+            this.button3.TabIndex = 282;
+            this.button3.Text = "Main Menu";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button4.Location = new System.Drawing.Point(12, 123);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(215, 66);
+            this.button4.TabIndex = 284;
+            this.button4.Text = "All-Time Analytics";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 26);
+            this.label1.TabIndex = 285;
+            this.label1.Text = "EXPENSES ANALYTICS";
+            // 
             // ExpenseAnalyticscs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1570, 826);
+            this.ClientSize = new System.Drawing.Size(1798, 826);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.LegendTable);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.dataGridView1);
@@ -219,6 +279,7 @@ namespace KENCO_LOGISTIQUES_APP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LegendTable)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,11 +292,15 @@ namespace KENCO_LOGISTIQUES_APP
         private TextBox SearchBox;
         string newFilePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName,
 "bin\\Debug\\net6.0-windows\\Resources\\Files\\KENCO_DB.xlsx");
-        private Button button1;
         private PictureBox pictureBox1;
         private ArrayList VehiclesList = new ArrayList();
+        private ArrayList VisibleCash = new ArrayList();
+        private ArrayList VisibleDescription = new ArrayList();
+        private ArrayList VisibleVehicle = new ArrayList();
         HashSet<string> Vehicles = new HashSet<string>();
         HashSet<string> Description = new HashSet<string>();
+        private HashSet<string> VisibleVehicles = new HashSet<string>();
+        private HashSet<string> VisibleDescriptionList = new HashSet<string>();
         private ArrayList DescriptionList = new ArrayList();
         private double income;
         private double income2;
@@ -252,5 +317,10 @@ namespace KENCO_LOGISTIQUES_APP
         private DataGridViewTextBoxColumn Column10;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
+        private Panel panel1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Label label1;
     }
 }

@@ -626,14 +626,22 @@ namespace KENCO_LOGISTIQUES_APP
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SearchMechanics("");
             income = 0;
-            income3 = 0;
+            //income3 = 0;
             LegendTable.Rows.Clear();
             GetCash(dataGridView1);
             income3 = income;
             GetVehicles();
             GetDescription();
             SearchMechanics("");
+
+            //GetCash(dataGridView1);
+            //income3 = income;
+            //GetVehicles();
+            ////SearchMechanics2(Search2);
+            //GetDescription();
+            //SearchMechanics("");
         }
     }
 }

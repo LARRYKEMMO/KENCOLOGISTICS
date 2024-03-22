@@ -265,6 +265,9 @@ namespace KENCO_LOGISTIQUES_APP
             }
         }
 
-        
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
