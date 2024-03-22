@@ -404,93 +404,9 @@ namespace KENCO_LOGISTIQUES_APP
 
         }
 
-        private void MainMenu_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Menu menu = new Menu();
-            menu.ShowDialog();
-            this.Close();
-        }
+      
 
-        private void AddNew_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(VehiclePlateNumberBox.Text) ||
-                string.IsNullOrEmpty(IEDDateBox.Text) ||
-                string.IsNullOrEmpty(IEDMonthBox.Text) ||
-                string.IsNullOrEmpty(IEDYearBox.Text) ||
-                string.IsNullOrEmpty(IEDReminderDateBox.Text) ||
-                string.IsNullOrEmpty(IEDReminderMonthBox.Text) ||
-                string.IsNullOrEmpty(IEDReminderYearBox.Text) ||
-                string.IsNullOrEmpty(TVEDDateBox.Text) ||
-                string.IsNullOrEmpty(TVEDMonthBox.Text) ||
-                string.IsNullOrEmpty(TVEDYearBox.Text) ||
-                string.IsNullOrEmpty(TVEDReminderDateBox.Text) ||
-                string.IsNullOrEmpty(TVEDReminderMonthBox.Text) ||
-                string.IsNullOrEmpty(TVEDReminderYearBox.Text) ||
-                string.IsNullOrEmpty(RCEDateBox.Text) ||
-                string.IsNullOrEmpty(RCEMonthBox.Text) ||
-                string.IsNullOrEmpty(RCEYearBox.Text) ||
-                string.IsNullOrEmpty(RCEReminderDateBox.Text) ||
-                string.IsNullOrEmpty(RCEReminderMonthBox.Text) ||
-                string.IsNullOrEmpty(RCEReminderYearBox.Text))
-            {
-                //MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ShowToast("ERROR", "All fields must be filled.");
-            }
-            else
-            {
-                dataGridView1.Rows.Add(VehiclePlateNumberBox.Text, IEDDateBox.Text + Slash + IEDMonthBox.Text + Slash + IEDYearBox.Text, IEDReminderDateBox.Text + Slash + IEDReminderMonthBox.Text + Slash + IEDReminderYearBox.Text, TVEDDateBox.Text + Slash + TVEDMonthBox.Text + Slash + TVEDYearBox.Text, TVEDReminderDateBox.Text + Slash + TVEDReminderMonthBox.Text + Slash + TVEDReminderYearBox.Text, RCEDateBox.Text + Slash + RCEMonthBox.Text + Slash + RCEYearBox.Text, RCEReminderDateBox.Text + Slash + RCEReminderMonthBox.Text + Slash + RCEReminderYearBox.Text);
-
-            }
-
-        }
-
-        private void Delete_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
-            {
-                dataGridView1.Rows.RemoveAt(item.Index);
-            }
-        }
-
-        private void Reset_Click(object sender, EventArgs e)
-        {
-            VehiclePlateNumberBox.Text = null;
-            IEDDateBox.Text = null;
-            IEDMonthBox.Text = null;
-            IEDYearBox.Text = null; 
-            IEDReminderDateBox.Text = null;
-            IEDReminderMonthBox.Text = null; 
-            IEDReminderYearBox.Text = null; 
-            TVEDDateBox.Text = null; 
-            TVEDMonthBox.Text = null;
-            TVEDYearBox.Text = null;
-            TVEDReminderDateBox.Text = null;
-            TVEDReminderMonthBox.Text = null;
-            TVEDReminderYearBox.Text = null;
-            RCEDateBox.Text = null;
-            RCEMonthBox.Text = null;
-            RCEYearBox.Text = null;
-            RCEReminderDateBox.Text = null; 
-            RCEReminderMonthBox.Text = null;
-            RCEReminderYearBox.Text = null;
-
-            // Clears Data Grid View
-            int numRows = dataGridView1.Rows.Count;
-            for (int i = 0; i < numRows; i++)
-            {
-                try
-                {
-                    int max = dataGridView1.Rows.Count - 1;
-                    dataGridView1.Rows.Remove(dataGridView1.Rows[max]);
-                }
-                catch (Exception exe)
-                {
-                    MessageBox.Show("All rows are to be deleted " + exe, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ShowToast("ERROR", "Rows are not able to be deleted.");
-                }
-            }
-        }
+        
 
         private void OpenXLFile()
         {
@@ -517,7 +433,41 @@ namespace KENCO_LOGISTIQUES_APP
             xlapp.Quit();
         }
 
-        private void SaveButton_Click(object sender, EventArgs e)
+        
+        private void DeleteEmptyRows(DataGridView dataGridView)
+        {
+            // Iterate through the rows in reverse order to avoid issues with indices
+            for (int i = dataGridView.Rows.Count - 1; i >= 0; i--)
+            {
+                DataGridViewRow row = dataGridView.Rows[i];
+                if (IsRowEmpty(row))
+                {
+                    dataGridView.Rows.RemoveAt(i);
+                }
+            }
+        }
+
+        private bool IsRowEmpty(DataGridViewRow row)
+        {
+            foreach (DataGridViewCell cell in row.Cells)
+            {
+                if (cell.Value != null && !string.IsNullOrWhiteSpace(cell.Value.ToString()))
+                {
+                    return false; // At least one cell has a non-null, non-empty value
+                }
+            }
+            return true; // All cells are either null or empty
+        }
+
+        private void MainMenu_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu menu = new Menu();
+            menu.ShowDialog();
+            this.Close();
+        }
+
+        private void SaveButton_Click_1(object sender, EventArgs e)
         {
             if (File.Exists(newFilePath))
             {
@@ -560,29 +510,83 @@ namespace KENCO_LOGISTIQUES_APP
             }
         }
 
-        private void DeleteEmptyRows(DataGridView dataGridView)
+        private void Reset_Click_1(object sender, EventArgs e)
         {
-            // Iterate through the rows in reverse order to avoid issues with indices
-            for (int i = dataGridView.Rows.Count - 1; i >= 0; i--)
+            VehiclePlateNumberBox.Text = null;
+            IEDDateBox.Text = null;
+            IEDMonthBox.Text = null;
+            IEDYearBox.Text = null;
+            IEDReminderDateBox.Text = null;
+            IEDReminderMonthBox.Text = null;
+            IEDReminderYearBox.Text = null;
+            TVEDDateBox.Text = null;
+            TVEDMonthBox.Text = null;
+            TVEDYearBox.Text = null;
+            TVEDReminderDateBox.Text = null;
+            TVEDReminderMonthBox.Text = null;
+            TVEDReminderYearBox.Text = null;
+            RCEDateBox.Text = null;
+            RCEMonthBox.Text = null;
+            RCEYearBox.Text = null;
+            RCEReminderDateBox.Text = null;
+            RCEReminderMonthBox.Text = null;
+            RCEReminderYearBox.Text = null;
+
+            // Clears Data Grid View
+            int numRows = dataGridView1.Rows.Count;
+            for (int i = 0; i < numRows; i++)
             {
-                DataGridViewRow row = dataGridView.Rows[i];
-                if (IsRowEmpty(row))
+                try
                 {
-                    dataGridView.Rows.RemoveAt(i);
+                    int max = dataGridView1.Rows.Count - 1;
+                    dataGridView1.Rows.Remove(dataGridView1.Rows[max]);
+                }
+                catch (Exception exe)
+                {
+                    MessageBox.Show("All rows are to be deleted " + exe, "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowToast("ERROR", "Rows are not able to be deleted.");
                 }
             }
         }
 
-        private bool IsRowEmpty(DataGridViewRow row)
+        private void Delete_Click_1(object sender, EventArgs e)
         {
-            foreach (DataGridViewCell cell in row.Cells)
+            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
             {
-                if (cell.Value != null && !string.IsNullOrWhiteSpace(cell.Value.ToString()))
-                {
-                    return false; // At least one cell has a non-null, non-empty value
-                }
+                dataGridView1.Rows.RemoveAt(item.Index);
             }
-            return true; // All cells are either null or empty
+        }
+
+        private void AddNew_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(VehiclePlateNumberBox.Text) ||
+                string.IsNullOrEmpty(IEDDateBox.Text) ||
+                string.IsNullOrEmpty(IEDMonthBox.Text) ||
+                string.IsNullOrEmpty(IEDYearBox.Text) ||
+                string.IsNullOrEmpty(IEDReminderDateBox.Text) ||
+                string.IsNullOrEmpty(IEDReminderMonthBox.Text) ||
+                string.IsNullOrEmpty(IEDReminderYearBox.Text) ||
+                string.IsNullOrEmpty(TVEDDateBox.Text) ||
+                string.IsNullOrEmpty(TVEDMonthBox.Text) ||
+                string.IsNullOrEmpty(TVEDYearBox.Text) ||
+                string.IsNullOrEmpty(TVEDReminderDateBox.Text) ||
+                string.IsNullOrEmpty(TVEDReminderMonthBox.Text) ||
+                string.IsNullOrEmpty(TVEDReminderYearBox.Text) ||
+                string.IsNullOrEmpty(RCEDateBox.Text) ||
+                string.IsNullOrEmpty(RCEMonthBox.Text) ||
+                string.IsNullOrEmpty(RCEYearBox.Text) ||
+                string.IsNullOrEmpty(RCEReminderDateBox.Text) ||
+                string.IsNullOrEmpty(RCEReminderMonthBox.Text) ||
+                string.IsNullOrEmpty(RCEReminderYearBox.Text))
+            {
+                //MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "All fields must be filled.");
+            }
+            else
+            {
+                dataGridView1.Rows.Add(VehiclePlateNumberBox.Text, IEDDateBox.Text + Slash + IEDMonthBox.Text + Slash + IEDYearBox.Text, IEDReminderDateBox.Text + Slash + IEDReminderMonthBox.Text + Slash + IEDReminderYearBox.Text, TVEDDateBox.Text + Slash + TVEDMonthBox.Text + Slash + TVEDYearBox.Text, TVEDReminderDateBox.Text + Slash + TVEDReminderMonthBox.Text + Slash + TVEDReminderYearBox.Text, RCEDateBox.Text + Slash + RCEMonthBox.Text + Slash + RCEYearBox.Text, RCEReminderDateBox.Text + Slash + RCEReminderMonthBox.Text + Slash + RCEReminderYearBox.Text);
+
+            }
         }
     }
 }

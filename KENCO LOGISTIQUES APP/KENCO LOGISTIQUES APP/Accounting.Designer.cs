@@ -40,24 +40,18 @@ namespace KENCO_LOGISTIQUES_APP
             this.EVBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.IVBox = new System.Windows.Forms.TextBox();
-            this.ResetExpense = new System.Windows.Forms.Button();
-            this.DeleteExpense = new System.Windows.Forms.Button();
-            this.ResetIncome = new System.Windows.Forms.Button();
-            this.AddExpense = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeleteIncome = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AddIncome = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.ExpenseAmountBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -98,6 +92,12 @@ namespace KENCO_LOGISTIQUES_APP
             this.AddNew = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.MainMenu = new System.Windows.Forms.Button();
+            this.ResetExpense = new System.Windows.Forms.Button();
+            this.DeleteExpense = new System.Windows.Forms.Button();
+            this.ResetIncome = new System.Windows.Forms.Button();
+            this.AddExpense = new System.Windows.Forms.Button();
+            this.DeleteIncome = new System.Windows.Forms.Button();
+            this.AddIncome = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -108,7 +108,7 @@ namespace KENCO_LOGISTIQUES_APP
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
@@ -118,7 +118,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.NicknameBox2);
             this.panel1.Controls.Add(this.label16);
@@ -127,14 +127,8 @@ namespace KENCO_LOGISTIQUES_APP
             this.panel1.Controls.Add(this.EVBox);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.IVBox);
-            this.panel1.Controls.Add(this.ResetExpense);
-            this.panel1.Controls.Add(this.DeleteExpense);
-            this.panel1.Controls.Add(this.ResetIncome);
-            this.panel1.Controls.Add(this.AddExpense);
             this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.DeleteIncome);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.AddIncome);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.ExpenseAmountBox);
             this.panel1.Controls.Add(this.label8);
@@ -161,7 +155,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.panel1.Controls.Add(this.label39);
             this.panel1.Location = new System.Drawing.Point(21, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1580, 354);
+            this.panel1.Size = new System.Drawing.Size(1580, 293);
             this.panel1.TabIndex = 221;
             // 
             // label17
@@ -236,54 +230,6 @@ namespace KENCO_LOGISTIQUES_APP
             this.IVBox.Size = new System.Drawing.Size(125, 27);
             this.IVBox.TabIndex = 272;
             // 
-            // ResetExpense
-            // 
-            this.ResetExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ResetExpense.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ResetExpense.Location = new System.Drawing.Point(1394, 310);
-            this.ResetExpense.Name = "ResetExpense";
-            this.ResetExpense.Size = new System.Drawing.Size(94, 29);
-            this.ResetExpense.TabIndex = 249;
-            this.ResetExpense.Text = "RESET";
-            this.ResetExpense.UseVisualStyleBackColor = false;
-            this.ResetExpense.Click += new System.EventHandler(this.ResetExpense_Click);
-            // 
-            // DeleteExpense
-            // 
-            this.DeleteExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.DeleteExpense.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DeleteExpense.Location = new System.Drawing.Point(1237, 310);
-            this.DeleteExpense.Name = "DeleteExpense";
-            this.DeleteExpense.Size = new System.Drawing.Size(94, 29);
-            this.DeleteExpense.TabIndex = 248;
-            this.DeleteExpense.Text = "DELETE";
-            this.DeleteExpense.UseVisualStyleBackColor = false;
-            this.DeleteExpense.Click += new System.EventHandler(this.DeleteExpense_Click);
-            // 
-            // ResetIncome
-            // 
-            this.ResetIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ResetIncome.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ResetIncome.Location = new System.Drawing.Point(566, 310);
-            this.ResetIncome.Name = "ResetIncome";
-            this.ResetIncome.Size = new System.Drawing.Size(94, 29);
-            this.ResetIncome.TabIndex = 252;
-            this.ResetIncome.Text = "RESET";
-            this.ResetIncome.UseVisualStyleBackColor = false;
-            this.ResetIncome.Click += new System.EventHandler(this.ResetIncome_Click);
-            // 
-            // AddExpense
-            // 
-            this.AddExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.AddExpense.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddExpense.Location = new System.Drawing.Point(1029, 310);
-            this.AddExpense.Name = "AddExpense";
-            this.AddExpense.Size = new System.Drawing.Size(138, 29);
-            this.AddExpense.TabIndex = 247;
-            this.AddExpense.Text = "Add Expense";
-            this.AddExpense.UseVisualStyleBackColor = false;
-            this.AddExpense.Click += new System.EventHandler(this.AddExpense_Click);
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -343,18 +289,6 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column11.ReadOnly = true;
             this.Column11.Width = 125;
             // 
-            // DeleteIncome
-            // 
-            this.DeleteIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.DeleteIncome.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DeleteIncome.Location = new System.Drawing.Point(409, 310);
-            this.DeleteIncome.Name = "DeleteIncome";
-            this.DeleteIncome.Size = new System.Drawing.Size(94, 29);
-            this.DeleteIncome.TabIndex = 251;
-            this.DeleteIncome.Text = "DELETE";
-            this.DeleteIncome.UseVisualStyleBackColor = false;
-            this.DeleteIncome.Click += new System.EventHandler(this.DeleteIncome_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -413,18 +347,6 @@ namespace KENCO_LOGISTIQUES_APP
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 125;
-            // 
-            // AddIncome
-            // 
-            this.AddIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.AddIncome.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddIncome.Location = new System.Drawing.Point(201, 310);
-            this.AddIncome.Name = "AddIncome";
-            this.AddIncome.Size = new System.Drawing.Size(138, 29);
-            this.AddIncome.TabIndex = 250;
-            this.AddIncome.Text = "Add Income";
-            this.AddIncome.UseVisualStyleBackColor = false;
-            this.AddIncome.Click += new System.EventHandler(this.AddIncome_Click);
             // 
             // label7
             // 
@@ -1001,7 +923,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.dataGridView3);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Location = new System.Drawing.Point(21, 404);
@@ -1109,8 +1031,10 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // Reset
             // 
-            this.Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reset.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Reset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Reset.Location = new System.Drawing.Point(1100, 621);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(94, 29);
@@ -1121,8 +1045,10 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // Delete
             // 
-            this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Delete.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Delete.Location = new System.Drawing.Point(943, 621);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(94, 29);
@@ -1133,8 +1059,10 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // AddNew
             // 
-            this.AddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.AddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.AddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddNew.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.AddNew.Location = new System.Drawing.Point(751, 621);
             this.AddNew.Name = "AddNew";
             this.AddNew.Size = new System.Drawing.Size(122, 29);
@@ -1145,8 +1073,10 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // SaveButton
             // 
-            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SaveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.SaveButton.Location = new System.Drawing.Point(1268, 619);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(94, 29);
@@ -1157,8 +1087,10 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             // MainMenu
             // 
-            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainMenu.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.MainMenu.Location = new System.Drawing.Point(1425, 617);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(118, 29);
@@ -1167,16 +1099,106 @@ namespace KENCO_LOGISTIQUES_APP
             this.MainMenu.UseVisualStyleBackColor = false;
             this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
             // 
+            // ResetExpense
+            // 
+            this.ResetExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ResetExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetExpense.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ResetExpense.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ResetExpense.Location = new System.Drawing.Point(1450, 349);
+            this.ResetExpense.Name = "ResetExpense";
+            this.ResetExpense.Size = new System.Drawing.Size(94, 29);
+            this.ResetExpense.TabIndex = 281;
+            this.ResetExpense.Text = "RESET";
+            this.ResetExpense.UseVisualStyleBackColor = false;
+            this.ResetExpense.Click += new System.EventHandler(this.ResetExpense_Click_1);
+            // 
+            // DeleteExpense
+            // 
+            this.DeleteExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.DeleteExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteExpense.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DeleteExpense.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.DeleteExpense.Location = new System.Drawing.Point(1293, 349);
+            this.DeleteExpense.Name = "DeleteExpense";
+            this.DeleteExpense.Size = new System.Drawing.Size(94, 29);
+            this.DeleteExpense.TabIndex = 280;
+            this.DeleteExpense.Text = "DELETE";
+            this.DeleteExpense.UseVisualStyleBackColor = false;
+            this.DeleteExpense.Click += new System.EventHandler(this.DeleteExpense_Click_1);
+            // 
+            // ResetIncome
+            // 
+            this.ResetIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ResetIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetIncome.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ResetIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ResetIncome.Location = new System.Drawing.Point(622, 349);
+            this.ResetIncome.Name = "ResetIncome";
+            this.ResetIncome.Size = new System.Drawing.Size(94, 29);
+            this.ResetIncome.TabIndex = 284;
+            this.ResetIncome.Text = "RESET";
+            this.ResetIncome.UseVisualStyleBackColor = false;
+            this.ResetIncome.Click += new System.EventHandler(this.ResetIncome_Click_1);
+            // 
+            // AddExpense
+            // 
+            this.AddExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.AddExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddExpense.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddExpense.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.AddExpense.Location = new System.Drawing.Point(1085, 349);
+            this.AddExpense.Name = "AddExpense";
+            this.AddExpense.Size = new System.Drawing.Size(138, 29);
+            this.AddExpense.TabIndex = 279;
+            this.AddExpense.Text = "Add Expense";
+            this.AddExpense.UseVisualStyleBackColor = false;
+            this.AddExpense.Click += new System.EventHandler(this.AddExpense_Click_1);
+            // 
+            // DeleteIncome
+            // 
+            this.DeleteIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.DeleteIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteIncome.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DeleteIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.DeleteIncome.Location = new System.Drawing.Point(465, 349);
+            this.DeleteIncome.Name = "DeleteIncome";
+            this.DeleteIncome.Size = new System.Drawing.Size(94, 29);
+            this.DeleteIncome.TabIndex = 283;
+            this.DeleteIncome.Text = "DELETE";
+            this.DeleteIncome.UseVisualStyleBackColor = false;
+            this.DeleteIncome.Click += new System.EventHandler(this.DeleteIncome_Click_1);
+            // 
+            // AddIncome
+            // 
+            this.AddIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.AddIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddIncome.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.AddIncome.Location = new System.Drawing.Point(257, 349);
+            this.AddIncome.Name = "AddIncome";
+            this.AddIncome.Size = new System.Drawing.Size(138, 29);
+            this.AddIncome.TabIndex = 282;
+            this.AddIncome.Text = "Add Income";
+            this.AddIncome.UseVisualStyleBackColor = false;
+            this.AddIncome.Click += new System.EventHandler(this.AddIncome_Click_1);
+            // 
             // Accounting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1613, 658);
+            this.Controls.Add(this.ResetExpense);
             this.Controls.Add(this.MainMenu);
+            this.Controls.Add(this.DeleteExpense);
             this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.ResetIncome);
+            this.Controls.Add(this.AddExpense);
             this.Controls.Add(this.Reset);
+            this.Controls.Add(this.DeleteIncome);
             this.Controls.Add(this.Delete);
+            this.Controls.Add(this.AddIncome);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.AddNew);
             this.Controls.Add(this.panel1);
@@ -1228,12 +1250,6 @@ namespace KENCO_LOGISTIQUES_APP
         private DataGridView dataGridView1;
         private Panel panel2;
         private Label label13;
-        private Button ResetExpense;
-        private Button DeleteExpense;
-        private Button ResetIncome;
-        private Button AddExpense;
-        private Button DeleteIncome;
-        private Button AddIncome;
         private Button Reset;
         private Button Delete;
         private Button AddNew;
@@ -1297,5 +1313,11 @@ namespace KENCO_LOGISTIQUES_APP
         private TextBox NicknameBox;
         private Label label17;
         private TextBox NicknameBox2;
+        private Button ResetExpense;
+        private Button DeleteExpense;
+        private Button ResetIncome;
+        private Button AddExpense;
+        private Button DeleteIncome;
+        private Button AddIncome;
     }
 }

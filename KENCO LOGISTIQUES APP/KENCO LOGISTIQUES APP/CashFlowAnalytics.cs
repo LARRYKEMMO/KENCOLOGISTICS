@@ -330,7 +330,7 @@ namespace KENCO_LOGISTIQUES_APP
                     dataX = dataX.Append(doubleX).ToArray();
                     dataY = dataY.Append(income).ToArray();
                     plt.PlotBar(dataX, dataY, fillColor: Color.Red, barWidth: 20.0);
-                    plt2.PlotPie(dataX, labels.ToArray(), colors, showPercentages: true);
+                    plt2.PlotPie(dataY, labels.ToArray(), colors, showPercentages: true);
                 }
 
 

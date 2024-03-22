@@ -73,7 +73,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.VehiclePlateNumberBox = new System.Windows.Forms.TextBox();
-            this.MainMenu = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,11 +81,12 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SaveButton = new System.Windows.Forms.Button();
             this.Reset = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.AddNew = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.MainMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -1472,18 +1472,6 @@
             this.VehiclePlateNumberBox.TabIndex = 221;
             this.VehiclePlateNumberBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // MainMenu
-            // 
-            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.MainMenu.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MainMenu.Location = new System.Drawing.Point(1281, 520);
-            this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(118, 29);
-            this.MainMenu.TabIndex = 222;
-            this.MainMenu.Text = "Main Menu";
-            this.MainMenu.UseVisualStyleBackColor = false;
-            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -1501,7 +1489,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1401, 168);
+            this.dataGridView1.Size = new System.Drawing.Size(1401, 187);
             this.dataGridView1.TabIndex = 223;
             // 
             // Column1
@@ -1553,73 +1541,20 @@
             this.Column7.Name = "Column7";
             this.Column7.Width = 200;
             // 
-            // SaveButton
-            // 
-            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.SaveButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SaveButton.Location = new System.Drawing.Point(1142, 520);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(94, 29);
-            this.SaveButton.TabIndex = 227;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.UseVisualStyleBackColor = false;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // Reset
-            // 
-            this.Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Reset.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Reset.Location = new System.Drawing.Point(986, 520);
-            this.Reset.Name = "Reset";
-            this.Reset.Size = new System.Drawing.Size(94, 29);
-            this.Reset.TabIndex = 226;
-            this.Reset.Text = "Reset";
-            this.Reset.UseVisualStyleBackColor = false;
-            this.Reset.Click += new System.EventHandler(this.Reset_Click);
-            // 
-            // Delete
-            // 
-            this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Delete.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Delete.Location = new System.Drawing.Point(834, 520);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(94, 29);
-            this.Delete.TabIndex = 225;
-            this.Delete.Text = "Delete";
-            this.Delete.UseVisualStyleBackColor = false;
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
-            // 
-            // AddNew
-            // 
-            this.AddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.AddNew.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddNew.Location = new System.Drawing.Point(674, 520);
-            this.AddNew.Name = "AddNew";
-            this.AddNew.Size = new System.Drawing.Size(94, 29);
-            this.AddNew.TabIndex = 224;
-            this.AddNew.Text = "Add New";
-            this.AddNew.UseVisualStyleBackColor = false;
-            this.AddNew.Click += new System.EventHandler(this.AddNew_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
-            this.panel1.Controls.Add(this.SaveButton);
             this.panel1.Controls.Add(this.VehiclePlateNumberBox);
             this.panel1.Controls.Add(this.label35);
-            this.panel1.Controls.Add(this.Reset);
             this.panel1.Controls.Add(this.RCEReminderYearBox);
             this.panel1.Controls.Add(this.label32);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.TVEDReminderYearBox);
-            this.panel1.Controls.Add(this.Delete);
             this.panel1.Controls.Add(this.label29);
             this.panel1.Controls.Add(this.label36);
             this.panel1.Controls.Add(this.IEDReminderYearBox);
-            this.panel1.Controls.Add(this.AddNew);
             this.panel1.Controls.Add(this.label37);
             this.panel1.Controls.Add(this.RCEReminderMonthBox);
-            this.panel1.Controls.Add(this.MainMenu);
             this.panel1.Controls.Add(this.RCEReminderDateBox);
             this.panel1.Controls.Add(this.label33);
             this.panel1.Controls.Add(this.label34);
@@ -1655,8 +1590,78 @@
             this.panel1.Controls.Add(this.label14);
             this.panel1.Location = new System.Drawing.Point(12, 69);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1433, 567);
+            this.panel1.Size = new System.Drawing.Size(1433, 531);
             this.panel1.TabIndex = 228;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SaveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SaveButton.Location = new System.Drawing.Point(1131, 607);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(94, 29);
+            this.SaveButton.TabIndex = 232;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click_1);
+            // 
+            // Reset
+            // 
+            this.Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reset.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Reset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Reset.Location = new System.Drawing.Point(975, 607);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(94, 29);
+            this.Reset.TabIndex = 231;
+            this.Reset.Text = "Reset";
+            this.Reset.UseVisualStyleBackColor = false;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click_1);
+            // 
+            // Delete
+            // 
+            this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Delete.Location = new System.Drawing.Point(823, 607);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(94, 29);
+            this.Delete.TabIndex = 230;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click_1);
+            // 
+            // AddNew
+            // 
+            this.AddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.AddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddNew.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.AddNew.Location = new System.Drawing.Point(663, 607);
+            this.AddNew.Name = "AddNew";
+            this.AddNew.Size = new System.Drawing.Size(94, 29);
+            this.AddNew.TabIndex = 229;
+            this.AddNew.Text = "Add New";
+            this.AddNew.UseVisualStyleBackColor = false;
+            this.AddNew.Click += new System.EventHandler(this.AddNew_Click_1);
+            // 
+            // MainMenu
+            // 
+            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainMenu.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.MainMenu.Location = new System.Drawing.Point(1270, 607);
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.Size = new System.Drawing.Size(118, 29);
+            this.MainMenu.TabIndex = 228;
+            this.MainMenu.Text = "Main Menu";
+            this.MainMenu.UseVisualStyleBackColor = false;
+            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click_1);
             // 
             // Reminder
             // 
@@ -1664,9 +1669,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1457, 648);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Reset);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.AddNew);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.MainMenu);
             this.Name = "Reminder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reminder";
@@ -1726,7 +1736,6 @@
         private Label label1;
         private Label label2;
         private TextBox VehiclePlateNumberBox;
-        private Button MainMenu;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
@@ -1735,10 +1744,6 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
-        private Button SaveButton;
-        private Button Reset;
-        private Button Delete;
-        private Button AddNew;
         string newFilePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName,
 "bin\\Debug\\net6.0-windows\\Resources\\Files\\KENCO_DB.xlsx");
         private string Slash = "-";
@@ -1746,5 +1751,10 @@
         private List<DateTime> IDateList = new List<DateTime>();
         private List<DateTime> TVDateList = new List<DateTime>();
         private List<DateTime> RCDateList = new List<DateTime>();
+        private Button SaveButton;
+        private Button Reset;
+        private Button Delete;
+        private Button AddNew;
+        private Button MainMenu;
     }
 }

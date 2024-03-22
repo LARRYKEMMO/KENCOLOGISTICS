@@ -22,65 +22,6 @@ namespace KENCO_LOGISTIQUES_APP
             //OpenExpensesXLFile();
         }
 
-        private void AddIncome_Click(object sender, EventArgs e)
-        {
-            if( string.IsNullOrEmpty(IVBox.Text) ||
-                string.IsNullOrEmpty(NicknameBox.Text) ||
-                string.IsNullOrEmpty(IncomeAmountBox.Text) ||
-                string.IsNullOrEmpty(IncomeDescription.Text) ||
-                string.IsNullOrEmpty(IncomeDateBox.Text) ||
-                string.IsNullOrEmpty(IncomeMonthBox.Text) ||
-                string.IsNullOrEmpty(IncomeYearBox.Text))
-            {
-                //MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ShowToast("ERROR", "All Income fields must be filled.");
-            }
-            else
-            {
-                dataGridView1.Rows.Add(IVBox.Text, NicknameBox.Text, IncomeAmountBox.Text, IncomeDescription.Text, IncomeDateBox.Text + slash + IncomeMonthBox.Text + slash + IncomeYearBox.Text);
-                VehicleIncomeList.Add(IVBox.Text);
-                NicknameIncomeList.Add(NicknameBox.Text);
-                IncomeList.Add(IncomeAmountBox.Text);
-                DescriptionIncomeList.Add(IncomeDescription.Text);
-                DateIncomeList.Add(IncomeDateBox.Text + slash + IncomeMonthBox.Text + slash + IncomeYearBox.Text);
-
-            }
-
-            //DGVSize++;
-        }
-
-        private void DeleteIncome_Click(object sender, EventArgs e)
-        {
-            // Collect the indices of the rows to be removed
-            List<int> indicesToRemove = new List<int>();
-
-            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
-            {
-                indicesToRemove.Add(item.Index);
-
-            }
-
-            foreach (int index in indicesToRemove.OrderByDescending(i => i))
-            {
-                dataGridView1.Rows.RemoveAt(index);
-
-                if (index < VehicleIncomeList.Count && index < IncomeList.Count &&
-                    index < DescriptionIncomeList.Count && index < DateIncomeList.Count)
-                {
-                    VehicleIncomeList.RemoveAt(index);
-                    NicknameIncomeList.RemoveAt(index);
-                    IncomeList.RemoveAt(index);
-                    DescriptionIncomeList.RemoveAt(index);
-                    DateIncomeList.RemoveAt(index);
-                }
-            }
-        }
-
-        private void ResetIncome_Click(object sender, EventArgs e)
-        {
-            ResetIncomeClick();
-        }
-
         private void ResetIncomeClick()
         {
             IncomeAmountBox.Text = null;
@@ -112,63 +53,6 @@ namespace KENCO_LOGISTIQUES_APP
                     ShowToast("ERROR", "Rows are not to be deleted");
                 }
             }
-        }
-
-        private void AddExpense_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(EVBox.Text) ||
-                string.IsNullOrEmpty(NicknameBox2.Text) ||
-                string.IsNullOrEmpty(ExpenseAmountBox.Text) ||
-                string.IsNullOrEmpty(ExpenseDecriptionBox.Text) ||
-                string.IsNullOrEmpty(ExpenseDayBox.Text) ||
-                string.IsNullOrEmpty(ExpenseMonthBox.Text) ||
-                string.IsNullOrEmpty(ExpenseYearBox.Text))
-            {
-                //MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ShowToast("ERROR", "All Expense fields must be filled.");
-            }
-            else
-            {
-                dataGridView2.Rows.Add(EVBox.Text, NicknameBox2.Text, ExpenseAmountBox.Text, ExpenseDecriptionBox.Text, ExpenseDayBox.Text + slash + ExpenseMonthBox.Text + slash + ExpenseYearBox.Text);
-                VehicleExpenseList.Add(EVBox.Text);
-                NicknameExpenseList.Add(NicknameBox2.Text);
-                ExpenseList.Add(ExpenseAmountBox.Text);
-                DescriptionExpenseList.Add(ExpenseDecriptionBox.Text);
-                DateExpenseList.Add(ExpenseDayBox.Text + slash + ExpenseMonthBox.Text + slash + ExpenseYearBox.Text);
-                                                                                            
-            }
-        }
-
-        private void DeleteExpense_Click(object sender, EventArgs e)
-        {
-            // Collect the indices of the rows to be removed
-            List<int> indicesToRemove = new List<int>();
-
-            foreach (DataGridViewRow item in this.dataGridView2.SelectedRows)
-            {
-                indicesToRemove.Add(item.Index);
-
-            }
-
-            foreach (int index in indicesToRemove.OrderByDescending(i => i))
-            {
-                dataGridView2.Rows.RemoveAt(index);
-
-                if (index < VehicleExpenseList.Count && index < ExpenseList.Count &&
-                    index < DescriptionExpenseList.Count && index < DateExpenseList.Count)
-                {
-                    VehicleExpenseList.RemoveAt(index);
-                    NicknameExpenseList.RemoveAt(index);
-                    ExpenseList.RemoveAt(index);
-                    DescriptionExpenseList.RemoveAt(index);
-                    DateExpenseList.RemoveAt(index);
-                }
-            }
-        }
-
-        private void ResetExpense_Click(object sender, EventArgs e)
-        {
-            ResetExpenseClick();
         }
 
         private void ResetExpenseClick()
@@ -775,6 +659,118 @@ namespace KENCO_LOGISTIQUES_APP
         private void ExpenseAmountBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddIncome_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(IVBox.Text) ||
+                string.IsNullOrEmpty(NicknameBox.Text) ||
+                string.IsNullOrEmpty(IncomeAmountBox.Text) ||
+                string.IsNullOrEmpty(IncomeDescription.Text) ||
+                string.IsNullOrEmpty(IncomeDateBox.Text) ||
+                string.IsNullOrEmpty(IncomeMonthBox.Text) ||
+                string.IsNullOrEmpty(IncomeYearBox.Text))
+            {
+                //MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "All Income fields must be filled.");
+            }
+            else
+            {
+                dataGridView1.Rows.Add(IVBox.Text, NicknameBox.Text, IncomeAmountBox.Text, IncomeDescription.Text, IncomeDateBox.Text + slash + IncomeMonthBox.Text + slash + IncomeYearBox.Text);
+                VehicleIncomeList.Add(IVBox.Text);
+                NicknameIncomeList.Add(NicknameBox.Text);
+                IncomeList.Add(IncomeAmountBox.Text);
+                DescriptionIncomeList.Add(IncomeDescription.Text);
+                DateIncomeList.Add(IncomeDateBox.Text + slash + IncomeMonthBox.Text + slash + IncomeYearBox.Text);
+
+            }
+        }
+
+        private void DeleteIncome_Click_1(object sender, EventArgs e)
+        {
+            List<int> indicesToRemove = new List<int>();
+
+            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+            {
+                indicesToRemove.Add(item.Index);
+
+            }
+
+            foreach (int index in indicesToRemove.OrderByDescending(i => i))
+            {
+                dataGridView1.Rows.RemoveAt(index);
+
+                if (index < VehicleIncomeList.Count && index < IncomeList.Count &&
+                    index < DescriptionIncomeList.Count && index < DateIncomeList.Count)
+                {
+                    VehicleIncomeList.RemoveAt(index);
+                    NicknameIncomeList.RemoveAt(index);
+                    IncomeList.RemoveAt(index);
+                    DescriptionIncomeList.RemoveAt(index);
+                    DateIncomeList.RemoveAt(index);
+                }
+            }
+        }
+
+        private void ResetIncome_Click_1(object sender, EventArgs e)
+        {
+            ResetIncomeClick();
+        }
+
+        private void AddExpense_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(EVBox.Text) ||
+                string.IsNullOrEmpty(NicknameBox2.Text) ||
+                string.IsNullOrEmpty(ExpenseAmountBox.Text) ||
+                string.IsNullOrEmpty(ExpenseDecriptionBox.Text) ||
+                string.IsNullOrEmpty(ExpenseDayBox.Text) ||
+                string.IsNullOrEmpty(ExpenseMonthBox.Text) ||
+                string.IsNullOrEmpty(ExpenseYearBox.Text))
+            {
+                //MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowToast("ERROR", "All Expense fields must be filled.");
+            }
+            else
+            {
+                dataGridView2.Rows.Add(EVBox.Text, NicknameBox2.Text, ExpenseAmountBox.Text, ExpenseDecriptionBox.Text, ExpenseDayBox.Text + slash + ExpenseMonthBox.Text + slash + ExpenseYearBox.Text);
+                VehicleExpenseList.Add(EVBox.Text);
+                NicknameExpenseList.Add(NicknameBox2.Text);
+                ExpenseList.Add(ExpenseAmountBox.Text);
+                DescriptionExpenseList.Add(ExpenseDecriptionBox.Text);
+                DateExpenseList.Add(ExpenseDayBox.Text + slash + ExpenseMonthBox.Text + slash + ExpenseYearBox.Text);
+
+            }
+        }
+
+        private void DeleteExpense_Click_1(object sender, EventArgs e)
+        {
+            List<int> indicesToRemove = new List<int>();
+
+            foreach (DataGridViewRow item in this.dataGridView2.SelectedRows)
+            {
+                indicesToRemove.Add(item.Index);
+
+            }
+
+            foreach (int index in indicesToRemove.OrderByDescending(i => i))
+            {
+                dataGridView2.Rows.RemoveAt(index);
+
+                if (index < VehicleExpenseList.Count && index < ExpenseList.Count &&
+                    index < DescriptionExpenseList.Count && index < DateExpenseList.Count)
+                {
+                    VehicleExpenseList.RemoveAt(index);
+                    NicknameExpenseList.RemoveAt(index);
+                    ExpenseList.RemoveAt(index);
+                    DescriptionExpenseList.RemoveAt(index);
+                    DateExpenseList.RemoveAt(index);
+                }
+            }
+        }
+
+        private void ResetExpense_Click_1(object sender, EventArgs e)
+        {
+            ResetExpenseClick();
         }
     }
 }

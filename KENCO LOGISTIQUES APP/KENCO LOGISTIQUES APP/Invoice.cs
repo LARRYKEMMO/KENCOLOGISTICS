@@ -21,7 +21,7 @@ namespace KENCO_LOGISTIQUES_APP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoadForm(new InvoiceCopy());
+            lblTitle.Text = "I N V O I C E";
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -71,23 +71,24 @@ namespace KENCO_LOGISTIQUES_APP
             e.Graphics.DrawImage(memorying, pagearea);
         }
 
-        public void LoadForm(object form)
-        {
-            if (this.panelPrint.Controls.Count > 0)
-            {
-                this.panelPrint.Controls.Clear();
-            }
-            Form f = form as Form;
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.panelPrint.Controls.Add(f);
-            this.panelPrint.Tag = f;
-            f.Show();
-        }
+        //public void LoadForm(object form)
+        //{
+        //    if (this.panelPrint.Controls.Count > 0)
+        //    {
+        //        this.panelPrint.Controls.Clear();
+        //    }
+        //    Form f = form as Form;
+        //    f.TopLevel = false;
+        //    f.Dock = DockStyle.Fill;
+        //    this.panelPrint.Controls.Add(f);
+        //    this.panelPrint.Tag = f;
+        //    f.Show();
+        //}
 
         private void btnReceipts_Click(object sender, EventArgs e)
         {
-            LoadForm(new Receipt());
+            //LoadForm(new Receipt());
+            lblTitle.Text = "R E C E I P T";
         }
     }
 }

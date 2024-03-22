@@ -55,7 +55,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -161,7 +161,7 @@
             this.panelPrint.Controls.Add(this.label12);
             this.panelPrint.Controls.Add(this.label11);
             this.panelPrint.Controls.Add(this.label10);
-            this.panelPrint.Controls.Add(this.label9);
+            this.panelPrint.Controls.Add(this.lblTitle);
             this.panelPrint.Controls.Add(this.label2);
             this.panelPrint.Controls.Add(this.label8);
             this.panelPrint.Controls.Add(this.panel2);
@@ -379,16 +379,16 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "CLIENT NAME:";
             // 
-            // label9
+            // lblTitle
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(31, 211);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(177, 35);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "I N V O I C E";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTitle.Location = new System.Drawing.Point(31, 211);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(177, 35);
+            this.lblTitle.TabIndex = 11;
+            this.lblTitle.Text = "I N V O I C E";
             // 
             // label2
             // 
@@ -577,7 +577,7 @@
         private Label label12;
         private Label label11;
         private Label label10;
-        private Label label9;
+        private Label lblTitle;
         private Label label2;
         private TextBox textBox8;
         private TextBox textBox7;
