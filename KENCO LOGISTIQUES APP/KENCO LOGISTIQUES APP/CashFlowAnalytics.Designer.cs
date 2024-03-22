@@ -198,6 +198,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.button2.TabIndex = 288;
             this.button2.Text = "Monthly Analytics";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -211,6 +212,7 @@ namespace KENCO_LOGISTIQUES_APP
             this.button3.TabIndex = 287;
             this.button3.Text = "Main Menu";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -274,10 +276,10 @@ namespace KENCO_LOGISTIQUES_APP
         private double income2;
         private ArrayList VehiclesList = new ArrayList();
         private ArrayList VisibleCash = new ArrayList();
-        private ArrayList VisibleDescription = new ArrayList();
+        //private ArrayList VisibleDescription = new ArrayList();
         private ArrayList VisibleVehicle = new ArrayList();
         private HashSet<string> VisibleVehicles = new HashSet<string>();
-        private HashSet<string> VisibleDescriptionList = new HashSet<string>();
+        //private HashSet<string> VisibleDescriptionList = new HashSet<string>();
         HashSet<string> Vehicles = new HashSet<string>();
         private double doubleX;
         private PictureBox pictureBox2;

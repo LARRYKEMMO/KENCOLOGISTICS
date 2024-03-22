@@ -635,13 +635,6 @@ namespace KENCO_LOGISTIQUES_APP
             GetVehicles();
             GetDescription();
             SearchMechanics("");
-
-            //GetCash(dataGridView1);
-            //income3 = income;
-            //GetVehicles();
-            ////SearchMechanics2(Search2);
-            //GetDescription();
-            //SearchMechanics("");
         }
     }
 }
