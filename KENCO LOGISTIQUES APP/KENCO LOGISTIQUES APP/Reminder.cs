@@ -1,4 +1,5 @@
 ﻿using ScottPlot;
+using ScottPlot.Drawing.Colormaps;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
@@ -594,7 +596,11 @@ namespace KENCO_LOGISTIQUES_APP
             }
             else
             {
-                dataGridView1.Rows.Add(VehiclePlateNumberBox.Text, IEDDateBox.Text + Slash + IEDMonthBox.Text + Slash + IEDYearBox.Text, IEDReminderDateBox.Text + Slash + IEDReminderMonthBox.Text + Slash + IEDReminderYearBox.Text, TVEDDateBox.Text + Slash + TVEDMonthBox.Text + Slash + TVEDYearBox.Text, TVEDReminderDateBox.Text + Slash + TVEDReminderMonthBox.Text + Slash + TVEDReminderYearBox.Text, RCEDateBox.Text + Slash + RCEMonthBox.Text + Slash + RCEYearBox.Text, RCEReminderDateBox.Text + Slash + RCEReminderMonthBox.Text + Slash + RCEReminderYearBox.Text);
+                if(CarPlateValidity(VehiclePlateNumberBox.Text) == true)
+                {
+                    dataGridView1.Rows.Add(VehiclePlateNumberBox.Text, IEDDateBox.Text + Slash + IEDMonthBox.Text + Slash + IEDYearBox.Text, IEDReminderDateBox.Text + Slash + IEDReminderMonthBox.Text + Slash + IEDReminderYearBox.Text, TVEDDateBox.Text + Slash + TVEDMonthBox.Text + Slash + TVEDYearBox.Text, TVEDReminderDateBox.Text + Slash + TVEDReminderMonthBox.Text + Slash + TVEDReminderYearBox.Text, RCEDateBox.Text + Slash + RCEMonthBox.Text + Slash + RCEYearBox.Text, RCEReminderDateBox.Text + Slash + RCEReminderMonthBox.Text + Slash + RCEReminderYearBox.Text);
+
+                }
 
             }
         }
@@ -611,6 +617,39 @@ namespace KENCO_LOGISTIQUES_APP
             {
                 dataGridView1.Rows[RowList2[i]].Cells[ColList2[i]].Style.BackColor = Color.Orange;
             }
+        }
+
+        private bool IntegerValidity(string TempText)
+        {
+            int number;
+            bool isInteger;
+
+            try
+            {
+                number = int.Parse(TempText);
+                isInteger = true;
+
+            }
+            catch(Exception e)
+            {
+                ShowToast("ERROR", "There seems to be a problem with your input (" + TempText + ")");
+                isInteger = false;
+            }
+
+            return isInteger;
+        }
+
+        private bool CarPlateValidity(string TempText)
+        {
+            string pattern = @"^[A-Z]{2}\d{3}[A-Z]{2}$";
+            bool isMatch = Regex.IsMatch(TempText, pattern);
+
+            if (!isMatch)
+            {
+                ShowToast("ERROR", "The Vehicle Plate Number is not in the format AB123CD.");
+            }
+
+            return isMatch;
         }
     }
 }

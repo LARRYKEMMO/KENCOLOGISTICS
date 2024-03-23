@@ -7,6 +7,7 @@ using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -281,55 +282,67 @@ namespace KENCO_LOGISTIQUES_APP
             float NetCash;
             int counter = 0;
 
-            GetCash(dataGridView1);
-            Income = income;
-            GetDescription(dataGridView1);
-            DescriptionIncome = Description;
-            GetDate(dataGridView1);
-            DateIncome = date;
-            GetVehicle(dataGridView1);
-            GetNickName(dataGridView1);
-            VIString = VehicleNumber;
-            GetCash(dataGridView2);
-            Expenses = income;
-            GetDescription(dataGridView2);
-            DescriptionExpenses = Description;
-            GetDate(dataGridView2);
-            DateExpenses = date;
-            GetVehicle(dataGridView2);
-            GetNickName(dataGridView2);
-            VEString = VehicleNumber;
-
-            NetCash = Income - Expenses;
-            Profit_Loss = NetCash.ToString();
-
-            if(DateIncome.Equals(DateExpenses))
+            if(dataGridView1.Rows.Count > 0 && dataGridView2.Rows.Count > 0)
             {
-                Date = DateIncome;
-                counter++;
-            }
+                GetCash(dataGridView1);
+                Income = income;
+                GetDescription(dataGridView1);
+                DescriptionIncome = Description;
+                GetDate(dataGridView1);
+                DateIncome = date;
+                GetVehicle(dataGridView1);
+                GetNickName(dataGridView1);
+                VIString = VehicleNumber;
+                GetCash(dataGridView2);
+                Expenses = income;
+                GetDescription(dataGridView2);
+                DescriptionExpenses = Description;
+                GetDate(dataGridView2);
+                DateExpenses = date;
+                GetVehicle(dataGridView2);
+                GetNickName(dataGridView2);
+                VEString = VehicleNumber;
 
-            if (VIString.Equals(VEString))
-            {
-                VehicleNumber = VIString;
-                counter++;
-            }
+                NetCash = Income - Expenses;
+                Profit_Loss = NetCash.ToString();
 
-            if (NicknameBox.Text.Equals(NicknameBox2.Text))
-            {
-                NickName = NicknameBox.Text;
-                counter++;
-            }
+                if(DateIncome.Equals(DateExpenses))
+                {
+                    Date = DateIncome;
+                    counter++;
+                }
 
-            if(counter.Equals(3))
-            {
-                dataGridView3.Rows.Add(VehicleNumber, NickName, Income.ToString(), DescriptionIncome, Expenses.ToString(), DescriptionExpenses, Profit_Loss, Date);
+                if (VIString.Equals(VEString))
+                {
+                    VehicleNumber = VIString;
+                    counter++;
+                }
+
+                if (NicknameBox.Text.Equals(NicknameBox2.Text))
+                {
+                    NickName = NicknameBox.Text;
+                    counter++;
+                }
+
+                if(counter.Equals(3))
+                {
+                    if(CarPlateValidity(VehicleNumber).Equals(true) && IntegerValidity(Income.ToString()).Equals(true) && IntegerValidity(Expenses.ToString()).Equals(true) && IntegerValidity(Profit_Loss).Equals(true))
+                    {
+                        dataGridView3.Rows.Add(VehicleNumber, NickName, Income.ToString(), DescriptionIncome, Expenses.ToString(), DescriptionExpenses, Profit_Loss, Date);
+
+                    }
+
+                }
+                else
+                {
+                    //MessageBox.Show("Error - Check your Income and Expense entries to find the problem");
+                    ShowToast("ERROR", "Check your Income and Expense entries to find the problem");
+                }
 
             }
             else
             {
-                //MessageBox.Show("Error - Check your Income and Expense entries to find the problem");
-                ShowToast("ERROR", "Check your Income and Expense entries to find the problem");
+                ShowToast("ERROR", "Cannot Calculate with Empty Income and Expenses Fields");
             }
            
         }
@@ -676,12 +689,16 @@ namespace KENCO_LOGISTIQUES_APP
             }
             else
             {
-                dataGridView1.Rows.Add(IVBox.Text, NicknameBox.Text, IncomeAmountBox.Text, IncomeDescription.Text, IncomeDateBox.Text + slash + IncomeMonthBox.Text + slash + IncomeYearBox.Text);
-                VehicleIncomeList.Add(IVBox.Text);
-                NicknameIncomeList.Add(NicknameBox.Text);
-                IncomeList.Add(IncomeAmountBox.Text);
-                DescriptionIncomeList.Add(IncomeDescription.Text);
-                DateIncomeList.Add(IncomeDateBox.Text + slash + IncomeMonthBox.Text + slash + IncomeYearBox.Text);
+                if (CarPlateValidity(IVBox.Text).Equals(true) && IntegerValidity(IncomeAmountBox.Text.ToString()).Equals(true))
+                {
+                    dataGridView1.Rows.Add(IVBox.Text, NicknameBox.Text, IncomeAmountBox.Text, IncomeDescription.Text, IncomeDateBox.Text + slash + IncomeMonthBox.Text + slash + IncomeYearBox.Text);
+                    VehicleIncomeList.Add(IVBox.Text);
+                    NicknameIncomeList.Add(NicknameBox.Text);
+                    IncomeList.Add(IncomeAmountBox.Text);
+                    DescriptionIncomeList.Add(IncomeDescription.Text);
+                    DateIncomeList.Add(IncomeDateBox.Text + slash + IncomeMonthBox.Text + slash + IncomeYearBox.Text);
+
+                }
 
             }
         }
@@ -732,6 +749,7 @@ namespace KENCO_LOGISTIQUES_APP
             }
             else
             {
+                if (CarPlateValidity(EVBox.Text).Equals(true) && IntegerValidity(ExpenseAmountBox.Text.ToString()).Equals(true))
                 dataGridView2.Rows.Add(EVBox.Text, NicknameBox2.Text, ExpenseAmountBox.Text, ExpenseDecriptionBox.Text, ExpenseDayBox.Text + slash + ExpenseMonthBox.Text + slash + ExpenseYearBox.Text);
                 VehicleExpenseList.Add(EVBox.Text);
                 NicknameExpenseList.Add(NicknameBox2.Text);
@@ -771,6 +789,39 @@ namespace KENCO_LOGISTIQUES_APP
         private void ResetExpense_Click_1(object sender, EventArgs e)
         {
             ResetExpenseClick();
+        }
+
+        private bool IntegerValidity(string TempText)
+        {
+            int number;
+            bool isInteger;
+
+            try
+            {
+                number = int.Parse(TempText);
+                isInteger = true;
+
+            }
+            catch (Exception e)
+            {
+                ShowToast("ERROR", "There seems to be a problem with your input (" + TempText + ")");
+                isInteger = false;
+            }
+
+            return isInteger;
+        }
+
+        private bool CarPlateValidity(string TempText)
+        {
+            string pattern = @"^[A-Z]{2}\d{3}[A-Z]{2}$";
+            bool isMatch = Regex.IsMatch(TempText, pattern);
+
+            if (!isMatch)
+            {
+                ShowToast("ERROR", "The Vehicle Plate Number is not in the format AB123CD.");
+            }
+
+            return isMatch;
         }
     }
 }

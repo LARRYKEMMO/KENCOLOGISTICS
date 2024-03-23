@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -117,8 +118,10 @@ namespace KENCO_LOGISTIQUES_APP
             }
             else
             {
-                dataGridView1.Rows.Add(FirstNameBox.Text, LastNameBox.Text, EmailBox.Text, AddressBox.Text, PhoneNumberBox.Text, BANameBox.Text, BANumberBox.Text);
-
+                if(IntegerValidity(PhoneNumberBox.Text).Equals(true) && IntegerValidity(BANumberBox.Text).Equals(true))
+                {
+                    dataGridView1.Rows.Add(FirstNameBox.Text, LastNameBox.Text, EmailBox.Text, AddressBox.Text, PhoneNumberBox.Text, BANameBox.Text, BANumberBox.Text);
+                }
             }
         }
 
@@ -192,5 +195,39 @@ namespace KENCO_LOGISTIQUES_APP
         {
 
         }
+
+        private bool IntegerValidity(string TempText)
+        {
+            int number;
+            bool isInteger;
+
+            try
+            {
+                number = int.Parse(TempText);
+                isInteger = true;
+
+            }
+            catch (Exception e)
+            {
+                ShowToast("ERROR", "There seems to be a problem with your input (" + TempText + ")");
+                isInteger = false;
+            }
+
+            return isInteger;
+        }
+
+        private bool CarPlateValidity(string TempText)
+        {
+            string pattern = @"^[A-Z]{2}\d{3}[A-Z]{2}$";
+            bool isMatch = Regex.IsMatch(TempText, pattern);
+
+            if (!isMatch)
+            {
+                ShowToast("ERROR", "The Vehicle Plate Number is not in the format AB123CD.");
+            }
+
+            return isMatch;
+        }
+    
     }
 }
