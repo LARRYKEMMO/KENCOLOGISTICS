@@ -1,4 +1,6 @@
-﻿namespace KENCO_LOGISTIQUES_APP
+﻿using System.Collections;
+
+namespace KENCO_LOGISTIQUES_APP
 {
     partial class Reminder
     {
@@ -1491,6 +1493,7 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(1401, 187);
             this.dataGridView1.TabIndex = 223;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // Column1
             // 
@@ -1756,5 +1759,9 @@
         private Button Delete;
         private Button AddNew;
         private Button MainMenu;
+        public static List<int> RowList = new List<int>();
+        public static List<int> RowList2 = new List<int>();
+        public static List<int> ColList = new List<int>();
+        public static List<int> ColList2 = new List<int>();
     }
 }

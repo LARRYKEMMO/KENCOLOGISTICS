@@ -15,11 +15,11 @@ namespace KENCO_LOGISTIQUES_APP
         public newVehicle()
         {
             InitializeComponent();
-            int newX = 10;
-            int newY = 10;
+            //int newX = 10;
+            //int newY = 10;
 
-            // Set the new location of the form
-            this.Location = new System.Drawing.Point(newX, newY);
+            //// Set the new location of the form
+            //this.Location = new System.Drawing.Point(newX, newY);
 
             OpenXLFile();
         }

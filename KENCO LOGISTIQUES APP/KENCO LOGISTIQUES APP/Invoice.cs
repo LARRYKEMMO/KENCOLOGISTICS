@@ -17,6 +17,12 @@ namespace KENCO_LOGISTIQUES_APP
         {
             InitializeComponent();
             lblDateToday.Text = DateTime.Now.ToLongDateString();
+            for(int i = 0; i < 7; i++)
+            {
+                dataGridView1.Rows.Add(null, null, null, null);
+
+            }
+            dataGridView1.Rows[5].Cells[2].Value = "TOTAL = ";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -89,6 +95,12 @@ namespace KENCO_LOGISTIQUES_APP
         {
             //LoadForm(new Receipt());
             lblTitle.Text = "R E C E I P T";
+        }
+
+        public void ShowToast(string Type, string Message)
+        {
+            ToastForm toastForm = new ToastForm(Type, Message);
+            toastForm.ShowDialog();
         }
     }
 }

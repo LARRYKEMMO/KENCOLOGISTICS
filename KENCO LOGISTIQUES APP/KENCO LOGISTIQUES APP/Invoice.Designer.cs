@@ -35,7 +35,7 @@
             this.btnInvoice = new System.Windows.Forms.Button();
             this.btnReceipts = new System.Windows.Forms.Button();
             this.panelPrint = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -47,7 +47,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -70,8 +69,12 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panelPrint.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +87,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(306, 1003);
+            this.panel1.Size = new System.Drawing.Size(306, 961);
             this.panel1.TabIndex = 0;
             // 
             // btnMenu
@@ -141,7 +144,7 @@
             // panelPrint
             // 
             this.panelPrint.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelPrint.Controls.Add(this.textBox8);
+            this.panelPrint.Controls.Add(this.dataGridView1);
             this.panelPrint.Controls.Add(this.textBox7);
             this.panelPrint.Controls.Add(this.textBox6);
             this.panelPrint.Controls.Add(this.textBox5);
@@ -153,7 +156,6 @@
             this.panelPrint.Controls.Add(this.panel3);
             this.panelPrint.Controls.Add(this.label19);
             this.panelPrint.Controls.Add(this.label18);
-            this.panelPrint.Controls.Add(this.label17);
             this.panelPrint.Controls.Add(this.label16);
             this.panelPrint.Controls.Add(this.label15);
             this.panelPrint.Controls.Add(this.label14);
@@ -177,20 +179,27 @@
             this.panelPrint.Size = new System.Drawing.Size(889, 942);
             this.panelPrint.TabIndex = 1;
             // 
-            // textBox8
+            // dataGridView1
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textBox8.Location = new System.Drawing.Point(571, 651);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(257, 27);
-            this.textBox8.TabIndex = 30;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Location = new System.Drawing.Point(24, 595);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(650, 231);
+            this.dataGridView1.TabIndex = 224;
             // 
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textBox7.Location = new System.Drawing.Point(170, 643);
+            this.textBox7.Location = new System.Drawing.Point(170, 550);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(219, 27);
             this.textBox7.TabIndex = 29;
@@ -199,7 +208,7 @@
             // 
             this.textBox6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textBox6.Location = new System.Drawing.Point(170, 569);
+            this.textBox6.Location = new System.Drawing.Point(170, 492);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(219, 27);
             this.textBox6.TabIndex = 28;
@@ -208,7 +217,7 @@
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textBox5.Location = new System.Drawing.Point(170, 493);
+            this.textBox5.Location = new System.Drawing.Point(170, 436);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(219, 27);
             this.textBox5.TabIndex = 27;
@@ -217,7 +226,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textBox4.Location = new System.Drawing.Point(170, 423);
+            this.textBox4.Location = new System.Drawing.Point(170, 379);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(219, 27);
             this.textBox4.TabIndex = 26;
@@ -226,7 +235,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textBox3.Location = new System.Drawing.Point(170, 355);
+            this.textBox3.Location = new System.Drawing.Point(170, 320);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(219, 27);
             this.textBox3.TabIndex = 25;
@@ -235,17 +244,17 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textBox2.Location = new System.Drawing.Point(571, 289);
+            this.textBox2.Location = new System.Drawing.Point(570, 266);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(307, 317);
+            this.textBox2.Size = new System.Drawing.Size(307, 311);
             this.textBox2.TabIndex = 24;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textBox1.Location = new System.Drawing.Point(170, 289);
+            this.textBox1.Location = new System.Drawing.Point(170, 265);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(219, 27);
             this.textBox1.TabIndex = 23;
@@ -255,7 +264,7 @@
             this.lblDateToday.AutoSize = true;
             this.lblDateToday.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDateToday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblDateToday.Location = new System.Drawing.Point(644, 742);
+            this.lblDateToday.Location = new System.Drawing.Point(644, 865);
             this.lblDateToday.Name = "lblDateToday";
             this.lblDateToday.Size = new System.Drawing.Size(48, 23);
             this.lblDateToday.TabIndex = 22;
@@ -264,7 +273,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(159, 767);
+            this.panel3.Location = new System.Drawing.Point(159, 890);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 3);
             this.panel3.TabIndex = 2;
@@ -274,7 +283,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label19.Location = new System.Drawing.Point(24, 734);
+            this.label19.Location = new System.Drawing.Point(24, 857);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(108, 23);
             this.label19.TabIndex = 21;
@@ -285,29 +294,18 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label18.Location = new System.Drawing.Point(579, 742);
+            this.label18.Location = new System.Drawing.Point(579, 865);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 23);
             this.label18.TabIndex = 20;
             this.label18.Text = "DATE:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label17.Location = new System.Drawing.Point(444, 652);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(91, 23);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "AMOUNT:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label16.Location = new System.Drawing.Point(440, 289);
+            this.label16.Location = new System.Drawing.Point(439, 266);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(125, 23);
             this.label16.TabIndex = 18;
@@ -318,7 +316,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label15.Location = new System.Drawing.Point(24, 644);
+            this.label15.Location = new System.Drawing.Point(24, 551);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(66, 23);
             this.label15.TabIndex = 17;
@@ -329,7 +327,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label14.Location = new System.Drawing.Point(24, 571);
+            this.label14.Location = new System.Drawing.Point(24, 494);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(130, 23);
             this.label14.TabIndex = 16;
@@ -340,7 +338,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label13.Location = new System.Drawing.Point(24, 495);
+            this.label13.Location = new System.Drawing.Point(24, 438);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(129, 23);
             this.label13.TabIndex = 15;
@@ -351,7 +349,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label12.Location = new System.Drawing.Point(24, 425);
+            this.label12.Location = new System.Drawing.Point(24, 381);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 23);
             this.label12.TabIndex = 14;
@@ -362,7 +360,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label11.Location = new System.Drawing.Point(24, 357);
+            this.label11.Location = new System.Drawing.Point(24, 322);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(93, 23);
             this.label11.TabIndex = 13;
@@ -373,7 +371,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(24, 290);
+            this.label10.Location = new System.Drawing.Point(24, 266);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(127, 23);
             this.label10.TabIndex = 12;
@@ -384,7 +382,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(31, 211);
+            this.lblTitle.Location = new System.Drawing.Point(24, 205);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(177, 35);
             this.lblTitle.TabIndex = 11;
@@ -527,12 +525,33 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ITEM NAME";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "QUANTITY / KG";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "PRICE / FCFA";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 200;
+            // 
             // Invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1195, 1003);
+            this.ClientSize = new System.Drawing.Size(1195, 961);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.panelPrint);
             this.Controls.Add(this.panel1);
@@ -542,6 +561,7 @@
             this.panel1.ResumeLayout(false);
             this.panelPrint.ResumeLayout(false);
             this.panelPrint.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -569,7 +589,6 @@
         private Panel panel3;
         private Label label19;
         private Label label18;
-        private Label label17;
         private Label label16;
         private Label label15;
         private Label label14;
@@ -579,7 +598,6 @@
         private Label label10;
         private Label lblTitle;
         private Label label2;
-        private TextBox textBox8;
         private TextBox textBox7;
         private TextBox textBox6;
         private TextBox textBox5;
@@ -590,5 +608,9 @@
         private ToolTip toolTip1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private PrintPreviewDialog printPreviewDialog1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
     }
 }

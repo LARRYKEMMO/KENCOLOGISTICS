@@ -118,13 +118,16 @@ namespace KENCO_LOGISTIQUES_APP
                                 //MessageBox.Show("Reminder: Insurance Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 ShowToast("REMINDER", "Reminder: Insurance Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today");
                                 Expired1 = true;
-                                
+                                RowList.Add(i);
+                                ColList.Add(1);
                             }
 
                             if (Expired1 == false)
                             {
                                 //MessageBox.Show("Reminder: Insurance Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 ShowToast("WARNING", "Reminder: Insurance Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon");
+                                RowList2.Add(i);
+                                ColList2.Add(2);
                             }
                         }
 
@@ -138,12 +141,16 @@ namespace KENCO_LOGISTIQUES_APP
                                 //MessageBox.Show("Reminder: Technical Visit Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 ShowToast("REMINDER", "Reminder: Technical Visit Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today");
                                 Expired2 = true;
+                                RowList.Add(i);
+                                ColList.Add(3);
                             }
 
                             if (Expired2 == false)
                             {
                                 //MessageBox.Show("Reminder: Technical Visit Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 ShowToast("WARNING", "Reminder: Technical Visit Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon");
+                                RowList2.Add(i);
+                                ColList2.Add(4);
                             }
                         
                         }
@@ -158,13 +165,16 @@ namespace KENCO_LOGISTIQUES_APP
                                 //MessageBox.Show("Reminder: Registration Card Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 ShowToast("REMINDER", "Reminder: Registration Card Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Today");
                                 Expired3 = true;
-
+                                RowList.Add(i);
+                                ColList.Add(5);
                             }
 
                             if (Expired3 == false)
                             {
                                 //MessageBox.Show("Reminder: Registration Card Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 ShowToast("WARNING", "Reminder: Registration Card Expiry Date for " + dataGridView1.Rows[i].Cells[0].Value?.ToString() + " is Due Soon");
+                                RowList2.Add(i);
+                                ColList2.Add(6);
                             }
                       
                         }
@@ -586,6 +596,20 @@ namespace KENCO_LOGISTIQUES_APP
             {
                 dataGridView1.Rows.Add(VehiclePlateNumberBox.Text, IEDDateBox.Text + Slash + IEDMonthBox.Text + Slash + IEDYearBox.Text, IEDReminderDateBox.Text + Slash + IEDReminderMonthBox.Text + Slash + IEDReminderYearBox.Text, TVEDDateBox.Text + Slash + TVEDMonthBox.Text + Slash + TVEDYearBox.Text, TVEDReminderDateBox.Text + Slash + TVEDReminderMonthBox.Text + Slash + TVEDReminderYearBox.Text, RCEDateBox.Text + Slash + RCEMonthBox.Text + Slash + RCEYearBox.Text, RCEReminderDateBox.Text + Slash + RCEReminderMonthBox.Text + Slash + RCEReminderYearBox.Text);
 
+            }
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            for (int i = 0; i < RowList.Count; i++)
+            {
+                //MessageBox.Show("Row: " + RowList[i].ToString(), "Colored Rows");
+                dataGridView1.Rows[RowList[i]].Cells[ColList[i]].Style.BackColor = Color.Red;
+            }
+
+            for (int i = 0; i < RowList2.Count; i++)
+            {
+                dataGridView1.Rows[RowList2[i]].Cells[ColList2[i]].Style.BackColor = Color.Orange;
             }
         }
     }
