@@ -86,7 +86,7 @@ namespace KENCO_LOGISTIQUES_APP
                             Date = DateTime.Parse(digit);
                             dateConvert = Date.ToString("yyyy-MM");
                             //MessageBox.Show(digit, "Message");
-                            if (dateConvert.Equals("2024-03"))
+                            if (dateConvert.Equals(MonthSearch))
                             {
                                 income += value;                                
                             }
@@ -129,7 +129,7 @@ namespace KENCO_LOGISTIQUES_APP
                             Date = DateTime.Parse(digit);
                             dateConvert = Date.ToString("yyyy-MM");
                             //MessageBox.Show(digit, "Message");
-                            if (dateConvert.Equals("2024-03"))
+                            if (dateConvert.Equals(MonthSearch))
                             {
                                 income2 += value;
                             }
@@ -142,6 +142,64 @@ namespace KENCO_LOGISTIQUES_APP
                         // For example, you may log an error or skip the value
                     }
                 }
+            }
+        }
+
+        private void DetermineDate(string Month)
+        {
+            string Year;
+            DateTime currentDate;
+
+            currentDate = DateTime.Today;
+            Year = currentDate.ToString("yyyy");
+
+            if (Month.Equals("January"))
+            {
+                MonthSearch = Year + "-01";
+            }
+            else if (Month.Equals("February"))
+            {
+                MonthSearch = Year + "-02";
+            }
+            else if (Month.Equals("March"))
+            {
+                MonthSearch = Year + "-03";
+            }
+            else if (Month.Equals("April"))
+            {
+                MonthSearch = Year + "-04";
+            }
+            else if (Month.Equals("May"))
+            {
+                MonthSearch = Year + "-05";
+            }
+            else if (Month.Equals("June"))
+            {
+                MonthSearch = Year + "-06";
+            }
+            else if (Month.Equals("July"))
+            {
+                MonthSearch = Year + "-07";
+            }
+            else if (Month.Equals("August"))
+            {
+                MonthSearch = Year + "-08";
+            }
+            else if (Month.Equals("September"))
+            {
+                MonthSearch = Year + "-09";
+            }
+            else if (Month.Equals("October"))
+            {
+                MonthSearch = Year + "-10";
+            }
+            else if (Month.Equals("November"))
+            {
+                MonthSearch = Year + "-11";
+            }
+            else if (Month.Equals("December"))
+            {
+                MonthSearch = Year + "-12";
             }
         }
 
@@ -192,7 +250,7 @@ namespace KENCO_LOGISTIQUES_APP
 
             }
 
-            plt.Title("Income Pie Chart");
+            plt.Title("Description Pie Chart");
             plt.SaveFig("Paretto.png");
             pictureBox2.ImageLocation = "Paretto.png";
 
@@ -205,6 +263,7 @@ namespace KENCO_LOGISTIQUES_APP
             var plt = new ScottPlot.Plot(596, 368);
             double[] dataX = new double[0];
             double[] dataY = new double[0];
+            string[] vehicles = new string[0];
 
             plt.Palette = Palette.Amber;
             plt.Title("Income Chart");
@@ -239,12 +298,14 @@ namespace KENCO_LOGISTIQUES_APP
                 digit = VisibleVehicle[i]?.ToString();
                 if (digit != null)
                 {
+                    vehicles = vehicles.Append(digit).ToArray();
                     SearchMechanics(digit);
                     GetCashMonth();
                     GetDigit(digit);
                     dataX = dataX.Append(doubleX).ToArray();
                     dataY = dataY.Append(income).ToArray();
                     plt.PlotBar(dataX, dataY, fillColor: Color.Purple, barWidth: 20.0);
+                    plt.XTicks(dataX, vehicles);
                 }
 
 
@@ -427,6 +488,7 @@ namespace KENCO_LOGISTIQUES_APP
             var plt = new ScottPlot.Plot(596, 368);
             double[] dataX = new double[0];
             double[] dataY = new double[0];
+            string[] vehicles = new string[0];
 
             plt.Palette = Palette.Amber;
             plt.Title("Income Chart");
@@ -463,15 +525,19 @@ namespace KENCO_LOGISTIQUES_APP
                 digit = VehiclesList[i]?.ToString();
                 if (digit != null)
                 {
+                    vehicles = vehicles.Append(digit).ToArray();
                     SearchMechanics(digit);
                     GetCash(dataGridView1);
                     GetDigit(digit);
                     dataX = dataX.Append(doubleX).ToArray();
                     dataY = dataY.Append(income).ToArray();
                     plt.PlotBar(dataX, dataY, fillColor: Color.Blue, barWidth: 20.0);
+                    plt.XTicks(dataX, vehicles);
+
+
                 }
 
-                
+
             }
 
             plt.SaveFig("IncomeChart.png");
@@ -605,7 +671,7 @@ namespace KENCO_LOGISTIQUES_APP
             }
 
 
-            plt.Title("Income Pie Chart");
+            plt.Title("Description Pie Chart");
             plt.SaveFig("Paretto.png");
             pictureBox2.ImageLocation = "Paretto.png";
 
@@ -635,6 +701,21 @@ namespace KENCO_LOGISTIQUES_APP
             GetVehicles();
             GetDescription();
             SearchMechanics("");
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string month;
+
+            month = comboBox1.Text;
+            income = 0;
+            DetermineDate(month);
+            GetCashMonth();
+            income3 = income;
+            GetVehicleMonth();
+            LegendTable.Rows.Clear();
+            GetDescriptionMonth();
+            SearchMechanics3();
         }
     }
 }

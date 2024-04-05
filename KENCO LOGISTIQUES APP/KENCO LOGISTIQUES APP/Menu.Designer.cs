@@ -97,7 +97,7 @@
             this.vehiclesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.vehiclesToolStripMenuItem.Image = global::KENCO_LOGISTIQUES_APP.Properties.Resources.Vehicles;
             this.vehiclesToolStripMenuItem.Name = "vehiclesToolStripMenuItem";
-            this.vehiclesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.vehiclesToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.vehiclesToolStripMenuItem.Text = "Vehicles";
             this.vehiclesToolStripMenuItem.Click += new System.EventHandler(this.vehiclesToolStripMenuItem_Click);
             // 
@@ -106,7 +106,7 @@
             this.employeesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.employeesToolStripMenuItem.Image = global::KENCO_LOGISTIQUES_APP.Properties.Resources.Worker;
             this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
-            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.employeesToolStripMenuItem.Text = "Employees";
             this.employeesToolStripMenuItem.Click += new System.EventHandler(this.employeesToolStripMenuItem_Click);
             // 
@@ -115,7 +115,7 @@
             this.ownersToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ownersToolStripMenuItem.Image = global::KENCO_LOGISTIQUES_APP.Properties.Resources.Owner;
             this.ownersToolStripMenuItem.Name = "ownersToolStripMenuItem";
-            this.ownersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ownersToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.ownersToolStripMenuItem.Text = "Owners";
             this.ownersToolStripMenuItem.Click += new System.EventHandler(this.ownersToolStripMenuItem_Click);
             // 
@@ -124,7 +124,7 @@
             this.remindersToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.remindersToolStripMenuItem.Image = global::KENCO_LOGISTIQUES_APP.Properties.Resources.Accounting;
             this.remindersToolStripMenuItem.Name = "remindersToolStripMenuItem";
-            this.remindersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.remindersToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.remindersToolStripMenuItem.Text = "Accounting";
             this.remindersToolStripMenuItem.Click += new System.EventHandler(this.remindersToolStripMenuItem_Click);
             // 
@@ -133,7 +133,7 @@
             this.accidentsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.accidentsToolStripMenuItem.Image = global::KENCO_LOGISTIQUES_APP.Properties.Resources.Accidents1;
             this.accidentsToolStripMenuItem.Name = "accidentsToolStripMenuItem";
-            this.accidentsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.accidentsToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.accidentsToolStripMenuItem.Text = "Accidents";
             this.accidentsToolStripMenuItem.Click += new System.EventHandler(this.accidentsToolStripMenuItem_Click);
             // 
@@ -142,7 +142,7 @@
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.exitToolStripMenuItem.Image = global::KENCO_LOGISTIQUES_APP.Properties.Resources.Exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -207,7 +207,7 @@
             this.remindersToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.remindersToolStripMenuItem1.Image = global::KENCO_LOGISTIQUES_APP.Properties.Resources.bell;
             this.remindersToolStripMenuItem1.Name = "remindersToolStripMenuItem1";
-            this.remindersToolStripMenuItem1.Size = new System.Drawing.Size(253, 26);
+            this.remindersToolStripMenuItem1.Size = new System.Drawing.Size(291, 26);
             this.remindersToolStripMenuItem1.Text = "Reminders";
             this.remindersToolStripMenuItem1.Click += new System.EventHandler(this.remindersToolStripMenuItem1_Click);
             // 
@@ -216,7 +216,7 @@
             this.invoicesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.invoicesToolStripMenuItem.Image = global::KENCO_LOGISTIQUES_APP.Properties.Resources.Invoices;
             this.invoicesToolStripMenuItem.Name = "invoicesToolStripMenuItem";
-            this.invoicesToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
+            this.invoicesToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.invoicesToolStripMenuItem.Text = "Invoices / Receipts";
             this.invoicesToolStripMenuItem.Click += new System.EventHandler(this.invoicesToolStripMenuItem_Click);
             // 
@@ -225,8 +225,9 @@
             this.documentManagementToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.documentManagementToolStripMenuItem.Image = global::KENCO_LOGISTIQUES_APP.Properties.Resources.Documents3;
             this.documentManagementToolStripMenuItem.Name = "documentManagementToolStripMenuItem";
-            this.documentManagementToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
-            this.documentManagementToolStripMenuItem.Text = "Document Management";
+            this.documentManagementToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.documentManagementToolStripMenuItem.Text = "Supplier / Client Management";
+            this.documentManagementToolStripMenuItem.Click += new System.EventHandler(this.documentManagementToolStripMenuItem_Click);
             // 
             // Menu
             // 

@@ -144,5 +144,13 @@ namespace KENCO_LOGISTIQUES_APP
             accident.ShowDialog();
             this.Close();
         }
+
+        private void documentManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vendor_Client_Management VCManagement = new Vendor_Client_Management();
+            VCManagement.ShowDialog();
+            this.Close();
+        }
     }
 }
