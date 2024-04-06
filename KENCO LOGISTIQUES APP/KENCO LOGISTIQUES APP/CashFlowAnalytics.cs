@@ -162,6 +162,7 @@ namespace KENCO_LOGISTIQUES_APP
         private void GetVehicleMonth()
         {
             string? digit;
+            string? NDigit;
             Color[] colors = { Color.Orange, Color.DarkGreen, Color.Indigo, Color.Violet, Color.Pink, Color.Blue, Color.Red, Color.Yellow, Color.DeepSkyBlue, Color.Cyan, Color.Magenta, Color.Gray, Color.Magenta, Color.DeepPink, Color.Purple, Color.Brown };
             var plt = new ScottPlot.Plot(620, 368);
             var plt2 = new ScottPlot.Plot(678, 367);
@@ -193,7 +194,7 @@ namespace KENCO_LOGISTIQUES_APP
                     {
                         VisibleVehicles.Add(dataGridView1.Rows[i].Cells[0].Value.ToString());
                         VisibleVehicle.Add(dataGridView1.Rows[i].Cells[0].Value.ToString());
-
+                        VList.Add(dataGridView1.Rows[i].Cells[1].Value.ToString());
                     }
                 }
             }
@@ -204,9 +205,10 @@ namespace KENCO_LOGISTIQUES_APP
             {
                 income = 0;
                 digit = VisibleVehicle[i]?.ToString();
+                NDigit = VList[i]?.ToString();
                 if (digit != null)
                 {
-                    vehicles = vehicles.Append(digit).ToArray();
+                    vehicles = vehicles.Append(NDigit).ToArray();
                     SearchMechanics(digit);
                     GetCashMonth();
                     GetDigit(digit);
@@ -269,7 +271,7 @@ namespace KENCO_LOGISTIQUES_APP
                 if (!row.IsNewRow)
                 {
                     // Access the cell value for the 'Amount (FCFA)' column
-                    string amountCellValue = Convert.ToString(row.Cells["Column4"].Value);
+                    string amountCellValue = Convert.ToString(row.Cells["Column1"].Value);
 
                     // Check if the cell value contains the search text
                     if (amountCellValue.Contains(SearchBox.Text))
@@ -339,6 +341,7 @@ namespace KENCO_LOGISTIQUES_APP
         private void GetVehicles()
         {
             string? digit;
+            string? NDigit;
             Color[] colors = { Color.Orange, Color.DarkGreen, Color.Indigo, Color.Violet, Color.Pink, Color.Blue, Color.Red, Color.Yellow, Color.DeepSkyBlue, Color.Cyan, Color.Magenta, Color.Gray, Color.Magenta, Color.DeepPink, Color.Purple, Color.Brown};
             var plt = new ScottPlot.Plot(620, 368);
             var plt2 = new ScottPlot.Plot(678, 367);
@@ -370,6 +373,7 @@ namespace KENCO_LOGISTIQUES_APP
                     {
                         Vehicles.Add(dataGridView1.Rows[i].Cells[0].Value.ToString());
                         VehiclesList.Add(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                        VList.Add(dataGridView1.Rows[i].Cells[1].Value.ToString());
                         //MessageBox.Show("Income: " + dataGridView1.Rows[i].Cells[0].Value.ToString(), "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -383,9 +387,10 @@ namespace KENCO_LOGISTIQUES_APP
             {
                 income = 0;
                 digit = VehiclesList[i]?.ToString();
+                NDigit = VList[i]?.ToString();
                 if (digit != null)
                 {
-                    vehicles = vehicles.Append(digit).ToArray();
+                    vehicles = vehicles.Append(NDigit).ToArray();
                     SearchMechanics(digit);
                     GetCash(dataGridView1);
                     GetDigit(digit);

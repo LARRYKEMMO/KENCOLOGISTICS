@@ -36,6 +36,9 @@
             this.btnReceipts = new System.Windows.Forms.Button();
             this.panelPrint = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -69,9 +72,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panelPrint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -143,7 +143,7 @@
             // 
             // panelPrint
             // 
-            this.panelPrint.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panelPrint.BackColor = System.Drawing.Color.Gainsboro;
             this.panelPrint.Controls.Add(this.dataGridView1);
             this.panelPrint.Controls.Add(this.textBox7);
             this.panelPrint.Controls.Add(this.textBox6);
@@ -195,9 +195,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(650, 231);
             this.dataGridView1.TabIndex = 224;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ITEM NAME";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "QUANTITY / KG";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "PRICE / FCFA";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 200;
+            // 
             // textBox7
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox7.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox7.Location = new System.Drawing.Point(170, 550);
             this.textBox7.Name = "textBox7";
@@ -206,7 +227,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox6.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox6.Location = new System.Drawing.Point(170, 492);
             this.textBox6.Name = "textBox6";
@@ -215,7 +236,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox5.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox5.Location = new System.Drawing.Point(170, 436);
             this.textBox5.Name = "textBox5";
@@ -224,7 +245,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox4.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox4.Location = new System.Drawing.Point(170, 379);
             this.textBox4.Name = "textBox4";
@@ -233,7 +254,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox3.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox3.Location = new System.Drawing.Point(170, 320);
             this.textBox3.Name = "textBox3";
@@ -242,7 +263,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox2.Location = new System.Drawing.Point(570, 266);
             this.textBox2.Multiline = true;
@@ -252,7 +273,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox1.Location = new System.Drawing.Point(170, 265);
             this.textBox1.Name = "textBox1";
@@ -525,32 +546,11 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ITEM NAME";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "QUANTITY / KG";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "PRICE / FCFA";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
-            // 
             // Invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1195, 961);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.panelPrint);

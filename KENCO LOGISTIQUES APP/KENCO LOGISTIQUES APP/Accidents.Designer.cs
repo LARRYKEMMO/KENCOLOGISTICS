@@ -108,6 +108,7 @@
             // 
             // panelPrint
             // 
+            this.panelPrint.BackColor = System.Drawing.Color.Gainsboro;
             this.panelPrint.Controls.Add(this.label20);
             this.panelPrint.Controls.Add(this.lblDateToday);
             this.panelPrint.Controls.Add(this.panel3);
@@ -226,7 +227,7 @@
             // 
             // textBox14
             // 
-            this.textBox14.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox14.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox14.Location = new System.Drawing.Point(590, 759);
             this.textBox14.Name = "textBox14";
@@ -247,7 +248,7 @@
             // 
             // textBox15
             // 
-            this.textBox15.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox15.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox15.Location = new System.Drawing.Point(167, 760);
             this.textBox15.Name = "textBox15";
@@ -268,7 +269,7 @@
             // 
             // textBox13
             // 
-            this.textBox13.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox13.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox13.Location = new System.Drawing.Point(169, 698);
             this.textBox13.Name = "textBox13";
@@ -289,7 +290,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox7.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox7.Location = new System.Drawing.Point(627, 639);
             this.textBox7.Name = "textBox7";
@@ -310,7 +311,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox12.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox12.Location = new System.Drawing.Point(170, 640);
             this.textBox12.Name = "textBox12";
@@ -331,7 +332,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox10.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox10.Location = new System.Drawing.Point(612, 577);
             this.textBox10.Name = "textBox10";
@@ -351,7 +352,7 @@
             // 
             // textBox11
             // 
-            this.textBox11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox11.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox11.Location = new System.Drawing.Point(149, 578);
             this.textBox11.Name = "textBox11";
@@ -371,7 +372,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox8.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox8.Location = new System.Drawing.Point(650, 522);
             this.textBox8.Name = "textBox8";
@@ -391,7 +392,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox9.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox9.Location = new System.Drawing.Point(146, 523);
             this.textBox9.Name = "textBox9";
@@ -411,7 +412,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox2.Location = new System.Drawing.Point(624, 477);
             this.textBox2.Name = "textBox2";
@@ -431,7 +432,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox6.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox6.Location = new System.Drawing.Point(120, 478);
             this.textBox6.Name = "textBox6";
@@ -440,7 +441,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox5.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox5.Location = new System.Drawing.Point(186, 420);
             this.textBox5.Name = "textBox5";
@@ -449,7 +450,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox4.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox4.Location = new System.Drawing.Point(17, 172);
             this.textBox4.Multiline = true;
@@ -459,7 +460,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox3.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox3.Location = new System.Drawing.Point(243, 108);
             this.textBox3.Name = "textBox3";
@@ -468,7 +469,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox1.Location = new System.Drawing.Point(243, 65);
             this.textBox1.Name = "textBox1";
@@ -560,7 +561,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(900, 953);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.panelPrint);

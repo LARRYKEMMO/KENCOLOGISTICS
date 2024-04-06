@@ -266,6 +266,7 @@ namespace KENCO_LOGISTIQUES_APP
         private void GetVehicleMonth()
         {
             string? digit;
+            string? NDigit;
             var plt = new ScottPlot.Plot(596, 368);
             double[] dataX = new double[0];
             double[] dataY = new double[0];
@@ -274,7 +275,7 @@ namespace KENCO_LOGISTIQUES_APP
             plt.Palette = Palette.Amber;
             plt.Title("Income Chart");
             plt.XLabel("Vehicles");
-            plt.YLabel("Income");
+            
 
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
@@ -291,7 +292,7 @@ namespace KENCO_LOGISTIQUES_APP
                     {
                         VisibleVehicles.Add(dataGridView1.Rows[i].Cells[0].Value.ToString());
                         VisibleVehicle.Add(dataGridView1.Rows[i].Cells[0].Value.ToString());
-
+                        VList.Add(dataGridView1.Rows[i].Cells[1].Value.ToString());
                     }
                 }
             }
@@ -302,9 +303,10 @@ namespace KENCO_LOGISTIQUES_APP
             {
                 income = 0;
                 digit = VisibleVehicle[i]?.ToString();
+                NDigit = VList[i]?.ToString();
                 if (digit != null)
                 {
-                    vehicles = vehicles.Append(digit).ToArray();
+                    vehicles = vehicles.Append(NDigit).ToArray();
                     SearchMechanics(digit);
                     GetCashMonth();
                     GetDigit(digit);
@@ -316,7 +318,7 @@ namespace KENCO_LOGISTIQUES_APP
 
 
             }
-
+            plt.YLabel("Expenses (" + income3.ToString() + ")");            
             plt.SaveFig("IncomeChart.png");
             pictureBox1.ImageLocation = "IncomeChart.png";
         }
@@ -354,7 +356,7 @@ namespace KENCO_LOGISTIQUES_APP
                 if (!row.IsNewRow)
                 {
                     // Access the cell value for the 'Amount (FCFA)' column
-                    string amountCellValue = Convert.ToString(row.Cells["Column1"].Value);
+                    string amountCellValue = Convert.ToString(row.Cells["Column7"].Value);
 
                     // Check if the cell value contains the search text
                     if (amountCellValue.Contains(SearchBox.Text))
@@ -400,6 +402,7 @@ namespace KENCO_LOGISTIQUES_APP
         private void GetVehicles()
         {
             string? digit;
+            string? NDigit;
             var plt = new ScottPlot.Plot(596, 368);
             double[] dataX = new double[0];
             double[] dataY = new double[0];
@@ -408,7 +411,7 @@ namespace KENCO_LOGISTIQUES_APP
             plt.Palette = Palette.Amber;
             plt.Title("Expenses Chart");
             plt.XLabel("Vehicles");
-            plt.YLabel("Expenses");
+            
 
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
@@ -425,6 +428,7 @@ namespace KENCO_LOGISTIQUES_APP
                     {
                         Vehicles.Add(dataGridView1.Rows[i].Cells[0].Value.ToString());
                         VehiclesList.Add(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                        VList.Add(dataGridView1.Rows[i].Cells[1].Value.ToString());
                         //MessageBox.Show("Income: " + dataGridView1.Rows[i].Cells[0].Value.ToString(), "DataGridView Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -438,9 +442,10 @@ namespace KENCO_LOGISTIQUES_APP
             {
                 income = 0;
                 digit = VehiclesList[i]?.ToString();
+                NDigit = VList[i]?.ToString();
                 if (digit != null)
                 {
-                    vehicles = vehicles.Append(digit).ToArray();
+                    vehicles = vehicles.Append(NDigit).ToArray();
                     SearchMechanics(digit);
                     GetCash(dataGridView1);
                     GetDigit(digit);
@@ -452,7 +457,7 @@ namespace KENCO_LOGISTIQUES_APP
 
 
             }
-
+            plt.YLabel("Expenses (" + income3.ToString() + ")");
             plt.SaveFig("ExpenseChart.png");
             pictureBox1.ImageLocation = "ExpenseChart.png";
         }

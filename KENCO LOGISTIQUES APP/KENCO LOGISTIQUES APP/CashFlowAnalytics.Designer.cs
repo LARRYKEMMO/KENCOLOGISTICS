@@ -44,11 +44,11 @@ namespace KENCO_LOGISTIQUES_APP
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -188,6 +188,17 @@ namespace KENCO_LOGISTIQUES_APP
             this.panel1.Size = new System.Drawing.Size(230, 729);
             this.panel1.TabIndex = 280;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(15, 276);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(199, 21);
+            this.label2.TabIndex = 291;
+            this.label2.Text = "Monthly Analytics";
+            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -253,22 +264,11 @@ namespace KENCO_LOGISTIQUES_APP
             this.label1.TabIndex = 286;
             this.label1.Text = "CASHFLOW ANALYTICS";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(15, 276);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 21);
-            this.label2.TabIndex = 291;
-            this.label2.Text = "Monthly Analytics";
-            // 
             // CashFlowAnalytics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1798, 813);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -302,6 +302,7 @@ namespace KENCO_LOGISTIQUES_APP
         private double income2;
         private ArrayList VehiclesList = new ArrayList();
         private ArrayList VisibleCash = new ArrayList();
+        private ArrayList VList = new ArrayList();
         //private ArrayList VisibleDescription = new ArrayList();
         private ArrayList VisibleVehicle = new ArrayList();
         private HashSet<string> VisibleVehicles = new HashSet<string>();

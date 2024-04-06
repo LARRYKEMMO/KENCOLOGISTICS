@@ -252,5 +252,35 @@ namespace KENCO_LOGISTIQUES_APP
                 }
             }
         }
+
+        private void SearchMechanics()
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                // Check if the row is not a new row
+                if (!row.IsNewRow)
+                {
+                    // Access the cell value for the 'Amount (FCFA)' column
+                    string amountCellValue = Convert.ToString(row.Cells["Column13"].Value);
+
+                    // Check if the cell value contains the search text
+                    if (amountCellValue.Contains(SearchBox.Text))
+                    {
+                        // Show the row if the cell value contains the search text
+                        row.Visible = true;
+                    }
+                    else
+                    {
+                        // Hide the row if the cell value does not contain the search text
+                        row.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            SearchMechanics();
+        }
     }
 }

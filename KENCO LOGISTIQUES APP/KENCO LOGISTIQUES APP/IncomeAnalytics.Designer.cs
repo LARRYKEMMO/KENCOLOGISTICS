@@ -287,7 +287,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1798, 782);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -325,6 +325,7 @@ namespace KENCO_LOGISTIQUES_APP
         private ArrayList VisibleCash = new ArrayList();
         private ArrayList VisibleDescription = new ArrayList();
         private ArrayList VisibleVehicle = new ArrayList();
+        private ArrayList VList = new ArrayList();
         HashSet<string> Vehicles = new HashSet<string>();
         private HashSet<string> VisibleVehicles = new HashSet<string>();
         private HashSet<string> VisibleDescriptionList = new HashSet<string>();

@@ -1670,7 +1670,7 @@ namespace KENCO_LOGISTIQUES_APP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1457, 648);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.dataGridView1);
